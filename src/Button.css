@@ -1,10 +1,10 @@
 @import "tailwindcss";
 
 .get-started{
-  padding: .5em 2em;
+  padding: .5em 4em;
   background-color: white;
   color: #9175df;
-  margin-left: 20em;
+  margin: 0 0 6.5em 20em;
   cursor: pointer;
   border-radius: 20px;
 }

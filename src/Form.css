@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+.login-form {
+  background-color: #9588bd;
+  padding: 2.8em;
+  max-width: fit-content;
+  margin: 1em 1em 4em 30em;
+  border-radius: 20px;
+  display: inline-block;
+}
+
+.input-field {
+  background-color: white;
+  color: #9175df;
+  border-radius: 20px;
+  padding: 1em;
+  margin: 2em;
+  width: 15vw;
+}
+.input-field:hover{
+   transition: all 0.3s ease;
+   box-shadow:  0 0 10px rgb(101, 51, 155);
+}
+.login-form-icon{
+  width: 2vw;
+}
+.login-form-fields{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
