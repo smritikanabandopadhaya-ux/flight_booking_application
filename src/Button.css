@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+.get-started{
+  padding: .5em 2em;
+  background-color: white;
+  color: #9175df;
+  margin-left: 20em;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.get-started:hover{
+   background-color: #9175df;
+   color: white;
+   transition: all 0.3s ease;
+   box-shadow:  0 0 5px rgb(255, 255, 255);
+}
