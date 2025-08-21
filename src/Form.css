@@ -3,18 +3,23 @@
 .login-form {
   background-color: #9588bd;
   padding: 2.8em;
-  width: fit-content;
-  margin: 1em 1em 4em 30em;
+  margin: 2em 1em 4em 30em;
   border-radius: 20px;
   justify-content: center;
+  margin-top: 6em;
 }
-
+.login-form-header{
+  font-size: 1.5em;
+  font-family: "Comic Sans MS", cursive;
+  font-weight: bold;
+  text-align: center;
+}
 .input-field {
   background-color: white;
   color: #9175df;
   border-radius: 20px;
   padding: 0.6em;
-  margin: 1em;
+  margin: 1.2em;
   width: 15vw;
 }
 .input-field:hover{
@@ -32,4 +37,15 @@
 }
 .sign-in{
   margin-left: 2em;
+}
+#sign-in-now{
+  font-size: 1.2em;
+  font-family: "Comic Sans MS", cursive;
+  font-weight: bold;
+  text-align: center;
+  color: #4f3d94;
+  cursor: pointer;
+}
+.hidden{
+  display: none;
 }

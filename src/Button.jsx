@@ -3,9 +3,8 @@ import "./Button.css"
 
 function Button(props){
   
- const { children }=props;
  return(
-  <button className="button">{children}</button>
+  <button className="button">{props.name}</button>
    );
 }
 

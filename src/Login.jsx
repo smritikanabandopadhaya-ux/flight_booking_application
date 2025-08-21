@@ -14,7 +14,6 @@ function Login() {
         <div className="backgound-container-subheading">
           The journey of a thousand miles begins with a single step...
         </div>
-        <div className="get-started"><Button>Get Started</Button></div>
       </div>
     </>
   );
