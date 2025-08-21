@@ -1,11 +1,11 @@
 import React, { useState } from "react"
 import "./Button.css"
 
-function Button(){
+function Button(props){
   
-
+ const { children }=props;
  return(
-  <button className="get-started">Get Started</button>
+  <button className="button">{children}</button>
    );
 }
 

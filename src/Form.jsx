@@ -1,15 +1,19 @@
 import React from "react";
 import Button from "./Button";
 import "./Form.css";
-import username from "./assets/username.svg"
-import password from "./assets/password.svg"
+import username from "./assets/username.svg";
+import password from "./assets/password.svg";
 
 function Form() {
   return (
     <>
       <form className="login-form">
         <div className="login-form-fields">
-          <img src={username} alt="username icon" className="login-form-icon"></img>
+          <img
+            src={username}
+            alt="username icon"
+            className="login-form-icon"
+          ></img>
           <input
             type="email"
             className="input-field"
@@ -18,7 +22,11 @@ function Form() {
           />
         </div>
         <div className="login-form-fields">
-          <img src={password} alt="username icon" className="login-form-icon"></img>
+          <img
+            src={password}
+            alt="username icon"
+            className="login-form-icon"
+          ></img>
           <input
             type="password"
             className="input-field"
@@ -26,9 +34,11 @@ function Form() {
             required
           />
         </div>
+        <div className="login-form-fields sign-in">
+          <Button>Sign In</Button>
+        </div>
         <div className="login-form-fields">
-          Does not have any Account ?
-          <a href="#">Sign Up here</a>
+          Does not have any Account ? <a href="#"> &nbsp; &nbsp; Sign Up here</a>
         </div>
       </form>
     </>

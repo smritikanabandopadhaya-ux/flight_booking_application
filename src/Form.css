@@ -3,18 +3,18 @@
 .login-form {
   background-color: #9588bd;
   padding: 2.8em;
-  max-width: fit-content;
+  width: fit-content;
   margin: 1em 1em 4em 30em;
   border-radius: 20px;
-  display: inline-block;
+  justify-content: center;
 }
 
 .input-field {
   background-color: white;
   color: #9175df;
   border-radius: 20px;
-  padding: 1em;
-  margin: 2em;
+  padding: 0.6em;
+  margin: 1em;
   width: 15vw;
 }
 .input-field:hover{
@@ -26,6 +26,10 @@
 }
 .login-form-fields{
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
+  
+}
+.sign-in{
+  margin-left: 2em;
 }
