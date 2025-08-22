@@ -6,12 +6,12 @@ import email from "./assets/email.svg";
 import password from "./assets/password.svg";
 
 function Form() {
-  const [isHidden, setHiddenState] = useState(false);
+  const [isHidden, setHiddenState] = useState(true);
   return (
     <>
       <form className="login-form">
         <div className="login-form-fields login-form-header">
-          Welcome Back !
+          Welcome Onboard !
         </div>
         <div
           className="login-form-fields"
@@ -49,22 +49,48 @@ function Form() {
             placeholder="   Password "
           />
         </div>
-        <div className="login-form-fields sign-in">
-          <Button name="Sign Up" />
+        <div className="login-form-fields text-xs flex gap-8 ml-10">
+           <label for="remember me" ><input type="checkbox" />
+         &nbsp;Remember Me&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+          <button id="sign-in-now" >Forget Password ?</button>
         </div>
-        <div className="login-form-fields">
-          Already have an Account ?
+
+        {isHidden ? (
+          <div className="login-form-fields sign-in">
+            <Button name="Sign In" />
+          </div>
+        ) : (
+          <div className="login-form-fields sign-in">
+            <Button name="Sign Up" />
+          </div>
+        )}
+        {isHidden?<div className="login-form-fields">
+          Does not have any Account ?
           <button
             id="sign-in-now"
             onClick={(e) => {
-              e.preventDefault();
+              e.preventDefault(); //for removing the form property to submit
               setHiddenState(!isHidden);
             }}
           >
             {" "}
-            &nbsp; Sign in
+            &nbsp; Sign Up
           </button>
         </div>
+        :<div className="login-form-fields">
+          Already have an Account ?
+          <button
+            id="sign-in-now"
+            onClick={(e) => {
+              e.preventDefault(); //for removing the form property to submit
+              setHiddenState(!isHidden);
+            }}
+          >
+            {" "}
+            &nbsp; Sign In
+          </button>
+        </div>
+          }
       </form>
     </>
   );
