@@ -1,0 +1,61 @@
+@import "tailwindcss";
+.background {
+  background-image: url("../assets/Gemini_Generated_Image_9vk7uu9vk7uu9vk7.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  min-width: 98vw;
+  padding: 2em;
+  margin-top: 0;
+}
+.boarding-form {
+  background-color: #a58fc7;
+  padding: 2.8em;
+  box-sizing: border-box;
+  border-radius: 20px;
+  justify-content: center;
+  max-width: fit-content;
+  float: right;
+}
+.boarding-form-header {
+  font-size: 1.5em;
+  font-family: "Comic Sans MS", cursive;
+  font-weight: bold;
+  text-align: center;
+}
+.boarding-field {
+  background-color: white;
+  color: #9175df;
+  border-radius: 20px;
+  padding: 0.6em;
+  margin: 1.2em;
+  width: 15vw;
+}
+.input-field:hover {
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgb(101, 51, 155);
+}
+.boarding-form-icon {
+  width: 2vw;
+}
+.boarding-form-fields {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sign-in {
+  margin-left: 2em;
+}
+#sign-in-now {
+  font-size: 1.2em;
+  font-family: "Comic Sans MS", cursive;
+  font-weight: bold;
+  text-align: center;
+  color: #4f3d94;
+  cursor: pointer;
+}
+.boarding-form-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 2%;
+}

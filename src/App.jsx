@@ -1,12 +1,13 @@
 import React from 'react';
 import "./Pages/Login.css";
 import Login from './Pages/Login';
+import Home from './Pages/Home';
 
 
 function App() {
   return (
     <div>
-      <Login></Login>
+      <Home></Home>
     </div>
   );
 }
