@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 .backgound-container {
-  background-image: url("./assets/cover_image_main.jpeg");
+  background-image: url("../assets/cover_image_main.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 100vh;

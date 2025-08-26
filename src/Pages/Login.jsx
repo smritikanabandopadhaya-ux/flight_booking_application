@@ -1,7 +1,7 @@
 import React from "react";
-import "./Login.css";
-import Button from "./Button";
-import Form from "./Form";
+import "../Pages/Login.css";
+import Form from "../Forms/Form";
+
 
 function Login() {
   return (
@@ -9,7 +9,7 @@ function Login() {
       <div className="backgound-container">
         <div className="background-container-main">
           <div className="backgound-container-heading">Wander Wings</div>
-          <Form/>
+          <Form></Form>
         </div>
         <div className="backgound-container-subheading">
           The journey of a thousand miles begins with a single step...

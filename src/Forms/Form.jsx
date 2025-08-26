@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import Button from "./Button";
-import "./Form.css";
-import username from "./assets/username.svg";
-import email from "./assets/email.svg";
-import password from "./assets/password.svg";
+import Button from "../Buttons/Button";
+import "../Forms/Form.css";
+import username from "../assets/username.svg";
+import email from "../assets/email.svg";
+import password from "../assets/password.svg";
 
 function Form() {
   const [isHidden, setHiddenState] = useState(true);
@@ -23,7 +23,7 @@ function Form() {
             alt="username icon"
             className="login-form-icon"
           ></img>
-          <input type="name" className="input-field" placeholder="   Name" />
+          <input type="name" className="input-field" placeholder="   Name" /> 
         </div>
         <div className="login-form-fields">
           <img
@@ -50,9 +50,11 @@ function Form() {
           />
         </div>
         <div className="login-form-fields text-xs flex gap-8 ml-10">
-           <label for="remember me" ><input type="checkbox" />
-         &nbsp;Remember Me&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-          <button id="sign-in-now" >Forget Password ?</button>
+          <label for="remember me">
+            <input type="checkbox" />
+            &nbsp;Remember Me&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </label>
+          <button id="sign-in-now">Forget Password ?</button>
         </div>
 
         {isHidden ? (
@@ -64,33 +66,35 @@ function Form() {
             <Button name="Sign Up" />
           </div>
         )}
-        {isHidden?<div className="login-form-fields">
-          Does not have any Account ?
-          <button
-            id="sign-in-now"
-            onClick={(e) => {
-              e.preventDefault(); //for removing the form property to submit
-              setHiddenState(!isHidden);
-            }}
-          >
-            {" "}
-            &nbsp; Sign Up
-          </button>
-        </div>
-        :<div className="login-form-fields">
-          Already have an Account ?
-          <button
-            id="sign-in-now"
-            onClick={(e) => {
-              e.preventDefault(); //for removing the form property to submit
-              setHiddenState(!isHidden);
-            }}
-          >
-            {" "}
-            &nbsp; Sign In
-          </button>
-        </div>
-          }
+        {isHidden ? (
+          <div className="login-form-fields">
+            Does not have any Account ?
+            <button
+              id="sign-in-now"
+              onClick={(e) => {
+                e.preventDefault(); //for removing the form property to submit
+                setHiddenState(!isHidden);
+              }}
+            >
+              {" "}
+              &nbsp; Sign Up
+            </button>
+          </div>
+        ) : (
+          <div className="login-form-fields">
+            Already have an Account ?
+            <button
+              id="sign-in-now"
+              onClick={(e) => {
+                e.preventDefault(); //for removing the form property to submit
+                setHiddenState(!isHidden);
+              }}
+            >
+              {" "}
+              &nbsp; Sign In
+            </button>
+          </div>
+        )}
       </form>
     </>
   );

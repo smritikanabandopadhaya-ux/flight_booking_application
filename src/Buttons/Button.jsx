@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import "./Button.css"
+import "../Buttons/Button.css"
 
 function Button(props){
   
