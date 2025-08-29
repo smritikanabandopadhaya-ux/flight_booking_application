@@ -10,8 +10,8 @@
 }
 .boarding-form {
   background-color: #a58fc7;
-  padding: 2.8em;
-  box-sizing: border-box;
+  padding: 1em;
+  /* box-sizing: border-box; */
   border-radius: 20px;
   justify-content: center;
   max-width: fit-content;
@@ -36,7 +36,7 @@
   box-shadow: 0 0 10px rgb(101, 51, 155);
 }
 .boarding-form-icon {
-  width: 2vw;
+  width: 1.5vw;
 }
 .boarding-form-fields {
   display: flex;

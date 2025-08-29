@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Button from "../Buttons/Button";
-import "./Home.css";
+import "./BoardingPass.css";
 import username from "../assets/username.svg";
 import calender from "../assets/calender-svgrepo-com.svg";
 import flight_class from '../assets/seat-svgrepo-com.svg';

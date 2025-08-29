@@ -1,11 +1,13 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Button from "../Buttons/Button";
+import { Link } from 'react-router-dom';
 import "../Forms/Form.css";
 import username from "../assets/username.svg";
 import email_img from "../assets/email.svg";
 import password_img from "../assets/password.svg";
 
-function Form() {
+const Form=()=> {
   const [isHidden, setHiddenState] = useState(true); // toggle between SignIn / SignUp
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -104,9 +106,7 @@ function Form() {
 
         {isHidden ? (
           <div className="login-form-fields sign-in">
-            <Button handleClick={handleLogin}
-              name="Sign In"
-            />
+            <Button handleClick={handleLogin} name="Sign In" />
           </div>
         ) : (
           <div className="login-form-fields sign-in">

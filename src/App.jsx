@@ -1,15 +1,17 @@
 import React from 'react';
 import "./Pages/Login.css";
 import Login from './Pages/Login';
-import Home from './Pages/Home';
+import { Routes, Route } from 'react-router-dom';
+import BoardingPass from './Pages/BoardingPass';
 
 
 function App() {
   return (
-    <div>
-      <Home></Home>
-    </div>
-  );
+    <>
+    <Login></Login>
+    <BoardingPass></BoardingPass>
+      </>
+      );
 }
 
-export default App
+export default App;
