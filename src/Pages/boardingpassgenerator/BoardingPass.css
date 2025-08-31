@@ -1,6 +1,6 @@
 @import "tailwindcss";
 .background {
-  background-image: url("../assets/Gemini_Generated_Image_9vk7uu9vk7uu9vk7.jpeg");
+  background-image: url("../../assets/Gemini_Generated_Image_wjgy0twjgy0twjgy.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 100vh;
@@ -9,13 +9,13 @@
   margin-top: 0;
 }
 .boarding-form {
-  background-color: #a58fc7;
+  background-color: #7c6aa6;
   padding: 1em;
-  /* box-sizing: border-box; */
+  box-sizing: border-box;
   border-radius: 20px;
   justify-content: center;
   max-width: fit-content;
-  float: right;
+  align-self: flex-start;
 }
 .boarding-form-header {
   font-size: 1.5em;

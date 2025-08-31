@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import "../Buttons/Button.css"
+import "./Button.css"
 
 function Button({handleClick,name}){
   

@@ -1,0 +1,2539 @@
+[
+  {
+    "flightNumber": "SP209",
+    "airline": "SpiceJet",
+    "aircraft": "Bombardier Q400",
+    "origin": {
+      "city": "Goa",
+      "airport": "Goa International Airport",
+      "iata": "GOI",
+      "terminal": "T1",
+      "departureTime": "2025-09-02T05:00:00"
+    },
+    "destination": {
+      "city": "Kolkata",
+      "airport": "Netaji Subhas Chandra Bose International Airport",
+      "iata": "CCU",
+      "terminal": "T2",
+      "arrivalTime": "2025-09-02T06:30:00"
+    },
+    "duration": "1h 30m",
+    "status": "On Time",
+    "gate": "D5",
+    "boardingTime": "2025-09-02T04:15:00",
+    "seats": {
+      "rows": 9,
+      "columns": 4,
+      "bookedSeats": [
+        "D9",
+        "C6",
+        "D7",
+        "D4",
+        "D9"
+      ],
+      "totalSeats": 36
+    },
+    "price": {
+      "currency": "INR",
+      "economy": 6534,
+      "business": 16616
+    },
+    "baggage": {
+      "cabin": "7kg",
+      "checkIn": "15kg"
+    },
+    "contact": {
+      "customerCare": "+91-9871-121-121",
+      "website": "https://www.spicejet.com"
+    }
+  },
+   {
+    "flightNumber": "SP175",
+    "airline": "SpiceJet",
+    "aircraft": "Bombardier Q810",
+    "origin": {
+      "city": "Goa",
+      "airport": "Goa International Airport",
+      "iata": "GOI",
+      "terminal": "T6",
+      "departureTime": "2025-09-02T05:00:00"
+    },
+    "destination": {
+      "city": "Kolkata",
+      "airport": "Netaji Subhas Chandra Bose International Airport",
+      "iata": "CCU",
+      "terminal": "T2",
+      "arrivalTime": "2025-09-02T06:30:00"
+    },
+    "duration": "1h 30m",
+    "status": "On Time",
+    "gate": "D5",
+    "boardingTime": "2025-09-02T04:35:00",
+    "seats": {
+      "rows": 9,
+      "columns": 4,
+      "bookedSeats": [
+        "D9",
+        "C6",
+        "D7",
+        "D4",
+        "D9"
+      ],
+      "totalSeats": 36
+    },
+    "price": {
+      "currency": "INR",
+      "economy": 6534,
+      "business": 16616
+    },
+    "baggage": {
+      "cabin": "7kg",
+      "checkIn": "15kg"
+    },
+    "contact": {
+      "customerCare": "+91-9871-121-121",
+      "website": "https://www.spicejet.com"
+    }
+  },
+  {
+    "flightNumber": "SP643",
+    "airline": "SpiceJet",
+    "aircraft": "Bombardier Q400",
+    "origin": {
+      "city": "Hyderabad",
+      "airport": "Rajiv Gandhi International Airport",
+      "iata": "HYD",
+      "terminal": "T1",
+      "departureTime": "2025-09-05T20:00:00"
+    },
+    "destination": {
+      "city": "Chennai",
+      "airport": "Chennai International Airport",
+      "iata": "MAA",
+      "terminal": "T1",
+      "arrivalTime": "2025-09-05T21:00:00"
+    },
+    "duration": "1h 0m",
+    "status": "Delayed",
+    "gate": "D18",
+    "boardingTime": "2025-09-05T19:15:00",
+    "seats": {
+      "rows": 9,
+      "columns": 4,
+      "bookedSeats": [
+        "C4",
+        "A2",
+        "C9",
+        "A6",
+        "B4",
+        "D5"
+      ],
+      "totalSeats": 36
+    },
+    "price": {
+      "currency": "INR",
+      "economy": 5241,
+      "business": 14043
+    },
+    "baggage": {
+      "cabin": "7kg",
+      "checkIn": "20kg"
+    },
+    "contact": {
+      "customerCare": "+91-9871-121-121",
+      "website": "https://www.spicejet.com"
+    }
+  },
+  {
+    "flightNumber": "IN110",
+    "airline": "IndiGo",
+    "aircraft": "Airbus A321neo",
+    "origin": {
+      "city": "Jammu & Kashmir",
+      "airport": "Sheikh ul-Alam International Airport",
+      "iata": "SXR",
+      "terminal": "T1",
+      "departureTime": "2025-09-01T13:00:00"
+    },
+    "destination": {
+      "city": "Bengaluru",
+      "airport": "Kempegowda International Airport",
+      "iata": "BLR",
+      "terminal": "T1",
+      "arrivalTime": "2025-09-01T15:00:00"
+    },
+    "duration": "2h 0m",
+    "status": "On Time",
+    "gate": "A2",
+    "boardingTime": "2025-09-01T12:15:00",
+    "seats": {
+      "rows": 11,
+      "columns": 4,
+      "bookedSeats": [
+        "A10",
+        "C10",
+        "B11",
+        "C11",
+        "B9",
+        "B9",
+        "D5",
+        "C2",
+        "D11",
+        "B7"
+      ],
+      "totalSeats": 44
+    },
+    "price": {
+      "currency": "INR",
+      "economy": 2967,
+      "business": 9772
+    },
+    "baggage": {
+      "cabin": "7kg",
+      "checkIn": "15kg"
+    },
+    "contact": {
+      "customerCare": "+91-9910-383-838",
+      "website": "https://www.goindigo.in"
+    }
+  },
+  {
+    "flightNumber": "SP446",
+    "airline": "SpiceJet",
+    "aircraft": "Bombardier Q400",
+    "origin": {
+      "city": "Hyderabad",
+      "airport": "Rajiv Gandhi International Airport",
+      "iata": "HYD",
+      "terminal": "T1",
+      "departureTime": "2025-09-02T18:00:00"
+    },
+    "destination": {
+      "city": "Mumbai",
+      "airport": "Chhatrapati Shivaji Maharaj International Airport",
+      "iata": "BOM",
+      "terminal": "T2",
+      "arrivalTime": "2025-09-02T20:00:00"
+    },
+    "duration": "2h 0m",
+    "status": "Cancelled",
+    "gate": "B17",
+    "boardingTime": "2025-09-02T17:15:00",
+    "seats": {
+      "rows": 12,
+      "columns": 6,
+      "bookedSeats": [
+        "B3",
+        "C12",
+        "F6",
+        "B10",
+        "E9",
+        "C11",
+        "E7",
+        "B4",
+        "C7",
+        "E4"
+      ],
+      "totalSeats": 72
+    },
+    "price": {
+      "currency": "INR",
+      "economy": 4090,
+      "business": 9245
+    },
+    "baggage": {
+      "cabin": "7kg",
+      "checkIn": "20kg"
+    },
+    "contact": {
+      "customerCare": "+91-9871-121-121",
+      "website": "https://www.spicejet.com"
+    }
+  },
+  {
+    "flightNumber": "SP298",
+    "airline": "SpiceJet",
+    "aircraft": "Bombardier Q400",
+    "origin": {
+      "city": "Bengaluru",
+      "airport": "Kempegowda International Airport",
+      "iata": "BLR",
+      "terminal": "T1",
+      "departureTime": "2025-09-02T13:00:00"
+    },
+    "destination": {
+      "city": "Hyderabad",
+      "airport": "Rajiv Gandhi International Airport",
+      "iata": "HYD",
+      "terminal": "T1",
+      "arrivalTime": "2025-09-02T15:30:00"
+    },
+    "duration": "2h 30m",
+    "status": "Delayed",
+    "gate": "B13",
+    "boardingTime": "2025-09-02T12:15:00",
+    "seats": {
+      "rows": 11,
+      "columns": 4,
+      "bookedSeats": [
+        "C10",
+        "D9",
+        "A4",
+        "A10",
+        "D4",
+        "D6",
+        "A9",
+        "C8"
+      ],
+      "totalSeats": 44
+    },
+    "price": {
+      "currency": "INR",
+      "economy": 4927,
+      "business": 11606
+    },
+    "baggage": {
+      "cabin": "7kg",
+      "checkIn": "15kg"
+    },
+    "contact": {
+      "customerCare": "+91-9871-121-121",
+      "website": "https://www.spicejet.com"
+    }
+  },
+  {
+    "flightNumber": "IN666",
+    "airline": "IndiGo",
+    "aircraft": "Airbus A321neo",
+    "origin": {
+      "city": "Kochi",
+      "airport": "Cochin International Airport",
+      "iata": "COK",
+      "terminal": "T3",
+      "departureTime": "2025-09-05T16:00:00"
+    },
+    "destination": {
+      "city": "Goa",
+      "airport": "Goa International Airport",
+      "iata": "GOI",
+      "terminal": "T1",
+      "arrivalTime": "2025-09-05T17:30:00"
+    },
+    "duration": "1h 30m",
+    "status": "Delayed",
+    "gate": "D17",
+    "boardingTime": "2025-09-05T15:15:00",
+    "seats": {
+      "rows": 6,
+      "columns": 6,
+      "bookedSeats": [
+        "C4",
+        "B1",
+        "E6",
+        "D5",
+        "C6",
+        "C6",
+        "B1",
+        "B5",
+        "F5",
+        "F2"
+      ],
+      "totalSeats": 36
+    },
+    "price": {
+      "currency": "INR",
+      "economy": 6600,
+      "business": 17434
+    },
+    "baggage": {
+      "cabin": "7kg",
+      "checkIn": "20kg"
+    },
+    "contact": {
+      "customerCare": "+91-9910-383-838",
+      "website": "https://www.goindigo.in"
+    }
+  },
+  {
+    "flightNumber": "AI312",
+    "airline": "Air India",
+    "aircraft": "Airbus A320",
+    "origin": {
+      "city": "Vizag",
+      "airport": "Visakhapatnam International Airport",
+      "iata": "VTZ",
+      "terminal": "T1",
+      "departureTime": "2025-09-05T04:00:00"
+    },
+    "destination": {
+      "city": "Kochi",
+      "airport": "Cochin International Airport",
+      "iata": "COK",
+      "terminal": "T3",
+      "arrivalTime": "2025-09-05T07:00:00"
+    },
+    "duration": "3h 0m",
+    "status": "Cancelled",
+    "gate": "A6",
+    "boardingTime": "2025-09-05T03:15:00",
+    "seats": {
+      "rows": 11,
+      "columns": 6,
+      "bookedSeats": [
+        "E5",
+        "F3",
+        "C5",
+        "A6",
+        "A9"
+      ],
+      "totalSeats": 66
+    },
+    "price": {
+      "currency": "INR",
+      "economy": 3372,
+      "business": 10099
+    },
+    "baggage": {
+      "cabin": "7kg",
+      "checkIn": "20kg"
+    },
+    "contact": {
+      "customerCare": "+91-1800-180-1407",
+      "website": "https://www.airindia.com"
+    }
+  },
+  {
+    "flightNumber": "AI975",
+    "airline": "Air India",
+    "aircraft": "Airbus A320",
+    "origin": {
+      "city": "Amritsar",
+      "airport": "Sri Guru Ram Dass Jee International Airport",
+      "iata": "ATQ",
+      "terminal": "T1",
+      "departureTime": "2025-09-02T13:00:00"
+    },
+    "destination": {
+      "city": "Pune",
+      "airport": "Pune International Airport",
+      "iata": "PNQ",
+      "terminal": "T1",
+      "arrivalTime": "2025-09-02T15:00:00"
+    },
+    "duration": "2h 0m",
+    "status": "On Time",
+    "gate": "D8",
+    "boardingTime": "2025-09-02T12:15:00",
+    "seats": {
+      "rows": 9,
+      "columns": 6,
+      "bookedSeats": [
+        "C6",
+        "E5",
+        "B6",
+        "C3",
+        "E4"
+      ],
+      "totalSeats": 54
+    },
+    "price": {
+      "currency": "INR",
+      "economy": 3224,
+      "business": 8059
+    },
+    "baggage": {
+      "cabin": "7kg",
+      "checkIn": "20kg"
+    },
+    "contact": {
+      "customerCare": "+91-1800-180-1407",
+      "website": "https://www.airindia.com"
+    }
+  },
+  {
+    "flightNumber": "IN308",
+    "airline": "IndiGo",
+    "aircraft": "Airbus A321neo",
+    "origin": {
+      "city": "Vizag",
+      "airport": "Visakhapatnam International Airport",
+      "iata": "VTZ",
+      "terminal": "T1",
+      "departureTime": "2025-09-02T04:00:00"
+    },
+    "destination": {
+      "city": "Jammu & Kashmir",
+      "airport": "Sheikh ul-Alam International Airport",
+      "iata": "SXR",
+      "terminal": "T1",
+      "arrivalTime": "2025-09-02T05:30:00"
+    },
+    "duration": "1h 30m",
+    "status": "Delayed",
+    "gate": "A18",
+    "boardingTime": "2025-09-02T03:15:00",
+    "seats": {
+      "rows": 8,
+      "columns": 4,
+      "bookedSeats": [
+        "A2",
+        "C3",
+        "D5"
+      ],
+      "totalSeats": 32
+    },
+    "price": {
+      "currency": "INR",
+      "economy": 5550,
+      "business": 12340
+    },
+    "baggage": {
+      "cabin": "7kg",
+      "checkIn": "20kg"
+    },
+    "contact": {
+      "customerCare": "+91-9910-383-838",
+      "website": "https://www.goindigo.in"
+    }
+  },
+  {
+    "flightNumber": "AI965",
+    "airline": "Air India",
+    "aircraft": "Airbus A320",
+    "origin": {
+      "city": "Goa",
+      "airport": "Goa International Airport",
+      "iata": "GOI",
+      "terminal": "T1",
+      "departureTime": "2025-09-02T18:00:00"
+    },
+    "destination": {
+      "city": "Vizag",
+      "airport": "Visakhapatnam International Airport",
+      "iata": "VTZ",
+      "terminal": "T1",
+      "arrivalTime": "2025-09-02T21:00:00"
+    },
+    "duration": "3h 0m",
+    "status": "Delayed",
+    "gate": "E1",
+    "boardingTime": "2025-09-02T17:15:00",
+    "seats": {
+      "rows": 11,
+      "columns": 5,
+      "bookedSeats": [
+        "C3",
+        "B6",
+        "C11",
+        "B2",
+        "D4",
+        "B4",
+        "B9",
+        "C7",
+        "C4"
+      ],
+      "totalSeats": 55
+    },
+    "price": {
+      "currency": "INR",
+      "economy": 5938,
+      "business": 14880
+    },
+    "baggage": {
+      "cabin": "7kg",
+      "checkIn": "20kg"
+    },
+    "contact": {
+      "customerCare": "+91-1800-180-1407",
+      "website": "https://www.airindia.com"
+    }
+  },
+  {
+    "flightNumber": "SP747",
+    "airline": "SpiceJet",
+    "aircraft": "Bombardier Q400",
+    "origin": {
+      "city": "Jammu & Kashmir",
+      "airport": "Sheikh ul-Alam International Airport",
+      "iata": "SXR",
+      "terminal": "T1",
+      "departureTime": "2025-09-02T22:00:00"
+    },
+    "destination": {
+      "city": "Pune",
+      "airport": "Pune International Airport",
+      "iata": "PNQ",
+      "terminal": "T1",
+      "arrivalTime": "2025-09-02T23:30:00"
+    },
+    "duration": "1h 30m",
+    "status": "Delayed",
+    "gate": "C5",
+    "boardingTime": "2025-09-02T21:15:00",
+    "seats": {
+      "rows": 5,
+      "columns": 5,
+      "bookedSeats": [
+        "B4",
+        "A2",
+        "B5",
+        "A2",
+        "B5",
+        "D5",
+        "A5",
+        "D3",
+        "B5",
+        "B2"
+      ],
+      "totalSeats": 25
+    },
+    "price": {
+      "currency": "INR",
+      "economy": 6319,
+      "business": 13923
+    },
+    "baggage": {
+      "cabin": "7kg",
+      "checkIn": "20kg"
+    },
+    "contact": {
+      "customerCare": "+91-9871-121-121",
+      "website": "https://www.spicejet.com"
+    }
+  },
+  {
+    "flightNumber": "AI756",
+    "airline": "Air India",
+    "aircraft": "Airbus A320",
+    "origin": {
+      "city": "Mumbai",
+      "airport": "Chhatrapati Shivaji Maharaj International Airport",
+      "iata": "BOM",
+      "terminal": "T2",
+      "departureTime": "2025-09-05T17:00:00"
+    },
+    "destination": {
+      "city": "Vizag",
+      "airport": "Visakhapatnam International Airport",
+      "iata": "VTZ",
+      "terminal": "T1",
+      "arrivalTime": "2025-09-05T18:00:00"
+    },
+    "duration": "1h 0m",
+    "status": "Cancelled",
+    "gate": "A4",
+    "boardingTime": "2025-09-05T16:15:00",
+    "seats": {
+      "rows": 10,
+      "columns": 6,
+      "bookedSeats": [
+        "F8",
+        "F10",
+        "D9",
+        "C5",
+        "D4",
+        "D2",
+        "B1"
+      ],
+      "totalSeats": 60
+    },
+    "price": {
+      "currency": "INR",
+      "economy": 2897,
+      "business": 9980
+    },
+    "baggage": {
+      "cabin": "7kg",
+      "checkIn": "20kg"
+    },
+    "contact": {
+      "customerCare": "+91-1800-180-1407",
+      "website": "https://www.airindia.com"
+    }
+  },
+  {
+    "flightNumber": "GO658",
+    "airline": "Go First",
+    "aircraft": "Airbus A320neo",
+    "origin": {
+      "city": "Delhi",
+      "airport": "Indira Gandhi International Airport",
+      "iata": "DEL",
+      "terminal": "T3",
+      "departureTime": "2025-09-02T08:00:00"
+    },
+    "destination": {
+      "city": "Chennai",
+      "airport": "Chennai International Airport",
+      "iata": "MAA",
+      "terminal": "T1",
+      "arrivalTime": "2025-09-02T11:00:00"
+    },
+    "duration": "3h 0m",
+    "status": "On Time",
+    "gate": "A6",
+    "boardingTime": "2025-09-02T07:15:00",
+    "seats": {
+      "rows": 6,
+      "columns": 6,
+      "bookedSeats": [
+        "D4",
+        "E2",
+        "C3",
+        "C3",
+        "C4",
+        "A1",
+        "B6",
+        "F3",
+        "F2",
+        "F3"
+      ],
+      "totalSeats": 36
+    },
+    "price": {
+      "currency": "INR",
+      "economy": 3461,
+      "business": 11185
+    },
+    "baggage": {
+      "cabin": "7kg",
+      "checkIn": "15kg"
+    },
+    "contact": {
+      "customerCare": "+91-2222-222-222",
+      "website": "https://www.flygofirst.com"
+    }
+  },
+  {
+    "flightNumber": "AI210",
+    "airline": "Air India",
+    "aircraft": "Airbus A320",
+    "origin": {
+      "city": "Amritsar",
+      "airport": "Sri Guru Ram Dass Jee International Airport",
+      "iata": "ATQ",
+      "terminal": "T1",
+      "departureTime": "2025-09-04T19:00:00"
+    },
+    "destination": {
+      "city": "Pune",
+      "airport": "Pune International Airport",
+      "iata": "PNQ",
+      "terminal": "T1",
+      "arrivalTime": "2025-09-04T21:30:00"
+    },
+    "duration": "2h 30m",
+    "status": "On Time",
+    "gate": "D1",
+    "boardingTime": "2025-09-04T18:15:00",
+    "seats": {
+      "rows": 8,
+      "columns": 6,
+      "bookedSeats": [
+        "B2",
+        "D7",
+        "E2",
+        "B7",
+        "C7",
+        "A6"
+      ],
+      "totalSeats": 48
+    },
+    "price": {
+      "currency": "INR",
+      "economy": 5493,
+      "business": 15184
+    },
+    "baggage": {
+      "cabin": "7kg",
+      "checkIn": "20kg"
+    },
+    "contact": {
+      "customerCare": "+91-1800-180-1407",
+      "website": "https://www.airindia.com"
+    }
+  },
+  {
+    "flightNumber": "VI391",
+    "airline": "Vistara",
+    "aircraft": "Boeing 737",
+    "origin": {
+      "city": "Pune",
+      "airport": "Pune International Airport",
+      "iata": "PNQ",
+      "terminal": "T1",
+      "departureTime": "2025-09-04T14:00:00"
+    },
+    "destination": {
+      "city": "Bengaluru",
+      "airport": "Kempegowda International Airport",
+      "iata": "BLR",
+      "terminal": "T1",
+      "arrivalTime": "2025-09-04T16:00:00"
+    },
+    "duration": "2h 0m",
+    "status": "Cancelled",
+    "gate": "D1",
+    "boardingTime": "2025-09-04T13:15:00",
+    "seats": {
+      "rows": 12,
+      "columns": 5,
+      "bookedSeats": [
+        "E7",
+        "C8",
+        "B8"
+      ],
+      "totalSeats": 60
+    },
+    "price": {
+      "currency": "INR",
+      "economy": 3476,
+      "business": 11396
+    },
+    "baggage": {
+      "cabin": "7kg",
+      "checkIn": "20kg"
+    },
+    "contact": {
+      "customerCare": "+91-9289-889-889",
+      "website": "https://www.airvistara.com"
+    }
+  },
+  {
+    "flightNumber": "SP559",
+    "airline": "SpiceJet",
+    "aircraft": "Bombardier Q400",
+    "origin": {
+      "city": "Kolkata",
+      "airport": "Netaji Subhas Chandra Bose International Airport",
+      "iata": "CCU",
+      "terminal": "T2",
+      "departureTime": "2025-09-02T01:00:00"
+    },
+    "destination": {
+      "city": "Goa",
+      "airport": "Goa International Airport",
+      "iata": "GOI",
+      "terminal": "T1",
+      "arrivalTime": "2025-09-02T03:00:00"
+    },
+    "duration": "2h 0m",
+    "status": "Delayed",
+    "gate": "D16",
+    "boardingTime": "2025-09-02T00:15:00",
+    "seats": {
+      "rows": 9,
+      "columns": 6,
+      "bookedSeats": [
+        "A6",
+        "A7",
+        "C4",
+        "D9",
+        "A1",
+        "C9",
+        "A2",
+        "F1",
+        "F5"
+      ],
+      "totalSeats": 54
+    },
+    "price": {
+      "currency": "INR",
+      "economy": 3389,
+      "business": 9209
+    },
+    "baggage": {
+      "cabin": "7kg",
+      "checkIn": "20kg"
+    },
+    "contact": {
+      "customerCare": "+91-9871-121-121",
+      "website": "https://www.spicejet.com"
+    }
+  },
+  {
+    "flightNumber": "GO537",
+    "airline": "Go First",
+    "aircraft": "Airbus A320neo",
+    "origin": {
+      "city": "Pune",
+      "airport": "Pune International Airport",
+      "iata": "PNQ",
+      "terminal": "T1",
+      "departureTime": "2025-09-02T16:00:00"
+    },
+    "destination": {
+      "city": "Mumbai",
+      "airport": "Chhatrapati Shivaji Maharaj International Airport",
+      "iata": "BOM",
+      "terminal": "T2",
+      "arrivalTime": "2025-09-02T18:30:00"
+    },
+    "duration": "2h 30m",
+    "status": "Cancelled",
+    "gate": "A11",
+    "boardingTime": "2025-09-02T15:15:00",
+    "seats": {
+      "rows": 10,
+      "columns": 4,
+      "bookedSeats": [
+        "A4",
+        "C8",
+        "D1",
+        "A1"
+      ],
+      "totalSeats": 40
+    },
+    "price": {
+      "currency": "INR",
+      "economy": 7202,
+      "business": 18065
+    },
+    "baggage": {
+      "cabin": "7kg",
+      "checkIn": "20kg"
+    },
+    "contact": {
+      "customerCare": "+91-2222-222-222",
+      "website": "https://www.flygofirst.com"
+    }
+  },
+  {
+    "flightNumber": "IN806",
+    "airline": "IndiGo",
+    "aircraft": "Airbus A321neo",
+    "origin": {
+      "city": "Kochi",
+      "airport": "Cochin International Airport",
+      "iata": "COK",
+      "terminal": "T3",
+      "departureTime": "2025-09-02T00:00:00"
+    },
+    "destination": {
+      "city": "Amritsar",
+      "airport": "Sri Guru Ram Dass Jee International Airport",
+      "iata": "ATQ",
+      "terminal": "T1",
+      "arrivalTime": "2025-09-02T01:30:00"
+    },
+    "duration": "1h 30m",
+    "status": "Delayed",
+    "gate": "C6",
+    "boardingTime": "2025-09-01T23:15:00",
+    "seats": {
+      "rows": 6,
+      "columns": 6,
+      "bookedSeats": [
+        "B1",
+        "A6",
+        "F5",
+        "D1",
+        "D6"
+      ],
+      "totalSeats": 36
+    },
+    "price": {
+      "currency": "INR",
+      "economy": 4135,
+      "business": 10019
+    },
+    "baggage": {
+      "cabin": "7kg",
+      "checkIn": "20kg"
+    },
+    "contact": {
+      "customerCare": "+91-9910-383-838",
+      "website": "https://www.goindigo.in"
+    }
+  },
+  {
+    "flightNumber": "GO745",
+    "airline": "Go First",
+    "aircraft": "Airbus A320neo",
+    "origin": {
+      "city": "Hyderabad",
+      "airport": "Rajiv Gandhi International Airport",
+      "iata": "HYD",
+      "terminal": "T1",
+      "departureTime": "2025-09-03T03:00:00"
+    },
+    "destination": {
+      "city": "Delhi",
+      "airport": "Indira Gandhi International Airport",
+      "iata": "DEL",
+      "terminal": "T3",
+      "arrivalTime": "2025-09-03T04:30:00"
+    },
+    "duration": "1h 30m",
+    "status": "On Time",
+    "gate": "D13",
+    "boardingTime": "2025-09-03T02:15:00",
+    "seats": {
+      "rows": 12,
+      "columns": 5,
+      "bookedSeats": [
+        "C4",
+        "D6",
+        "E9",
+        "A5"
+      ],
+      "totalSeats": 60
+    },
+    "price": {
+      "currency": "INR",
+      "economy": 4652,
+      "business": 13246
+    },
+    "baggage": {
+      "cabin": "7kg",
+      "checkIn": "20kg"
+    },
+    "contact": {
+      "customerCare": "+91-2222-222-222",
+      "website": "https://www.flygofirst.com"
+    }
+  },
+  {
+    "flightNumber": "IN306",
+    "airline": "IndiGo",
+    "aircraft": "Airbus A321neo",
+    "origin": {
+      "city": "Delhi",
+      "airport": "Indira Gandhi International Airport",
+      "iata": "DEL",
+      "terminal": "T3",
+      "departureTime": "2025-09-03T03:00:00"
+    },
+    "destination": {
+      "city": "Amritsar",
+      "airport": "Sri Guru Ram Dass Jee International Airport",
+      "iata": "ATQ",
+      "terminal": "T1",
+      "arrivalTime": "2025-09-03T04:00:00"
+    },
+    "duration": "1h 0m",
+    "status": "Cancelled",
+    "gate": "B6",
+    "boardingTime": "2025-09-03T02:15:00",
+    "seats": {
+      "rows": 6,
+      "columns": 5,
+      "bookedSeats": [
+        "C6",
+        "E5",
+        "D1",
+        "D5",
+        "C6"
+      ],
+      "totalSeats": 30
+    },
+    "price": {
+      "currency": "INR",
+      "economy": 5889,
+      "business": 15606
+    },
+    "baggage": {
+      "cabin": "7kg",
+      "checkIn": "15kg"
+    },
+    "contact": {
+      "customerCare": "+91-9910-383-838",
+      "website": "https://www.goindigo.in"
+    }
+  },
+  {
+    "flightNumber": "AI292",
+    "airline": "Air India",
+    "aircraft": "Airbus A320",
+    "origin": {
+      "city": "Pune",
+      "airport": "Pune International Airport",
+      "iata": "PNQ",
+      "terminal": "T1",
+      "departureTime": "2025-09-02T21:00:00"
+    },
+    "destination": {
+      "city": "New Jalpaiguri",
+      "airport": "Bagdogra International Airport",
+      "iata": "IXB",
+      "terminal": "T1",
+      "arrivalTime": "2025-09-02T22:15:00"
+    },
+    "duration": "1h 15m",
+    "status": "On Time",
+    "gate": "C4",
+    "boardingTime": "2025-09-02T20:15:00",
+    "seats": {
+      "rows": 12,
+      "columns": 4,
+      "bookedSeats": [
+        "A2",
+        "D11",
+        "D6",
+        "C12",
+        "C2",
+        "C7",
+        "A3"
+      ],
+      "totalSeats": 48
+    },
+    "price": {
+      "currency": "INR",
+      "economy": 5875,
+      "business": 16739
+    },
+    "baggage": {
+      "cabin": "7kg",
+      "checkIn": "15kg"
+    },
+    "contact": {
+      "customerCare": "+91-1800-180-1407",
+      "website": "https://www.airindia.com"
+    }
+  },
+  {
+    "flightNumber": "IN382",
+    "airline": "IndiGo",
+    "aircraft": "Airbus A321neo",
+    "origin": {
+      "city": "Hyderabad",
+      "airport": "Rajiv Gandhi International Airport",
+      "iata": "HYD",
+      "terminal": "T1",
+      "departureTime": "2025-09-05T19:00:00"
+    },
+    "destination": {
+      "city": "Pune",
+      "airport": "Pune International Airport",
+      "iata": "PNQ",
+      "terminal": "T1",
+      "arrivalTime": "2025-09-05T20:15:00"
+    },
+    "duration": "1h 15m",
+    "status": "Delayed",
+    "gate": "C17",
+    "boardingTime": "2025-09-05T18:15:00",
+    "seats": {
+      "rows": 10,
+      "columns": 4,
+      "bookedSeats": [
+        "C9",
+        "C7",
+        "D8",
+        "B4",
+        "C7",
+        "D3"
+      ],
+      "totalSeats": 40
+    },
+    "price": {
+      "currency": "INR",
+      "economy": 3496,
+      "business": 8206
+    },
+    "baggage": {
+      "cabin": "7kg",
+      "checkIn": "15kg"
+    },
+    "contact": {
+      "customerCare": "+91-9910-383-838",
+      "website": "https://www.goindigo.in"
+    }
+  },
+  {
+    "flightNumber": "IN814",
+    "airline": "IndiGo",
+    "aircraft": "Airbus A321neo",
+    "origin": {
+      "city": "Kochi",
+      "airport": "Cochin International Airport",
+      "iata": "COK",
+      "terminal": "T3",
+      "departureTime": "2025-09-02T08:00:00"
+    },
+    "destination": {
+      "city": "Pune",
+      "airport": "Pune International Airport",
+      "iata": "PNQ",
+      "terminal": "T1",
+      "arrivalTime": "2025-09-02T09:30:00"
+    },
+    "duration": "1h 30m",
+    "status": "On Time",
+    "gate": "E17",
+    "boardingTime": "2025-09-02T07:15:00",
+    "seats": {
+      "rows": 12,
+      "columns": 5,
+      "bookedSeats": [
+        "C2",
+        "C5",
+        "C10",
+        "C7",
+        "D7",
+        "E2",
+        "A5",
+        "A8",
+        "D8"
+      ],
+      "totalSeats": 60
+    },
+    "price": {
+      "currency": "INR",
+      "economy": 3352,
+      "business": 9480
+    },
+    "baggage": {
+      "cabin": "7kg",
+      "checkIn": "15kg"
+    },
+    "contact": {
+      "customerCare": "+91-9910-383-838",
+      "website": "https://www.goindigo.in"
+    }
+  },
+  {
+    "flightNumber": "GO241",
+    "airline": "Go First",
+    "aircraft": "Airbus A320neo",
+    "origin": {
+      "city": "Goa",
+      "airport": "Goa International Airport",
+      "iata": "GOI",
+      "terminal": "T1",
+      "departureTime": "2025-09-01T18:00:00"
+    },
+    "destination": {
+      "city": "Mumbai",
+      "airport": "Chhatrapati Shivaji Maharaj International Airport",
+      "iata": "BOM",
+      "terminal": "T2",
+      "arrivalTime": "2025-09-01T20:00:00"
+    },
+    "duration": "2h 0m",
+    "status": "Cancelled",
+    "gate": "D8",
+    "boardingTime": "2025-09-01T17:15:00",
+    "seats": {
+      "rows": 12,
+      "columns": 6,
+      "bookedSeats": [
+        "E1",
+        "C4",
+        "E6",
+        "E5",
+        "D6",
+        "E1",
+        "C6",
+        "F9",
+        "E4",
+        "E10"
+      ],
+      "totalSeats": 72
+    },
+    "price": {
+      "currency": "INR",
+      "economy": 5006,
+      "business": 13999
+    },
+    "baggage": {
+      "cabin": "7kg",
+      "checkIn": "20kg"
+    },
+    "contact": {
+      "customerCare": "+91-2222-222-222",
+      "website": "https://www.flygofirst.com"
+    }
+  },
+  {
+    "flightNumber": "VI973",
+    "airline": "Vistara",
+    "aircraft": "Boeing 737",
+    "origin": {
+      "city": "Vizag",
+      "airport": "Visakhapatnam International Airport",
+      "iata": "VTZ",
+      "terminal": "T1",
+      "departureTime": "2025-09-01T06:00:00"
+    },
+    "destination": {
+      "city": "Goa",
+      "airport": "Goa International Airport",
+      "iata": "GOI",
+      "terminal": "T1",
+      "arrivalTime": "2025-09-01T09:00:00"
+    },
+    "duration": "3h 0m",
+    "status": "Delayed",
+    "gate": "A16",
+    "boardingTime": "2025-09-01T05:15:00",
+    "seats": {
+      "rows": 9,
+      "columns": 6,
+      "bookedSeats": [
+        "E4",
+        "B7",
+        "B6",
+        "B2",
+        "D3",
+        "C2"
+      ],
+      "totalSeats": 54
+    },
+    "price": {
+      "currency": "INR",
+      "economy": 3839,
+      "business": 10782
+    },
+    "baggage": {
+      "cabin": "7kg",
+      "checkIn": "20kg"
+    },
+    "contact": {
+      "customerCare": "+91-9289-889-889",
+      "website": "https://www.airvistara.com"
+    }
+  },
+  {
+    "flightNumber": "GO594",
+    "airline": "Go First",
+    "aircraft": "Airbus A320neo",
+    "origin": {
+      "city": "Kochi",
+      "airport": "Cochin International Airport",
+      "iata": "COK",
+      "terminal": "T3",
+      "departureTime": "2025-09-04T17:00:00"
+    },
+    "destination": {
+      "city": "Jammu & Kashmir",
+      "airport": "Sheikh ul-Alam International Airport",
+      "iata": "SXR",
+      "terminal": "T1",
+      "arrivalTime": "2025-09-04T18:30:00"
+    },
+    "duration": "1h 30m",
+    "status": "On Time",
+    "gate": "B5",
+    "boardingTime": "2025-09-04T16:15:00",
+    "seats": {
+      "rows": 12,
+      "columns": 6,
+      "bookedSeats": [
+        "D12",
+        "A8",
+        "E1",
+        "D5",
+        "A3",
+        "E10"
+      ],
+      "totalSeats": 72
+    },
+    "price": {
+      "currency": "INR",
+      "economy": 4267,
+      "business": 11436
+    },
+    "baggage": {
+      "cabin": "7kg",
+      "checkIn": "20kg"
+    },
+    "contact": {
+      "customerCare": "+91-2222-222-222",
+      "website": "https://www.flygofirst.com"
+    }
+  },
+  {
+    "flightNumber": "SP783",
+    "airline": "SpiceJet",
+    "aircraft": "Bombardier Q400",
+    "origin": {
+      "city": "Chennai",
+      "airport": "Chennai International Airport",
+      "iata": "MAA",
+      "terminal": "T1",
+      "departureTime": "2025-09-05T16:00:00"
+    },
+    "destination": {
+      "city": "Jammu & Kashmir",
+      "airport": "Sheikh ul-Alam International Airport",
+      "iata": "SXR",
+      "terminal": "T1",
+      "arrivalTime": "2025-09-05T18:00:00"
+    },
+    "duration": "2h 0m",
+    "status": "On Time",
+    "gate": "E7",
+    "boardingTime": "2025-09-05T15:15:00",
+    "seats": {
+      "rows": 7,
+      "columns": 6,
+      "bookedSeats": [
+        "B2",
+        "D2",
+        "E4",
+        "C6",
+        "D2",
+        "D3"
+      ],
+      "totalSeats": 42
+    },
+    "price": {
+      "currency": "INR",
+      "economy": 6209,
+      "business": 13794
+    },
+    "baggage": {
+      "cabin": "7kg",
+      "checkIn": "15kg"
+    },
+    "contact": {
+      "customerCare": "+91-9871-121-121",
+      "website": "https://www.spicejet.com"
+    }
+  },
+  {
+    "flightNumber": "VI720",
+    "airline": "Vistara",
+    "aircraft": "Boeing 737",
+    "origin": {
+      "city": "Bengaluru",
+      "airport": "Kempegowda International Airport",
+      "iata": "BLR",
+      "terminal": "T1",
+      "departureTime": "2025-09-02T08:00:00"
+    },
+    "destination": {
+      "city": "Delhi",
+      "airport": "Indira Gandhi International Airport",
+      "iata": "DEL",
+      "terminal": "T3",
+      "arrivalTime": "2025-09-02T09:30:00"
+    },
+    "duration": "1h 30m",
+    "status": "Cancelled",
+    "gate": "B16",
+    "boardingTime": "2025-09-02T07:15:00",
+    "seats": {
+      "rows": 5,
+      "columns": 5,
+      "bookedSeats": [
+        "C2",
+        "B4",
+        "B1",
+        "C2",
+        "C3",
+        "E4",
+        "B4",
+        "D1"
+      ],
+      "totalSeats": 25
+    },
+    "price": {
+      "currency": "INR",
+      "economy": 6798,
+      "business": 17494
+    },
+    "baggage": {
+      "cabin": "7kg",
+      "checkIn": "20kg"
+    },
+    "contact": {
+      "customerCare": "+91-9289-889-889",
+      "website": "https://www.airvistara.com"
+    }
+  },
+  {
+    "flightNumber": "AI840",
+    "airline": "Air India",
+    "aircraft": "Airbus A320",
+    "origin": {
+      "city": "Goa",
+      "airport": "Goa International Airport",
+      "iata": "GOI",
+      "terminal": "T1",
+      "departureTime": "2025-09-02T09:00:00"
+    },
+    "destination": {
+      "city": "New Jalpaiguri",
+      "airport": "Bagdogra International Airport",
+      "iata": "IXB",
+      "terminal": "T1",
+      "arrivalTime": "2025-09-02T10:30:00"
+    },
+    "duration": "1h 30m",
+    "status": "Delayed",
+    "gate": "E14",
+    "boardingTime": "2025-09-02T08:15:00",
+    "seats": {
+      "rows": 6,
+      "columns": 5,
+      "bookedSeats": [
+        "C3",
+        "E4",
+        "B6"
+      ],
+      "totalSeats": 30
+    },
+    "price": {
+      "currency": "INR",
+      "economy": 6857,
+      "business": 15677
+    },
+    "baggage": {
+      "cabin": "7kg",
+      "checkIn": "15kg"
+    },
+    "contact": {
+      "customerCare": "+91-1800-180-1407",
+      "website": "https://www.airindia.com"
+    }
+  },
+  {
+    "flightNumber": "IN668",
+    "airline": "IndiGo",
+    "aircraft": "Airbus A321neo",
+    "origin": {
+      "city": "Kolkata",
+      "airport": "Netaji Subhas Chandra Bose International Airport",
+      "iata": "CCU",
+      "terminal": "T2",
+      "departureTime": "2025-09-05T10:00:00"
+    },
+    "destination": {
+      "city": "Amritsar",
+      "airport": "Sri Guru Ram Dass Jee International Airport",
+      "iata": "ATQ",
+      "terminal": "T1",
+      "arrivalTime": "2025-09-05T11:15:00"
+    },
+    "duration": "1h 15m",
+    "status": "On Time",
+    "gate": "C6",
+    "boardingTime": "2025-09-05T09:15:00",
+    "seats": {
+      "rows": 5,
+      "columns": 6,
+      "bookedSeats": [
+        "B5",
+        "E5",
+        "F1",
+        "E4"
+      ],
+      "totalSeats": 30
+    },
+    "price": {
+      "currency": "INR",
+      "economy": 5880,
+      "business": 13351
+    },
+    "baggage": {
+      "cabin": "7kg",
+      "checkIn": "20kg"
+    },
+    "contact": {
+      "customerCare": "+91-9910-383-838",
+      "website": "https://www.goindigo.in"
+    }
+  },
+  {
+    "flightNumber": "GO846",
+    "airline": "Go First",
+    "aircraft": "Airbus A320neo",
+    "origin": {
+      "city": "Kolkata",
+      "airport": "Netaji Subhas Chandra Bose International Airport",
+      "iata": "CCU",
+      "terminal": "T2",
+      "departureTime": "2025-09-06T04:00:00"
+    },
+    "destination": {
+      "city": "Goa",
+      "airport": "Goa International Airport",
+      "iata": "GOI",
+      "terminal": "T1",
+      "arrivalTime": "2025-09-06T06:00:00"
+    },
+    "duration": "2h 0m",
+    "status": "Cancelled",
+    "gate": "C7",
+    "boardingTime": "2025-09-06T03:15:00",
+    "seats": {
+      "rows": 12,
+      "columns": 6,
+      "bookedSeats": [
+        "C6",
+        "E4",
+        "B1",
+        "A4",
+        "C7",
+        "F12",
+        "D12",
+        "C11",
+        "A2",
+        "A8"
+      ],
+      "totalSeats": 72
+    },
+    "price": {
+      "currency": "INR",
+      "economy": 5227,
+      "business": 15209
+    },
+    "baggage": {
+      "cabin": "7kg",
+      "checkIn": "15kg"
+    },
+    "contact": {
+      "customerCare": "+91-2222-222-222",
+      "website": "https://www.flygofirst.com"
+    }
+  },
+  {
+    "flightNumber": "IN695",
+    "airline": "IndiGo",
+    "aircraft": "Airbus A321neo",
+    "origin": {
+      "city": "New Jalpaiguri",
+      "airport": "Bagdogra International Airport",
+      "iata": "IXB",
+      "terminal": "T1",
+      "departureTime": "2025-09-02T07:00:00"
+    },
+    "destination": {
+      "city": "Mumbai",
+      "airport": "Chhatrapati Shivaji Maharaj International Airport",
+      "iata": "BOM",
+      "terminal": "T2",
+      "arrivalTime": "2025-09-02T10:00:00"
+    },
+    "duration": "3h 0m",
+    "status": "Cancelled",
+    "gate": "D15",
+    "boardingTime": "2025-09-02T06:15:00",
+    "seats": {
+      "rows": 8,
+      "columns": 4,
+      "bookedSeats": [
+        "C2",
+        "D5",
+        "A8",
+        "D8",
+        "C7",
+        "C4",
+        "A8",
+        "A4",
+        "A7",
+        "C3"
+      ],
+      "totalSeats": 32
+    },
+    "price": {
+      "currency": "INR",
+      "economy": 4744,
+      "business": 13820
+    },
+    "baggage": {
+      "cabin": "7kg",
+      "checkIn": "20kg"
+    },
+    "contact": {
+      "customerCare": "+91-9910-383-838",
+      "website": "https://www.goindigo.in"
+    }
+  },
+  {
+    "flightNumber": "VI507",
+    "airline": "Vistara",
+    "aircraft": "Boeing 737",
+    "origin": {
+      "city": "Vizag",
+      "airport": "Visakhapatnam International Airport",
+      "iata": "VTZ",
+      "terminal": "T1",
+      "departureTime": "2025-09-02T18:00:00"
+    },
+    "destination": {
+      "city": "Chennai",
+      "airport": "Chennai International Airport",
+      "iata": "MAA",
+      "terminal": "T1",
+      "arrivalTime": "2025-09-02T19:00:00"
+    },
+    "duration": "1h 0m",
+    "status": "Delayed",
+    "gate": "D15",
+    "boardingTime": "2025-09-02T17:15:00",
+    "seats": {
+      "rows": 12,
+      "columns": 4,
+      "bookedSeats": [
+        "A3",
+        "A2",
+        "D11",
+        "A4",
+        "C7",
+        "C4",
+        "C4"
+      ],
+      "totalSeats": 48
+    },
+    "price": {
+      "currency": "INR",
+      "economy": 3275,
+      "business": 10222
+    },
+    "baggage": {
+      "cabin": "7kg",
+      "checkIn": "15kg"
+    },
+    "contact": {
+      "customerCare": "+91-9289-889-889",
+      "website": "https://www.airvistara.com"
+    }
+  },
+  {
+    "flightNumber": "AI345",
+    "airline": "Air India",
+    "aircraft": "Airbus A320",
+    "origin": {
+      "city": "Delhi",
+      "airport": "Indira Gandhi International Airport",
+      "iata": "DEL",
+      "terminal": "T3",
+      "departureTime": "2025-09-04T22:00:00"
+    },
+    "destination": {
+      "city": "New Jalpaiguri",
+      "airport": "Bagdogra International Airport",
+      "iata": "IXB",
+      "terminal": "T1",
+      "arrivalTime": "2025-09-05T00:30:00"
+    },
+    "duration": "2h 30m",
+    "status": "On Time",
+    "gate": "A8",
+    "boardingTime": "2025-09-04T21:15:00",
+    "seats": {
+      "rows": 12,
+      "columns": 4,
+      "bookedSeats": [
+        "B12",
+        "B1",
+        "C1"
+      ],
+      "totalSeats": 48
+    },
+    "price": {
+      "currency": "INR",
+      "economy": 6055,
+      "business": 16539
+    },
+    "baggage": {
+      "cabin": "7kg",
+      "checkIn": "20kg"
+    },
+    "contact": {
+      "customerCare": "+91-1800-180-1407",
+      "website": "https://www.airindia.com"
+    }
+  },
+  {
+    "flightNumber": "SP266",
+    "airline": "SpiceJet",
+    "aircraft": "Bombardier Q400",
+    "origin": {
+      "city": "Kochi",
+      "airport": "Cochin International Airport",
+      "iata": "COK",
+      "terminal": "T3",
+      "departureTime": "2025-09-03T21:00:00"
+    },
+    "destination": {
+      "city": "Kolkata",
+      "airport": "Netaji Subhas Chandra Bose International Airport",
+      "iata": "CCU",
+      "terminal": "T2",
+      "arrivalTime": "2025-09-04T00:00:00"
+    },
+    "duration": "3h 0m",
+    "status": "Delayed",
+    "gate": "C1",
+    "boardingTime": "2025-09-03T20:15:00",
+    "seats": {
+      "rows": 7,
+      "columns": 4,
+      "bookedSeats": [
+        "C2",
+        "B3",
+        "A6",
+        "D7",
+        "A3",
+        "C2",
+        "C2",
+        "B1",
+        "C5"
+      ],
+      "totalSeats": 28
+    },
+    "price": {
+      "currency": "INR",
+      "economy": 4523,
+      "business": 11626
+    },
+    "baggage": {
+      "cabin": "7kg",
+      "checkIn": "15kg"
+    },
+    "contact": {
+      "customerCare": "+91-9871-121-121",
+      "website": "https://www.spicejet.com"
+    }
+  },
+  {
+    "flightNumber": "AI893",
+    "airline": "Air India",
+    "aircraft": "Airbus A320",
+    "origin": {
+      "city": "Kochi",
+      "airport": "Cochin International Airport",
+      "iata": "COK",
+      "terminal": "T3",
+      "departureTime": "2025-09-02T02:00:00"
+    },
+    "destination": {
+      "city": "Jammu & Kashmir",
+      "airport": "Sheikh ul-Alam International Airport",
+      "iata": "SXR",
+      "terminal": "T1",
+      "arrivalTime": "2025-09-02T03:15:00"
+    },
+    "duration": "1h 15m",
+    "status": "Delayed",
+    "gate": "D15",
+    "boardingTime": "2025-09-02T01:15:00",
+    "seats": {
+      "rows": 6,
+      "columns": 4,
+      "bookedSeats": [
+        "B6",
+        "C1",
+        "C5",
+        "C5",
+        "C2",
+        "D5",
+        "C3"
+      ],
+      "totalSeats": 24
+    },
+    "price": {
+      "currency": "INR",
+      "economy": 4190,
+      "business": 13199
+    },
+    "baggage": {
+      "cabin": "7kg",
+      "checkIn": "15kg"
+    },
+    "contact": {
+      "customerCare": "+91-1800-180-1407",
+      "website": "https://www.airindia.com"
+    }
+  },
+  {
+    "flightNumber": "IN203",
+    "airline": "IndiGo",
+    "aircraft": "Airbus A321neo",
+    "origin": {
+      "city": "Amritsar",
+      "airport": "Sri Guru Ram Dass Jee International Airport",
+      "iata": "ATQ",
+      "terminal": "T1",
+      "departureTime": "2025-09-04T16:00:00"
+    },
+    "destination": {
+      "city": "Hyderabad",
+      "airport": "Rajiv Gandhi International Airport",
+      "iata": "HYD",
+      "terminal": "T1",
+      "arrivalTime": "2025-09-04T19:00:00"
+    },
+    "duration": "3h 0m",
+    "status": "Delayed",
+    "gate": "A17",
+    "boardingTime": "2025-09-04T15:15:00",
+    "seats": {
+      "rows": 8,
+      "columns": 6,
+      "bookedSeats": [
+        "A6",
+        "E6",
+        "E6"
+      ],
+      "totalSeats": 48
+    },
+    "price": {
+      "currency": "INR",
+      "economy": 3121,
+      "business": 10729
+    },
+    "baggage": {
+      "cabin": "7kg",
+      "checkIn": "20kg"
+    },
+    "contact": {
+      "customerCare": "+91-9910-383-838",
+      "website": "https://www.goindigo.in"
+    }
+  },
+  {
+    "flightNumber": "GO488",
+    "airline": "Go First",
+    "aircraft": "Airbus A320neo",
+    "origin": {
+      "city": "Jammu & Kashmir",
+      "airport": "Sheikh ul-Alam International Airport",
+      "iata": "SXR",
+      "terminal": "T1",
+      "departureTime": "2025-09-04T19:00:00"
+    },
+    "destination": {
+      "city": "Kochi",
+      "airport": "Cochin International Airport",
+      "iata": "COK",
+      "terminal": "T3",
+      "arrivalTime": "2025-09-04T21:00:00"
+    },
+    "duration": "2h 0m",
+    "status": "Cancelled",
+    "gate": "B16",
+    "boardingTime": "2025-09-04T18:15:00",
+    "seats": {
+      "rows": 10,
+      "columns": 5,
+      "bookedSeats": [
+        "E1",
+        "C10",
+        "E7",
+        "A3",
+        "D5",
+        "B3",
+        "C1"
+      ],
+      "totalSeats": 50
+    },
+    "price": {
+      "currency": "INR",
+      "economy": 6437,
+      "business": 15598
+    },
+    "baggage": {
+      "cabin": "7kg",
+      "checkIn": "20kg"
+    },
+    "contact": {
+      "customerCare": "+91-2222-222-222",
+      "website": "https://www.flygofirst.com"
+    }
+  },
+  {
+    "flightNumber": "VI180",
+    "airline": "Vistara",
+    "aircraft": "Boeing 737",
+    "origin": {
+      "city": "Delhi",
+      "airport": "Indira Gandhi International Airport",
+      "iata": "DEL",
+      "terminal": "T3",
+      "departureTime": "2025-09-04T09:00:00"
+    },
+    "destination": {
+      "city": "New Jalpaiguri",
+      "airport": "Bagdogra International Airport",
+      "iata": "IXB",
+      "terminal": "T1",
+      "arrivalTime": "2025-09-04T10:30:00"
+    },
+    "duration": "1h 30m",
+    "status": "Delayed",
+    "gate": "C2",
+    "boardingTime": "2025-09-04T08:15:00",
+    "seats": {
+      "rows": 11,
+      "columns": 5,
+      "bookedSeats": [
+        "B6",
+        "D11",
+        "B6",
+        "E2",
+        "D1",
+        "C10",
+        "B6"
+      ],
+      "totalSeats": 55
+    },
+    "price": {
+      "currency": "INR",
+      "economy": 3992,
+      "business": 12937
+    },
+    "baggage": {
+      "cabin": "7kg",
+      "checkIn": "20kg"
+    },
+    "contact": {
+      "customerCare": "+91-9289-889-889",
+      "website": "https://www.airvistara.com"
+    }
+  },
+  {
+    "flightNumber": "VI928",
+    "airline": "Vistara",
+    "aircraft": "Boeing 737",
+    "origin": {
+      "city": "Amritsar",
+      "airport": "Sri Guru Ram Dass Jee International Airport",
+      "iata": "ATQ",
+      "terminal": "T1",
+      "departureTime": "2025-09-03T16:00:00"
+    },
+    "destination": {
+      "city": "Hyderabad",
+      "airport": "Rajiv Gandhi International Airport",
+      "iata": "HYD",
+      "terminal": "T1",
+      "arrivalTime": "2025-09-03T18:00:00"
+    },
+    "duration": "2h 0m",
+    "status": "On Time",
+    "gate": "C11",
+    "boardingTime": "2025-09-03T15:15:00",
+    "seats": {
+      "rows": 5,
+      "columns": 6,
+      "bookedSeats": [
+        "E1",
+        "B2",
+        "D2",
+        "F1",
+        "C4",
+        "F3",
+        "F1"
+      ],
+      "totalSeats": 30
+    },
+    "price": {
+      "currency": "INR",
+      "economy": 7303,
+      "business": 19259
+    },
+    "baggage": {
+      "cabin": "7kg",
+      "checkIn": "20kg"
+    },
+    "contact": {
+      "customerCare": "+91-9289-889-889",
+      "website": "https://www.airvistara.com"
+    }
+  },
+  {
+    "flightNumber": "VI450",
+    "airline": "Vistara",
+    "aircraft": "Boeing 737",
+    "origin": {
+      "city": "Kochi",
+      "airport": "Cochin International Airport",
+      "iata": "COK",
+      "terminal": "T3",
+      "departureTime": "2025-09-06T04:00:00"
+    },
+    "destination": {
+      "city": "New Jalpaiguri",
+      "airport": "Bagdogra International Airport",
+      "iata": "IXB",
+      "terminal": "T1",
+      "arrivalTime": "2025-09-06T05:00:00"
+    },
+    "duration": "1h 0m",
+    "status": "Cancelled",
+    "gate": "A17",
+    "boardingTime": "2025-09-06T03:15:00",
+    "seats": {
+      "rows": 7,
+      "columns": 5,
+      "bookedSeats": [
+        "C3",
+        "B6",
+        "B2",
+        "D7",
+        "A3",
+        "D5",
+        "B7",
+        "A3",
+        "D3"
+      ],
+      "totalSeats": 35
+    },
+    "price": {
+      "currency": "INR",
+      "economy": 4676,
+      "business": 14233
+    },
+    "baggage": {
+      "cabin": "7kg",
+      "checkIn": "15kg"
+    },
+    "contact": {
+      "customerCare": "+91-9289-889-889",
+      "website": "https://www.airvistara.com"
+    }
+  },
+  {
+    "flightNumber": "VI160",
+    "airline": "Vistara",
+    "aircraft": "Boeing 737",
+    "origin": {
+      "city": "New Jalpaiguri",
+      "airport": "Bagdogra International Airport",
+      "iata": "IXB",
+      "terminal": "T1",
+      "departureTime": "2025-09-02T12:00:00"
+    },
+    "destination": {
+      "city": "Goa",
+      "airport": "Goa International Airport",
+      "iata": "GOI",
+      "terminal": "T1",
+      "arrivalTime": "2025-09-02T14:00:00"
+    },
+    "duration": "2h 0m",
+    "status": "On Time",
+    "gate": "B17",
+    "boardingTime": "2025-09-02T11:15:00",
+    "seats": {
+      "rows": 10,
+      "columns": 6,
+      "bookedSeats": [
+        "E5",
+        "D6",
+        "F10",
+        "B5",
+        "C1",
+        "F5",
+        "A6"
+      ],
+      "totalSeats": 60
+    },
+    "price": {
+      "currency": "INR",
+      "economy": 7330,
+      "business": 16201
+    },
+    "baggage": {
+      "cabin": "7kg",
+      "checkIn": "20kg"
+    },
+    "contact": {
+      "customerCare": "+91-9289-889-889",
+      "website": "https://www.airvistara.com"
+    }
+  },
+  {
+    "flightNumber": "VI508",
+    "airline": "Vistara",
+    "aircraft": "Boeing 737",
+    "origin": {
+      "city": "Hyderabad",
+      "airport": "Rajiv Gandhi International Airport",
+      "iata": "HYD",
+      "terminal": "T1",
+      "departureTime": "2025-09-01T12:00:00"
+    },
+    "destination": {
+      "city": "Kochi",
+      "airport": "Cochin International Airport",
+      "iata": "COK",
+      "terminal": "T3",
+      "arrivalTime": "2025-09-01T14:00:00"
+    },
+    "duration": "2h 0m",
+    "status": "On Time",
+    "gate": "E14",
+    "boardingTime": "2025-09-01T11:15:00",
+    "seats": {
+      "rows": 5,
+      "columns": 6,
+      "bookedSeats": [
+        "C3",
+        "D2",
+        "C5",
+        "B2",
+        "D3",
+        "D2",
+        "E1"
+      ],
+      "totalSeats": 30
+    },
+    "price": {
+      "currency": "INR",
+      "economy": 6010,
+      "business": 16182
+    },
+    "baggage": {
+      "cabin": "7kg",
+      "checkIn": "15kg"
+    },
+    "contact": {
+      "customerCare": "+91-9289-889-889",
+      "website": "https://www.airvistara.com"
+    }
+  },
+  {
+    "flightNumber": "AI303",
+    "airline": "Air India",
+    "aircraft": "Airbus A320",
+    "origin": {
+      "city": "Goa",
+      "airport": "Goa International Airport",
+      "iata": "GOI",
+      "terminal": "T1",
+      "departureTime": "2025-09-05T11:00:00"
+    },
+    "destination": {
+      "city": "Hyderabad",
+      "airport": "Rajiv Gandhi International Airport",
+      "iata": "HYD",
+      "terminal": "T1",
+      "arrivalTime": "2025-09-05T13:30:00"
+    },
+    "duration": "2h 30m",
+    "status": "Cancelled",
+    "gate": "B14",
+    "boardingTime": "2025-09-05T10:15:00",
+    "seats": {
+      "rows": 5,
+      "columns": 5,
+      "bookedSeats": [
+        "C5",
+        "C3",
+        "E4",
+        "C5"
+      ],
+      "totalSeats": 25
+    },
+    "price": {
+      "currency": "INR",
+      "economy": 3961,
+      "business": 12287
+    },
+    "baggage": {
+      "cabin": "7kg",
+      "checkIn": "15kg"
+    },
+    "contact": {
+      "customerCare": "+91-1800-180-1407",
+      "website": "https://www.airindia.com"
+    }
+  },
+  {
+    "flightNumber": "VI793",
+    "airline": "Vistara",
+    "aircraft": "Boeing 737",
+    "origin": {
+      "city": "Mumbai",
+      "airport": "Chhatrapati Shivaji Maharaj International Airport",
+      "iata": "BOM",
+      "terminal": "T2",
+      "departureTime": "2025-09-05T04:00:00"
+    },
+    "destination": {
+      "city": "Pune",
+      "airport": "Pune International Airport",
+      "iata": "PNQ",
+      "terminal": "T1",
+      "arrivalTime": "2025-09-05T07:00:00"
+    },
+    "duration": "3h 0m",
+    "status": "Delayed",
+    "gate": "D8",
+    "boardingTime": "2025-09-05T03:15:00",
+    "seats": {
+      "rows": 5,
+      "columns": 5,
+      "bookedSeats": [
+        "A2",
+        "E4",
+        "D3",
+        "D2"
+      ],
+      "totalSeats": 25
+    },
+    "price": {
+      "currency": "INR",
+      "economy": 3464,
+      "business": 8187
+    },
+    "baggage": {
+      "cabin": "7kg",
+      "checkIn": "20kg"
+    },
+    "contact": {
+      "customerCare": "+91-9289-889-889",
+      "website": "https://www.airvistara.com"
+    }
+  },
+  {
+    "flightNumber": "VI923",
+    "airline": "Vistara",
+    "aircraft": "Boeing 737",
+    "origin": {
+      "city": "Vizag",
+      "airport": "Visakhapatnam International Airport",
+      "iata": "VTZ",
+      "terminal": "T1",
+      "departureTime": "2025-09-01T22:00:00"
+    },
+    "destination": {
+      "city": "Mumbai",
+      "airport": "Chhatrapati Shivaji Maharaj International Airport",
+      "iata": "BOM",
+      "terminal": "T2",
+      "arrivalTime": "2025-09-01T23:30:00"
+    },
+    "duration": "1h 30m",
+    "status": "Delayed",
+    "gate": "A6",
+    "boardingTime": "2025-09-01T21:15:00",
+    "seats": {
+      "rows": 6,
+      "columns": 5,
+      "bookedSeats": [
+        "D4",
+        "C5",
+        "B4",
+        "B3",
+        "D2",
+        "E4",
+        "A1"
+      ],
+      "totalSeats": 30
+    },
+    "price": {
+      "currency": "INR",
+      "economy": 5810,
+      "business": 12652
+    },
+    "baggage": {
+      "cabin": "7kg",
+      "checkIn": "15kg"
+    },
+    "contact": {
+      "customerCare": "+91-9289-889-889",
+      "website": "https://www.airvistara.com"
+    }
+  },
+  {
+    "flightNumber": "AI312",
+    "airline": "Air India",
+    "aircraft": "Airbus A320",
+    "origin": {
+      "city": "Mumbai",
+      "airport": "Chhatrapati Shivaji Maharaj International Airport",
+      "iata": "BOM",
+      "terminal": "T2",
+      "departureTime": "2025-09-03T18:00:00"
+    },
+    "destination": {
+      "city": "Amritsar",
+      "airport": "Sri Guru Ram Dass Jee International Airport",
+      "iata": "ATQ",
+      "terminal": "T1",
+      "arrivalTime": "2025-09-03T20:30:00"
+    },
+    "duration": "2h 30m",
+    "status": "Delayed",
+    "gate": "D7",
+    "boardingTime": "2025-09-03T17:15:00",
+    "seats": {
+      "rows": 7,
+      "columns": 6,
+      "bookedSeats": [
+        "E6",
+        "C7",
+        "C1",
+        "A7",
+        "B1",
+        "D6",
+        "C5"
+      ],
+      "totalSeats": 42
+    },
+    "price": {
+      "currency": "INR",
+      "economy": 6010,
+      "business": 16469
+    },
+    "baggage": {
+      "cabin": "7kg",
+      "checkIn": "20kg"
+    },
+    "contact": {
+      "customerCare": "+91-1800-180-1407",
+      "website": "https://www.airindia.com"
+    }
+  },
+  {
+    "flightNumber": "SP148",
+    "airline": "SpiceJet",
+    "aircraft": "Bombardier Q400",
+    "origin": {
+      "city": "New Jalpaiguri",
+      "airport": "Bagdogra International Airport",
+      "iata": "IXB",
+      "terminal": "T1",
+      "departureTime": "2025-09-04T09:00:00"
+    },
+    "destination": {
+      "city": "Hyderabad",
+      "airport": "Rajiv Gandhi International Airport",
+      "iata": "HYD",
+      "terminal": "T1",
+      "arrivalTime": "2025-09-04T10:30:00"
+    },
+    "duration": "1h 30m",
+    "status": "Delayed",
+    "gate": "C7",
+    "boardingTime": "2025-09-04T08:15:00",
+    "seats": {
+      "rows": 5,
+      "columns": 4,
+      "bookedSeats": [
+        "D1",
+        "A5",
+        "C2",
+        "D5",
+        "A1",
+        "A5",
+        "A4"
+      ],
+      "totalSeats": 20
+    },
+    "price": {
+      "currency": "INR",
+      "economy": 4570,
+      "business": 12759
+    },
+    "baggage": {
+      "cabin": "7kg",
+      "checkIn": "20kg"
+    },
+    "contact": {
+      "customerCare": "+91-9871-121-121",
+      "website": "https://www.spicejet.com"
+    }
+  },
+  {
+    "flightNumber": "SP833",
+    "airline": "SpiceJet",
+    "aircraft": "Bombardier Q400",
+    "origin": {
+      "city": "New Jalpaiguri",
+      "airport": "Bagdogra International Airport",
+      "iata": "IXB",
+      "terminal": "T1",
+      "departureTime": "2025-09-05T01:00:00"
+    },
+    "destination": {
+      "city": "Delhi",
+      "airport": "Indira Gandhi International Airport",
+      "iata": "DEL",
+      "terminal": "T3",
+      "arrivalTime": "2025-09-05T03:30:00"
+    },
+    "duration": "2h 30m",
+    "status": "Delayed",
+    "gate": "A9",
+    "boardingTime": "2025-09-05T00:15:00",
+    "seats": {
+      "rows": 8,
+      "columns": 4,
+      "bookedSeats": [
+        "B5",
+        "A3",
+        "D6",
+        "D5",
+        "D1",
+        "B1",
+        "A2",
+        "B2"
+      ],
+      "totalSeats": 32
+    },
+    "price": {
+      "currency": "INR",
+      "economy": 5668,
+      "business": 13048
+    },
+    "baggage": {
+      "cabin": "7kg",
+      "checkIn": "15kg"
+    },
+    "contact": {
+      "customerCare": "+91-9871-121-121",
+      "website": "https://www.spicejet.com"
+    }
+  },
+  {
+    "flightNumber": "VI947",
+    "airline": "Vistara",
+    "aircraft": "Boeing 737",
+    "origin": {
+      "city": "Amritsar",
+      "airport": "Sri Guru Ram Dass Jee International Airport",
+      "iata": "ATQ",
+      "terminal": "T1",
+      "departureTime": "2025-09-01T14:00:00"
+    },
+    "destination": {
+      "city": "Chennai",
+      "airport": "Chennai International Airport",
+      "iata": "MAA",
+      "terminal": "T1",
+      "arrivalTime": "2025-09-01T15:15:00"
+    },
+    "duration": "1h 15m",
+    "status": "On Time",
+    "gate": "B12",
+    "boardingTime": "2025-09-01T13:15:00",
+    "seats": {
+      "rows": 12,
+      "columns": 4,
+      "bookedSeats": [
+        "A3",
+        "C3",
+        "B2",
+        "B3",
+        "A4",
+        "C8",
+        "A3",
+        "C8",
+        "B3",
+        "B2"
+      ],
+      "totalSeats": 48
+    },
+    "price": {
+      "currency": "INR",
+      "economy": 3044,
+      "business": 9387
+    },
+    "baggage": {
+      "cabin": "7kg",
+      "checkIn": "20kg"
+    },
+    "contact": {
+      "customerCare": "+91-9289-889-889",
+      "website": "https://www.airvistara.com"
+    }
+  }
+]

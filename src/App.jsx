@@ -1,14 +1,15 @@
 import React from 'react';
 import "./Pages/Login.css";
 import Login from './Pages/Login';
-import { Routes, Route } from 'react-router-dom';
-import BoardingPass from './Pages/BoardingPass';
+import BoardingPass from "./Pages/boardingpassgenerator/BoardingPass";
+import FlightDetails from './Pages/boardingpassgenerator/FlightDetails';
 
 
 function App() {
   return (
     <>
     <Login></Login>
+    <FlightDetails></FlightDetails>
     <BoardingPass></BoardingPass>
       </>
       );

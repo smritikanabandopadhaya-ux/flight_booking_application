@@ -1,27 +1,29 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import Button from "../Buttons/Button";
-import { Link } from 'react-router-dom';
-import "../Forms/Form.css";
-import username from "../assets/username.svg";
-import email_img from "../assets/email.svg";
-import password_img from "../assets/password.svg";
+import Button from "../buttons/Button";
+import "./Form.css";
+import username from "../../assets/username.svg";
+import email_img from "../../assets/email.svg";
+import password_img from "../../assets/password.svg";
 
-const Form=()=> {
+const Form = () => {
   const [isHidden, setHiddenState] = useState(true); // toggle between SignIn / SignUp
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [name, setName] = useState("");
 
-  function handleSubmit(event) {
+  const handleSubmit = (event) => {
     event.preventDefault();
-    const data = new FormData(event.target);
+    const data = new FormData(event.target); // for having form data
     const value = Object.fromEntries(data.entries());
-    console.log({ value });
+    // console.log({ value });
     const jsonString = JSON.stringify(value);
     localStorage.setItem("userData", jsonString);
-  }
+    setEmail("");
+    setPassword("");
+    setName("");
+  };
 
-  function handleLogin(event) {
+  const handleLogin = (event) => {
     event.preventDefault();
     event.stopPropagation();
     const retrievedJsonString = localStorage.getItem("userData");
@@ -40,7 +42,9 @@ const Form=()=> {
     } else {
       console.log(" Invalid credentials");
     }
-  }
+    setEmail(""); // for resetting the fields
+    setPassword("");
+  };
 
   return (
     <>
@@ -122,6 +126,8 @@ const Form=()=> {
               onClick={(e) => {
                 e.preventDefault();
                 setHiddenState(false); // switch to SignUp
+                setEmail("");
+                setPassword("");
               }}
             >
               &nbsp; Sign Up
@@ -135,6 +141,8 @@ const Form=()=> {
               onClick={(e) => {
                 e.preventDefault();
                 setHiddenState(true); // switch back to SignIn
+                setEmail("");
+                setPassword("");
               }}
             >
               &nbsp; Sign In
@@ -144,6 +152,6 @@ const Form=()=> {
       </form>
     </>
   );
-}
+};
 
 export default Form;

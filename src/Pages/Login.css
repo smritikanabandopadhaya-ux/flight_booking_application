@@ -5,7 +5,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 100vh;
-  min-width: 100vw;
+  min-width: 98vw;
 }
 .background-container-main{
   display: flex;
