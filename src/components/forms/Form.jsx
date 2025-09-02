@@ -4,18 +4,20 @@ import "./Form.css";
 import username from "../../assets/username.svg";
 import email_img from "../../assets/email.svg";
 import password_img from "../../assets/password.svg";
+import { useNavigate} from 'react-router-dom';
 
 const Form = () => {
   const [isHidden, setHiddenState] = useState(true); // toggle between SignIn / SignUp
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [name, setName] = useState("");
+  const navigate = useNavigate();
 
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.target); // for having form data
     const value = Object.fromEntries(data.entries());
-    // console.log({ value });
+    console.log({ value });
     const jsonString = JSON.stringify(value);
     localStorage.setItem("userData", jsonString);
     setEmail("");
@@ -33,12 +35,15 @@ const Form = () => {
     }
 
     const retrievedObject = JSON.parse(retrievedJsonString);
+    
 
     if (
       retrievedObject.email === email &&
       retrievedObject.password === password
     ) {
       console.log(" Login Successful!");
+      navigate('/flight-details');
+  
     } else {
       console.log(" Invalid credentials");
     }

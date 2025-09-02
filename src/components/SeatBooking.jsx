@@ -4,7 +4,7 @@ import Button from "./buttons/Button";
 const SeatBooking = () => {
   const rows = 9;
   const cols = 5;
-  const [bookedSeats, setBookedSeats] = useState(["B3", "D1"]);
+  const [bookedSeats, setBookedSeats] = useState(["B3", "D1","E1","G5","F5"]);
   const [selectedSeat, setSelectedSeat] = useState(null);
 
   const handleSeatClick = (seat) => {
@@ -14,8 +14,9 @@ const SeatBooking = () => {
 
   const handleBooking = () => {
     if (!selectedSeat) return alert("No seat is selected.");
-    setBookedSeats([...bookedSeats, selectedSeat]);
-    console.log("Seat Booked");
+    else {setBookedSeats([...bookedSeats, selectedSeat]);
+    alert("seat is selected.");
+    }
     setSelectedSeat(null);
   };
 
@@ -51,11 +52,10 @@ const SeatBooking = () => {
       </div>
 
       <div className="flex justify-center">
-        <Button
+        <button className="bg-white text-violet-900 p-4 w-40 rounded-2xl hover:bg-violet-900 hover:text-white"
           onClick={handleBooking}
-          name="Book Now"
-        >
-        </Button>
+        >Book Now
+        </button>
       </div>
     </div>
   );

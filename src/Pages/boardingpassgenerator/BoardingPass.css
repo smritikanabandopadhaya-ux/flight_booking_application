@@ -16,6 +16,7 @@
   justify-content: center;
   max-width: fit-content;
   align-self: flex-start;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 .boarding-form-header {
   font-size: 1.5em;

@@ -5,6 +5,7 @@ import Button from "../../components/buttons/Button";
 import class_img from "../../assets/seat-pictogram-2-svgrepo-com.svg";
 import { useState } from "react";
 import allFlightDetails from "../../assets/flights.json";
+import FlightCard from "./FlightCard";
 
 const FlightDetails = () => {
   const [ flightsAvailable, setflightsAvailable]= useState([]);
@@ -30,10 +31,21 @@ const FlightDetails = () => {
     
     
   };
+  const flightData = {
+  airline: 'SkyHigh Airlines',
+  flightNumber: 'SH123',
+  origin: 'New York (JFK)',
+  destination: 'London (LHR)',
+  date: '2025-09-15',
+  time: '10:30 AM',
+  duration: '7h 45m',
+  price: '780',
+  travelClass: 'Business'
+};
   return (
     <div>
-      <div></div>
       <div className="background flex justify-end">
+        <FlightCard flight={flightData}/>
         <form className="boarding-form p-10 m-10" onSubmit={checkFlights}>
           <div className="boarding-form-fields boarding-form-header">
             Let's book your next flight,

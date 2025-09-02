@@ -1,0 +1,64 @@
+.flight-card {
+  background: linear-gradient(135deg, rgb(101, 51, 155), #9175df);
+  color: white;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  margin: 20px auto;
+  font-family: 'Segoe UI', sans-serif;
+  transition: transform 0.3s ease;
+  align-self: flex-start;
+}
+
+.flight-card:hover {
+  transform: translateY(-5px);
+}
+
+.flight-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  padding-bottom: 10px;
+}
+
+.flight-header h3 {
+  margin: 0;
+  font-size: 1.2em;
+}
+
+.flight-body {
+  margin-top: 15px;
+}
+
+.route {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.arrow {
+  font-size: 1.5em;
+}
+
+.label {
+  font-size: 0.8em;
+  opacity: 0.8;
+}
+
+.flight-info p {
+  margin: 4px 0;
+}
+
+.price {
+  text-align: right;
+  margin-top: 10px;
+}
+
+.price h3 {
+  font-size: 1.5em;
+  margin: 0;
+  color: #ffd700;
+}
