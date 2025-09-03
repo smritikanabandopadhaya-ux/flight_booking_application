@@ -13,6 +13,7 @@
 
 .flight-card:hover {
   transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgb(255, 255, 255, 0.1);
 }
 
 .flight-header {

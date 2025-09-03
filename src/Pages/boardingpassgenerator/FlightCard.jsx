@@ -1,5 +1,6 @@
 import React from 'react';
 import './FlightCard.css';
+import Button from '../../components/buttons/Button';
 
 const FlightCard = ({ flight }) => {
   const {
@@ -10,7 +11,6 @@ const FlightCard = ({ flight }) => {
     date,
     time,
     duration,
-    price,
     travelClass
   } = flight;
 
@@ -18,7 +18,7 @@ const FlightCard = ({ flight }) => {
     <div className="flight-card">
       <div className="flight-header">
         <h3>{airline}</h3>
-        <span>Flight #{flightNumber}</span>
+        <span>{flightNumber}</span>
       </div>
 
       <div className="flight-body">
@@ -40,10 +40,7 @@ const FlightCard = ({ flight }) => {
           <p><strong>Duration:</strong> {duration}</p>
           <p><strong>Class:</strong> {travelClass}</p>
         </div>
-
-        <div className="price">
-          <h3>${price}</h3>
-        </div>
+<Button name="Let's Fly"></Button>
       </div>
     </div>
   );

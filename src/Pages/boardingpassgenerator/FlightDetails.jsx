@@ -8,45 +8,51 @@ import allFlightDetails from "../../assets/flights.json";
 import FlightCard from "./FlightCard";
 
 const FlightDetails = () => {
-  const [ flightsAvailable, setflightsAvailable]= useState([]);
+  const [flightsAvailable, setflightsAvailable] = useState([]);
+  const [myFlight, setMyFlight] = useState([]);
 
   const checkFlights = (e) => {
     e.preventDefault();
     e.stopPropagation();
     const myData = new FormData(e.target);
     const myFlightDetails = Object.fromEntries(myData.entries());
+    setMyFlight(myFlightDetails);
     // console.log(myFlightDetails);
-    const mySource=myFlightDetails["source"];
-    const myDestination=myFlightDetails["destination"];
+    const mySource = myFlightDetails["source"];
+    const myDestination = myFlightDetails["destination"];
 
-    const flightArray= allFlightDetails.filter(
-      flight=>{
-        if (mySource === flight["origin"]["city"] && myDestination === flight["destination"]["city"])
-          return true;
-        else false;
-      }
-    )
-    console.log(flightArray);
+    const flightArray = allFlightDetails.filter(
+      (flight) =>
+        mySource === flight["origin"]["city"] &&
+        myDestination === flight["destination"]["city"]
+    );
+    console.log("flight Array", flightArray);
     setflightsAvailable(flightArray);
-    
-    
+    console.log("flights avialable", flightsAvailable);
   };
-  const flightData = {
-  airline: 'SkyHigh Airlines',
-  flightNumber: 'SH123',
-  origin: 'New York (JFK)',
-  destination: 'London (LHR)',
-  date: '2025-09-15',
-  time: '10:30 AM',
-  duration: '7h 45m',
-  price: '780',
-  travelClass: 'Business'
-};
+  const flightCards = flightsAvailable.map((flight, index) => (
+    <FlightCard
+      key={index}
+      flight={{
+        airline: flight.airline,
+        flightNumber: flight.flightNumber,
+        origin: flight.origin.city,
+        destination: flight.destination.city,
+        date: myFlight.date,
+        time: flight.boardingTime,
+        duration: flight.duration,
+        price: flight.price,
+        travelClass: myFlight.class_name,
+      }}
+    />
+  ));
   return (
     <div>
-      <div className="background flex justify-end">
-        <FlightCard flight={flightData}/>
-        <form className="boarding-form p-10 m-10" onSubmit={checkFlights}>
+      <div className="background flex justify-between align-baseliner">
+        <div className="flex gap-8 p-10 pl-50">
+        {flightCards.length > 0 ? flightCards : <p>No flights found</p>}
+        </div>
+        <form className="boarding-form p-10 m-10 pr-32" onSubmit={checkFlights}>
           <div className="boarding-form-fields boarding-form-header">
             Let's book your next flight,
           </div>
@@ -80,7 +86,7 @@ const FlightDetails = () => {
               className="boarding-form-icon"
             ></img>
             <select className="input-field" name="destination">
-               <option>Destination</option>
+              <option>Destination</option>
               <option>Amritsar</option>
               <option>Bengaluru</option>
               <option>Chennai</option>
@@ -105,17 +111,22 @@ const FlightDetails = () => {
             ></img>
             <input type="date" name="date" className="input-field" />
           </div>
-          <div className="boarding-form-fields flex gap-4 mr-6" id="form-input-name">
+          <div
+            className="boarding-form-fields flex gap-4 mr-6"
+            id="form-input-name"
+          >
             <img
               src={class_img}
               alt="class icon"
               className="boarding-form-icon mr-2"
             ></img>
-            <label htmlFor="business" className="mr-4">Class :</label>
+            <label htmlFor="business" className="mr-4">
+              Class :
+            </label>
 
-            <input type="radio" name="class-name" value="business" />
+            <input type="radio" name="class_name" value="business" />
             <label htmlFor="business">Business</label>
-            <input type="radio" name="class-name" value="economy"/>
+            <input type="radio" name="class_name" value="economy" />
             <label htmlFor="economy">Economy</label>
           </div>
           <div className="boarding-form-buttons">
