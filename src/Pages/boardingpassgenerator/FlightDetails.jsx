@@ -26,9 +26,9 @@ const FlightDetails = () => {
         mySource === flight["origin"]["city"] &&
         myDestination === flight["destination"]["city"]
     );
-    console.log("flight Array", flightArray);
+   // console.log("flight Array", flightArray);
     setflightsAvailable(flightArray);
-    console.log("flights avialable", flightsAvailable);
+   // console.log("flights avialable", flightsAvailable);
   };
   const flightCards = flightsAvailable.map((flight, index) => (
     <FlightCard
@@ -124,9 +124,9 @@ const FlightDetails = () => {
               Class :
             </label>
 
-            <input type="radio" name="class_name" value="business" />
+            <input type="radio" name="class_name" value="Business" />
             <label htmlFor="business">Business</label>
-            <input type="radio" name="class_name" value="economy" />
+            <input type="radio" name="class_name" value="Economy" />
             <label htmlFor="economy">Economy</label>
           </div>
           <div className="boarding-form-buttons">
