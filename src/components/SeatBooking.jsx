@@ -45,11 +45,21 @@ const SeatBooking = () => {
 
   return (
     <div className="w-fit flex-col items-center justify-center p-6 mt-6 ml-20">
-      <div className={`grid grid-cols-5 gap-2 justify-center mb-4`}>
-        {[...Array(rows)].map((_, row) =>
-          [...Array(cols)].map((_, col) => renderSeat(row, col))
-        )}
-      </div>
+      <div className="flex flex-col gap-4">
+      {[...Array(rows)].map((_, row) => (
+        <div key={row} className="flex justify-center gap-8">
+          {/* Left block (A, B, C) */}
+          <div className="flex gap-2">
+            {[0, 1, 2].map((col) => renderSeat(row, col))}
+          </div>
+
+          {/* Right block (D, E, F) */}
+          <div className="flex gap-2">
+            {[3, 4, 5].map((col) => renderSeat(row, col))}
+          </div>
+        </div>
+      ))}
+    </div>
 
       <div className="flex justify-center">
         <button className="bg-white text-violet-900 p-4 w-40 rounded-2xl hover:bg-violet-900 hover:text-white"

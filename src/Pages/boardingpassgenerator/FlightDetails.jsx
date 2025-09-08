@@ -50,7 +50,7 @@ const FlightDetails = () => {
     <div>
       <div className="background flex justify-between align-baseliner">
         <div className="flex gap-8 p-10 pl-50">
-        {flightCards.length > 0 ? flightCards : <p>No flights found</p>}
+        {flightCards.length > 0 ? flightCards : <div></div>}
         </div>
         <form className="boarding-form p-10 m-10 pr-32" onSubmit={checkFlights}>
           <div className="boarding-form-fields boarding-form-header">

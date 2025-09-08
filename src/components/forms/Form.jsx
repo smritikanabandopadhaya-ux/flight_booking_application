@@ -27,7 +27,7 @@ const Form = () => {
 
   const handleLogin = (event) => {
     event.preventDefault();
-    event.stopPropagation();
+    event.stopPropagation(); // t prevents the event from bubbling up (or propagating) to parent elements.
     const retrievedJsonString = localStorage.getItem("userData");
     if (!retrievedJsonString) {
       console.log(" No user data found");
