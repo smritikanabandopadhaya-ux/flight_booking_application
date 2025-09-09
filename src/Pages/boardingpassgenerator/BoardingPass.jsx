@@ -1,4 +1,4 @@
-import React, {useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import Button from "../../components/buttons/Button";
 import "./BoardingPass.css";
 import username from "../../assets/username.svg";
@@ -9,12 +9,21 @@ import food_img from "../../assets/food_img.svg";
 const Form = () => {
   const [showSeatBooking, setShowSeatBooking] = useState(false);
   const [flightData, setFlightData] = useState(null);
+  const [maxluggage, setMaxLuggage] = useState(0);
+  const [seatArrangement, setSeatArrangement] = useState(null);
+  const [travelClass, setTravelClass] = useState("");
 
   useEffect(() => {
     const savedData = localStorage.getItem("flightData");
     if (savedData) {
-      setFlightData(JSON.parse(savedData));
-      // console.log(savedData);
+      const parsedData = JSON.parse(savedData);
+      setFlightData(parsedData);
+      console.log("All:", parsedData);
+      const weightNum = parseInt(parsedData.luggageWeight, 10); // extracts the integer part
+      setMaxLuggage(weightNum);
+      // console.log("seat", parsedData.seatDetails);
+      setSeatArrangement(parsedData.seatDetails);
+      setTravelClass(parsedData.travelClass);
     }
   }, []);
 
@@ -55,7 +64,7 @@ const Form = () => {
               className="input-field"
               placeholder="  Luggage Weight"
               min="0"
-              max="25"
+              max={maxluggage}
               required
             />
           </div>
@@ -83,7 +92,12 @@ const Form = () => {
             </div>
           </div>
         </form>
-        {showSeatBooking && <SeatBooking />}
+        {showSeatBooking && (
+          <SeatBooking
+            seatArrange={seatArrangement}
+            travelClass={travelClass}
+          />
+        )}
       </div>
     </div>
   );

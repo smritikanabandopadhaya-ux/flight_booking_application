@@ -13,6 +13,9 @@ const FlightCard = ({ flight }) => {
     time,
     duration,
     travelClass,
+    price,
+    luggageWeight,
+    seatDetails,
   } = flight;
   const navigate = useNavigate();
   const handleSubmit = (event) => {

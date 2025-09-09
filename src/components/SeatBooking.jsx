@@ -1,10 +1,12 @@
 import { useState } from "react";
 import Button from "./buttons/Button";
 
-const SeatBooking = () => {
-  const rows = 9;
-  const cols = 5;
-  const [bookedSeats, setBookedSeats] = useState(["B3", "D1","E1","G5","F5"]);
+const SeatBooking = ({ seatArrange, travelClass }) => {
+  const rows = seatArrange.rows;
+  const columns = seatArrange.columns;
+  const businessRows = 4;
+  const mytravelClass = travelClass;
+  const [bookedSeats, setBookedSeats] = useState(seatArrange.bookedSeats);
   const [selectedSeat, setSelectedSeat] = useState(null);
 
   const handleSeatClick = (seat) => {
@@ -14,8 +16,9 @@ const SeatBooking = () => {
 
   const handleBooking = () => {
     if (!selectedSeat) return alert("No seat is selected.");
-    else {setBookedSeats([...bookedSeats, selectedSeat]);
-    alert("seat is selected.");
+    else {
+      setBookedSeats([...bookedSeats, selectedSeat]);
+      alert("seat is selected.");
     }
     setSelectedSeat(null);
   };
@@ -25,46 +28,84 @@ const SeatBooking = () => {
     const isBooked = bookedSeats.includes(seat);
     const isSelected = selectedSeat === seat;
 
+    //  window seat check
+  let isWindow = false;
+  if (travelClass === "Economy") {
+    // Economy 
+    isWindow = col === 0 || col === columns - 1;
+    // Window seat check
+  } else if (travelClass === "Business") {
+    // Business 
+    isWindow = col === 0 || col === 3;
+  }
     return (
       <div
         key={seat}
         onClick={() => handleSeatClick(seat)}
         className={`w-16 h-12 flex items-center justify-center rounded-xl cursor-pointer m-1 
-          ${
-            isBooked
-              ? "bg-gray-500 cursor-not-allowed"
-              : isSelected
-              ? "bg-blue-500 text-white"
-              : "bg-white text-violet-950 hover:bg-violet-900 hover:text-white"
-          }`}
+        ${isBooked ? "bg-gray-500 cursor-not-allowed" : ""}
+        ${isSelected ? "bg-blue-500 text-white" : ""}
+        ${
+          !isBooked && !isSelected
+            ? "bg-white text-violet-950 hover:bg-violet-900 hover:text-white"
+            : ""
+        }
+        ${
+          isWindow ? "border-2 border-blue-400 " : ""
+        }  // 👈 highlight window seats
+      `}
       >
         {seat}
+        {isWindow && (
+          <span className="ml-1 text-xs font-bold text-blue-300">W</span>
+        )}
       </div>
     );
   };
 
   return (
     <div className="w-fit flex-col items-center justify-center p-6 mt-6 ml-20">
-      <div className="flex flex-col gap-4">
-      {[...Array(rows)].map((_, row) => (
-        <div key={row} className="flex justify-center gap-8">
-          {/* Left block (A, B, C) */}
-          <div className="flex gap-2">
-            {[0, 1, 2].map((col) => renderSeat(row, col))}
-          </div>
-
-          {/* Right block (D, E, F) */}
-          <div className="flex gap-2">
-            {[3, 4, 5].map((col) => renderSeat(row, col))}
-          </div>
+      <div className="items-center justify-center font-bold text-lg mb-4">
+        {travelClass} Class
+      </div>
+      {travelClass === "Economy" ? (
+        <div className="flex flex-col gap-4">
+          {[...Array(rows)].map((_, row) => (
+            <div key={row} className="flex justify-center gap-8">
+              {/* Left block (A, B, C) */}
+              <div className="flex gap-2">
+                {[0, 1, 2].map((col) => renderSeat(row, col))}
+              </div>
+              {/* Right block (D, E, F) */}
+              <div className="flex gap-2">
+                {[3, 4, 5].map((col) => renderSeat(row, col))}
+              </div>
+            </div>
+          ))}
         </div>
-      ))}
-    </div>
+      ) : (
+        <div className="flex flex-col gap-6">
+          {[...Array(businessRows)].map((_, row) => (
+            <div key={row} className="flex justify-center gap-16">
+              {/* Left block (A, B) */}
+              <div className="flex gap-2">
+                {[0, 1].map((col) => renderSeat(row, col, "B"))}
+              </div>
+              {/* Right block (C, D) */}
+              <div className="flex gap-2">
+                {[2, 3].map((col) => renderSeat(row, col, "B"))}
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
 
-      <div className="flex justify-center">
-        <button className="bg-white text-violet-900 p-4 w-40 rounded-2xl hover:bg-violet-900 hover:text-white"
+      <div className="flex justify-center mt-5">
+        <button
+          className="bg-white text-violet-900 p-2 w-40 rounded-2xl hover:bg-violet-900 hover:text-white"
           onClick={handleBooking}
-        >Book Now
+        >
+          Book Now
         </button>
       </div>
     </div>
