@@ -1,4 +1,4 @@
-import source from "../../assets/flight-takeoff-svgrepo-com.svg";
+import source_img from "../../assets/flight-takeoff-svgrepo-com.svg";
 import destination from "../../assets/flight-land-svgrepo-com.svg";
 import calender from "../../assets/calender-svgrepo-com.svg";
 import Button from "../../components/buttons/Button";
@@ -6,11 +6,27 @@ import class_img from "../../assets/seat-pictogram-2-svgrepo-com.svg";
 import { useState } from "react";
 import allFlightDetails from "../../assets/flights.json";
 import FlightCard from "./FlightCard";
+import Navbar from "../../components/navbar/Navbar";
 
 const FlightDetails = () => {
   const [flightsAvailable, setflightsAvailable] = useState([]);
   const [myFlight, setMyFlight] = useState([]);
-
+  const [source, setSource] = useState("");
+  const locations = [
+    "Amritsar",
+    "Bengaluru",
+    "Chennai",
+    "Delhi",
+    "Goa",
+    "Jammu & Kashmir",
+    "Kochi",
+    "Kolkata",
+    "Hyderabad",
+    "Mumbai",
+    "New Jalpaiguri",
+    "Pune",
+    "Vizag",
+  ];
   const checkFlights = (e) => {
     e.preventDefault();
     e.stopPropagation();
@@ -26,9 +42,9 @@ const FlightDetails = () => {
         mySource === flight["origin"]["city"] &&
         myDestination === flight["destination"]["city"]
     );
-   // console.log("flight Array", flightArray);
+    // console.log("flight Array", flightArray);
     setflightsAvailable(flightArray);
-   // console.log("flights avialable", flightsAvailable);
+    // console.log("flights avialable", flightsAvailable);
   };
   const flightCards = flightsAvailable.map((flight, index) => (
     <FlightCard
@@ -50,9 +66,12 @@ const FlightDetails = () => {
   ));
   return (
     <div>
-      <div className="background flex justify-between align-baseliner">
+      <div className="background flex-col justify-center align-baseliner">
+       <div> 
+        <Navbar></Navbar></div>
+        <section className="flex justify-between">
         <div className="flex gap-8 p-10 pl-50">
-        {flightCards.length > 0 ? flightCards : <div/>}
+          {flightCards.length > 0 ? flightCards : <div />}
         </div>
         <form className="boarding-form p-10 m-10 pr-32" onSubmit={checkFlights}>
           <div className="boarding-form-fields boarding-form-header">
@@ -60,25 +79,18 @@ const FlightDetails = () => {
           </div>
           <div className="boarding-form-fields" id="form-input-name">
             <img
-              src={source}
+              src={source_img}
               alt="Flight from icon"
               className="boarding-form-icon"
             ></img>
-            <select className="input-field" name="source">
-              <option>Source</option>
-              <option>Amritsar</option>
-              <option>Bengaluru</option>
-              <option>Chennai</option>
-              <option>Delhi</option>
-              <option>Goa</option>
-              <option>Jammu & Kasmir</option>
-              <option>Kochi</option>
-              <option>Kolkata</option>
-              <option>Hyderabad</option>
-              <option>Mumbai</option>
-              <option>New Jalpaiguri</option>
-              <option>Pune</option>
-              <option>Vizag</option>
+            <select className="input-field" name="source" value={source} onChange={(e) => setSource(e.target.value)}>
+              <option value="">Source</option>
+              {locations.map((loc, i) => (
+                <option key={i} value={loc}>
+                  {loc}
+                </option>
+                
+              ))}
             </select>
           </div>
           <div className="boarding-form-fields" id="form-input-name">
@@ -88,20 +100,14 @@ const FlightDetails = () => {
               className="boarding-form-icon"
             ></img>
             <select className="input-field" name="destination">
-              <option>Destination</option>
-              <option>Amritsar</option>
-              <option>Bengaluru</option>
-              <option>Chennai</option>
-              <option>Delhi</option>
-              <option>Goa</option>
-              <option>Jammu & Kasmir</option>
-              <option>Kochi</option>
-              <option>Kolkata</option>
-              <option>Hyderabad</option>
-              <option>Mumbai</option>
-              <option>New Jalpaiguri</option>
-              <option>Pune</option>
-              <option>Vizag</option>
+              <option value="">Destination</option>
+              {locations
+                .filter((loc) => loc !== source) // hide selected source
+                .map((loc, i) => (
+                  <option key={i} value={loc}>
+                    {loc}
+                  </option>
+                ))}
             </select>
           </div>
           <div className="boarding-form-fields">
@@ -137,7 +143,8 @@ const FlightDetails = () => {
             </div>
           </div>
         </form>
-      </div>
+      </section>
+    </div>
     </div>
   );
 };

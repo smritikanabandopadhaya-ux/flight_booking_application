@@ -20,17 +20,19 @@ const Form = () => {
     console.log({ value });
     const jsonString = JSON.stringify(value);
     localStorage.setItem("userData", jsonString);
+    alert("Account Created Successfully");
     setEmail("");
     setPassword("");
     setName("");
+    setHiddenState(true);
   };
 
   const handleLogin = (event) => {
     event.preventDefault();
-    event.stopPropagation(); // t prevents the event from bubbling up (or propagating) to parent elements.
+    event.stopPropagation(); // it prevents the event from bubbling up (or propagating) to parent elements.
     const retrievedJsonString = localStorage.getItem("userData");
     if (!retrievedJsonString) {
-      console.log(" No user data found");
+      alert(" No user data found");
       return;
     }
     const retrievedObject = JSON.parse(retrievedJsonString);
@@ -38,10 +40,10 @@ const Form = () => {
       retrievedObject.email === email &&
       retrievedObject.password === password
     ) {
-      console.log(" Login Successful!");
       navigate("/flight-details");
+      alert(" Login Successful!");
     } else {
-      console.log(" Invalid credentials");
+      alert(" Invalid credentials");
     }
     setEmail(""); // for resetting the fields
     setPassword("");

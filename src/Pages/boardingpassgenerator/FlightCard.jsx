@@ -24,7 +24,7 @@ const FlightCard = ({ flight }) => {
     console.log("Selected Flight:", flight);
     const jsonString = JSON.stringify(flight);
     localStorage.setItem("flightData", jsonString);
-    navigate("/boarding-pass");
+    navigate("/boarding-details");
   };
   return (
     <form onSubmit={handleSubmit}>
