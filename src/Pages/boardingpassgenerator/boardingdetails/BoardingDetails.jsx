@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
-import Button from "../../components/buttons/Button";
+import Button from "../../../components/buttons/Button";
 import "./BoardingDetails.css";
-import username from "../../assets/username.svg";
-import luggage from "../../assets/luggage-svgrepo-com.svg";
-import SeatBooking from "../../components/SeatBooking";
-import food_img from "../../assets/food_img.svg";
-import Navbar from "../../components/navbar/Navbar";
+import username from "../../../assets/username.svg";
+import luggage from "../../../assets/luggage-svgrepo-com.svg";
+import SeatBooking from "../../../components/seatbooking/SeatBooking";
+import food_img from "../../../assets/food_img.svg";
+import Navbar from "../../../components/navbar/Navbar";
 
 const Form = () => {
   const [showSeatBooking, setShowSeatBooking] = useState(false);

@@ -1,7 +1,6 @@
 import React from "react";
 import "./Login.css";
-import Form from "../components/forms/Form";
-import Navbar from "../components/navbar/Navbar";
+import Form from "../../components/forms/Form";
 
 
 function Login() {

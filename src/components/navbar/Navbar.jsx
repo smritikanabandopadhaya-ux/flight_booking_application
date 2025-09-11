@@ -17,14 +17,14 @@ const Navbar = () => {
       <div className="flex gap-4 items-center">
         <button
           onClick={() => navigate("/profile")}
-          className="px-4 py-2 rounded-lg bg-[#bdb3d5] text-[#533d88] font-medium hover:bg-gray-100 transition"
+          className="px-4 py-2 rounded-2xl bg-[#f5f5f5] text-[#533d88] font-medium hover:bg-[#a18dce] hover:text-white transition"
         >
           Profile
         </button>
 
         <button
           onClick={handleLogout}
-          className="px-4 py-2 rounded-lg bg-red-500 text-white font-medium hover:bg-red-500 transition"
+          className="px-4 py-2 rounded-2xl bg-red-500 text-white font-medium hover:bg-white hover:text-red-600 transition"
         >
           Logout
         </button>

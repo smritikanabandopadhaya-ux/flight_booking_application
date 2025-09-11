@@ -5,7 +5,7 @@ import Button from "../../components/buttons/Button";
 import class_img from "../../assets/seat-pictogram-2-svgrepo-com.svg";
 import { useState } from "react";
 import allFlightDetails from "../../assets/flights.json";
-import FlightCard from "./FlightCard";
+import FlightCard from "../boardingpassgenerator/flightcard/FlightCard";
 import Navbar from "../../components/navbar/Navbar";
 
 const FlightDetails = () => {
@@ -117,7 +117,7 @@ const FlightDetails = () => {
               className="boarding-form-icon"
               placeholder="   Date"
             ></img>
-            <input type="date" name="date" className="input-field" />
+            <input type="date" name="date" className="input-field" required/>
           </div>
           <div
             className="boarding-form-fields flex gap-4 mr-6"
@@ -132,9 +132,9 @@ const FlightDetails = () => {
               Class :
             </label>
 
-            <input type="radio" name="class_name" value="Business" />
+            <input type="radio" name="class_name" value="Business" required/>
             <label htmlFor="business">Business</label>
-            <input type="radio" name="class_name" value="Economy" />
+            <input type="radio" name="class_name" value="Economy" required/>
             <label htmlFor="economy">Economy</label>
           </div>
           <div className="boarding-form-buttons">

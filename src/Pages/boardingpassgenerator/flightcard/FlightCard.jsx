@@ -1,6 +1,6 @@
 import React from "react";
 import "./FlightCard.css";
-import Button from "../../components/buttons/Button";
+import Button from "../../../components/buttons/Button";
 import { useNavigate } from "react-router-dom";
 
 const FlightCard = ({ flight }) => {
