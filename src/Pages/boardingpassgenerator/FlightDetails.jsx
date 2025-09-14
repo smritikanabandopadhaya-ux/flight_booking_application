@@ -7,6 +7,7 @@ import { useState } from "react";
 import allFlightDetails from "../../assets/flights.json";
 import FlightCard from "../boardingpassgenerator/flightcard/FlightCard";
 import Navbar from "../../components/navbar/Navbar";
+import Footer from "../../components/footer/Footer";
 
 const FlightDetails = () => {
   const [flightsAvailable, setflightsAvailable] = useState([]);
@@ -147,6 +148,7 @@ const FlightDetails = () => {
         </form>
       </section>
     </div>
+    <Footer></Footer>
     </div>
   );
 };
