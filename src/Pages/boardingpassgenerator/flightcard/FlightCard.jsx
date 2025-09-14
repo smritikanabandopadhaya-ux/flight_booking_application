@@ -1,4 +1,3 @@
-import React from "react";
 import "./FlightCard.css";
 import Button from "../../../components/buttons/Button";
 import { useNavigate } from "react-router-dom";
@@ -10,12 +9,10 @@ const FlightCard = ({ flight }) => {
     origin,
     destination,
     date,
-    time,
+    departuretime,
     duration,
     travelClass,
     price,
-    luggageWeight,
-    seatDetails,
   } = flight;
   const navigate = useNavigate();
   const handleSubmit = (event) => {
@@ -52,13 +49,16 @@ const FlightCard = ({ flight }) => {
               <strong>Date:</strong> {date}
             </p>
             <p>
-              <strong>Time:</strong> {time}
+              <strong>Time:</strong> {departuretime}
             </p>
             <p>
               <strong>Duration:</strong> {duration}
             </p>
             <p>
               <strong>Class:</strong> {travelClass}
+            </p>
+            <p>
+              <strong>Price:</strong> {price} INR
             </p>
           </div>
           <Button name="Let's Fly" type="submit"></Button>

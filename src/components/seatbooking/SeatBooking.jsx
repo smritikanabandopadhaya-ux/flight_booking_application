@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const SeatBooking = ({ seatArrange, travelClass }) => {
   const rows = seatArrange.rows;
@@ -7,6 +8,7 @@ const SeatBooking = ({ seatArrange, travelClass }) => {
   const mytravelClass = travelClass;
   const [bookedSeats, setBookedSeats] = useState(seatArrange.bookedSeats);
   const [selectedSeat, setSelectedSeat] = useState(null);
+  const navigate = useNavigate();
 
   const handleSeatClick = (seat) => {
     if (bookedSeats.includes(seat)) return; // can't select booked seat
@@ -17,7 +19,9 @@ const SeatBooking = ({ seatArrange, travelClass }) => {
     if (!selectedSeat) return alert("No seat is selected.");
     else {
       setBookedSeats([...bookedSeats, selectedSeat]);
-      alert("seat is selected.");
+      console.log(selectedSeat);
+      localStorage.setItem("selectedSeat", JSON.stringify(selectedSeat));
+      navigate("/boarding-pass");
     }
     setSelectedSeat(null);
   };
@@ -28,15 +32,15 @@ const SeatBooking = ({ seatArrange, travelClass }) => {
     const isSelected = selectedSeat === seat;
 
     //  window seat check
-  let isWindow = false;
-  if (travelClass === "Economy") {
-    // Economy 
-    isWindow = col === 0 || col === columns - 1;
-    // Window seat check
-  } else if (travelClass === "Business") {
-    // Business 
-    isWindow = col === 0 || col === 3;
-  }
+    let isWindow = false;
+    if (mytravelClass === "Economy") {
+      // Economy
+      isWindow = col === 0 || col === columns - 1;
+      // Window seat check
+    } else if (travelClass === "Business") {
+      // Business
+      isWindow = col === 0 || col === 3;
+    }
     return (
       <div
         key={seat}
@@ -65,17 +69,17 @@ const SeatBooking = ({ seatArrange, travelClass }) => {
   return (
     <div className="w-fit flex-col items-center justify-center p-6 mt-6 ml-20">
       <div className="flex justify-between font-bold text-lg mb-4">
-       <div>{travelClass} Class</div>
-       <div> <button
-          className="bg-white text-violet-900 p-2 w-40 rounded-2xl hover:bg-violet-900 hover:text-white"
-          onClick={handleBooking}
-        >
-          Book Now
-        </button></div>
+        <div>{travelClass} Class</div>
+        <div>
+          {" "}
+          <button
+            className="bg-white text-violet-900 p-2 w-40 rounded-2xl hover:bg-violet-900 hover:text-white"
+            onClick={handleBooking}
+          >
+            Book Now
+          </button>
+        </div>
       </div>
-       {/* <div className="flex justify-end mt-5">
-        
-      </div> */}
       {travelClass === "Economy" ? (
         <div className="flex flex-col gap-4">
           {[...Array(rows)].map((_, row) => (

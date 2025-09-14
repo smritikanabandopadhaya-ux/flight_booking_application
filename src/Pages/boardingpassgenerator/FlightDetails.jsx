@@ -36,7 +36,6 @@ const FlightDetails = () => {
     // console.log(myFlightDetails);
     const mySource = myFlightDetails["source"];
     const myDestination = myFlightDetails["destination"];
-
     const flightArray = allFlightDetails.filter(
       (flight) =>
         mySource === flight["origin"]["city"] &&
@@ -55,12 +54,15 @@ const FlightDetails = () => {
         origin: flight.origin.city,
         destination: flight.destination.city,
         date: myFlight.date,
-        time: flight.boardingTime,
+        boardingtime: flight.boardingTime,
+        departuretime:flight.origin.departureTime,
         duration: flight.duration,
-        price: flight.price,
+        price: myFlight.class_name === 'Economy' ? flight.price.economy : flight.price.business,
         travelClass: myFlight.class_name,
         luggageWeight: flight.baggage.checkIn,
         seatDetails: flight.seats,
+        terminal:flight.origin.terminal,
+        gate:flight.gate
       }}
     />
   ));

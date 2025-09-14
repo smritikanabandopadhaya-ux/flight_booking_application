@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const navigate = useNavigate();
-  const user=JSON.parse(localStorage.getItem("userData"));
+  const user=JSON.parse(localStorage.getItem("loginData"));
   const handleLogout = () => {
     localStorage.removeItem("user");
     navigate("/"); // redirect to login page
@@ -10,10 +10,7 @@ const Navbar = () => {
 
   return (
     <nav className="flex justify-between items-center px-6 py-4 bg-[#533d88] text-[#3c2075] shadow-md rounded-lg">
-      {/* Logo / Title */}
       <h2 className="m-0 font-sans font-bold text-3xl italic text-white">Welcome {user.name},</h2>
-
-      {/* Right Side Buttons */}
       <div className="flex gap-4 items-center">
         <button
           onClick={() => navigate("/profile")}

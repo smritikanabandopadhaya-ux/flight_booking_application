@@ -1,15 +1,22 @@
-import React from "react";
+import background from "../../assets/background_cover_image.jpeg";
 
-const BoardingPass = ({ passenger, from, to, flight, gate, date, time, seat }) => {
+const BoardingPass = () => {
+const myflightDetails=JSON.parse(localStorage.getItem("flightData"));
+console.log(myflightDetails);
+const myboardingDetails=JSON.parse(localStorage.getItem("boardingDetails"));
+console.log(myboardingDetails);
+const mySeat=JSON.parse(localStorage.getItem("selectedSeat"));
+
   return (
-    <div className="w-[700px] bg-white rounded-xl shadow-xl overflow-hidden flex border-2 border-gray-300">
+   <div className="w-full h-screen flex justify-center items-center" style={{ backgroundImage: `url(${background})` }}> 
+    <div className="w-[700px] h-3/5 bg-white rounded-xl shadow-xl overflow-hidden flex border-2 border-gray-300">
       {/* Left Section */}
       <div className="flex-1 p-6 border-r-2 border-dashed border-gray-400">
-        <h2 className="text-xl font-bold text-center bg-blue-600 text-white py-2 rounded-md">
-          BOARDING PASS
+        <h2 className="text-xl font-bold text-center bg-[#65339b] text-white py-2 rounded-md">
+        {myflightDetails.airline} Airline
         </h2>
 
-        {/* Fake Barcode */}
+        {/* Barcode */}
         <div className="my-4 flex justify-center">
           <div className="flex gap-[2px]">
             {Array.from({ length: 30 }).map((_, i) => (
@@ -26,22 +33,22 @@ const BoardingPass = ({ passenger, from, to, flight, gate, date, time, seat }) =
         {/* Details */}
         <div className="text-sm space-y-2 text-black">
           <p>
-            <span className="font-semibold">Passenger:</span> {passenger}
+            <span className="font-semibold">Passenger: {myboardingDetails.name}</span> 
           </p>
           <p>
-            <span className="font-semibold">Flying From:</span> {from}
+            <span className="font-semibold">Flight: {myflightDetails.flightNumber}</span>
           </p>
           <p>
-            <span className="font-semibold">To:</span> {to}
+            <span className="font-semibold">Flying From: {myflightDetails.origin}</span>
           </p>
           <p>
-            <span className="font-semibold">Flight:</span> {flight}
+            <span className="font-semibold">Flying To: {myflightDetails.destination}</span>
           </p>
           <p>
-            <span className="font-semibold">Departure Date:</span> {date}
+            <span className="font-semibold">Departure Date: {myflightDetails.date}</span>
           </p>
           <p>
-            <span className="font-semibold">Departure Time:</span> {time}
+            <span className="font-semibold">Departure Time: {myflightDetails.departuretime}</span>
           </p>
           <p className="mt-3 text-xs text-red-600 font-medium">
             Gate closes 15 minutes before departure
@@ -50,52 +57,49 @@ const BoardingPass = ({ passenger, from, to, flight, gate, date, time, seat }) =
       </div>
 
       {/* Right Section */}
-      <div className="w-[220px] p-4 bg-gray-50">
-        <h2 className="text-lg font-bold text-center bg-blue-600 text-white py-2 rounded-md">
+      <div className="w-[220px] p-7 bg-[#b382e7]">
+        <h2 className="text-lg font-bold text-center bg-white text-[#65339b] py-2 rounded-md">
           BOARDING PASS
         </h2>
         <div className="mt-4 text-sm text-black space-y-2">
           <p>
-            <span className="font-semibold">Passenger:</span> {passenger}
+            <span className="font-semibold">Passenger: {myboardingDetails.name}</span>
           </p>
           <p>
-            <span className="font-semibold">From:</span> {from}
+            <span className="font-semibold">From: {myflightDetails.origin}</span>
           </p>
           <p>
-            <span className="font-semibold">To:</span> {to}
+            <span className="font-semibold">To: {myflightDetails.destination}</span>
           </p>
           <p>
-            <span className="font-semibold">Flight:</span> {flight}
+            <span className="font-semibold">Flight: {myflightDetails.flightNumber}</span>
+          </p>
+           <p>
+            <span className="font-semibold">Terminal: {myflightDetails.terminal}</span>
           </p>
           <p>
-            <span className="font-semibold">Gate:</span> {gate}
+            <span className="font-semibold">Gate: {myflightDetails.gate}</span>
           </p>
           <p>
-            <span className="font-semibold">Date:</span> {date}
+            <span className="font-semibold">Date: {myflightDetails.date}</span>
+          </p>
+          <p>
+            <span className="font-semibold">Boarding Time: {myflightDetails.boardingtime}</span>
+          </p>
+          <p>
+            <span className="font-semibold">Luggage Weight: {myboardingDetails.luggage} KG</span>
+          </p>
+          <p>
+            <span className="font-semibold">Meal: {myboardingDetails.food}</span>
           </p>
         </div>
         <div className="mt-6 text-center">
-          <p className="font-bold text-lg">SEAT {seat}</p>
+          <p className="font-bold text-lg">SEAT: {mySeat} </p>
         </div>
       </div>
+    </div>
     </div>
   );
 };
 
-// Example usage
-export default function App() {
-  return (
-    <div className="min-h-screen flex justify-center items-center bg-gray-200">
-      <BoardingPass
-        passenger="John Smith"
-        from="NYC"
-        to="LA"
-        flight="BH01122"
-        gate="B27"
-        date="25 MAY"
-        time="20:10"
-        seat="16C"
-      />
-    </div>
-  );
-}
+export default BoardingPass;

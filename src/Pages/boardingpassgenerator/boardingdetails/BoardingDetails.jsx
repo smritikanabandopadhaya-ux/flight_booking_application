@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Button from "../../../components/buttons/Button";
 import "./BoardingDetails.css";
 import username from "../../../assets/username.svg";
@@ -13,13 +13,14 @@ const Form = () => {
   const [maxluggage, setMaxLuggage] = useState(0);
   const [seatArrangement, setSeatArrangement] = useState(null);
   const [travelClass, setTravelClass] = useState("");
+  const userdata=JSON.parse(localStorage.getItem("loginData"));
 
   useEffect(() => {
     const savedData = localStorage.getItem("flightData");
     if (savedData) {
       const parsedData = JSON.parse(savedData);
       setFlightData(parsedData);
-      console.log("All:", parsedData);
+      // console.log("All:", parsedData);
       const weightNum = parseInt(parsedData.luggageWeight, 10); // extracts the integer part
       setMaxLuggage(weightNum);
       // console.log("seat", parsedData.seatDetails);
@@ -30,6 +31,11 @@ const Form = () => {
 
   const bookMySeat = (e) => {
     e.preventDefault(); // prevent form from reloading
+    const data = new FormData(e.target); // for having form data
+    const value = Object.fromEntries(data.entries());
+    console.log({ value });
+    const jsonString = JSON.stringify(value);
+    localStorage.setItem("boardingDetails", jsonString);
     setShowSeatBooking(true); // show SeatBooking after submit
   };
   return (
@@ -52,7 +58,7 @@ const Form = () => {
                 type="text"
                 name="name"
                 className="input-field"
-                placeholder="   Name of the Passanger"
+                defaultValue={userdata.name}
                 required
               />
             </div>
@@ -84,9 +90,9 @@ const Form = () => {
               <label htmlFor="veg" className="mr-6">
                 Food:
               </label>
-              <input type="radio" name="class_name" value="Veg" required />
+              <input type="radio" name="food" value="Veg" required />
               <label htmlFor="veg">Veg</label>
-              <input type="radio" name="class_name" value="Non_veg" required />
+              <input type="radio" name="food" value="Non Veg" required />
               <label htmlFor="non_veg">Non Veg</label>
             </div>
 

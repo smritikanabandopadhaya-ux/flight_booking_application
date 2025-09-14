@@ -7,7 +7,8 @@
   border-radius: 20px;
   justify-content: center;
   margin-top: 6em;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 8px 20px #00000066;
+  min-width: 50%;
 }
 .login-form-header{
   font-size: 1.5em;
@@ -49,4 +50,21 @@
 }
 .hidden{
   display: none;
+}
+.password-strength-msg {
+  font-size: 0.85rem;
+  margin: 0 0 0.3rem 5rem;
+  transition: all 0.3s ease;
+}
+
+.password-strength-msg.weak {
+  color: #fa2335; /* red */
+}
+
+.password-strength-msg.medium {
+  color: #fff025; /* orange */
+}
+
+.password-strength-msg.strong {
+  color: #68d671; /* green */
 }
