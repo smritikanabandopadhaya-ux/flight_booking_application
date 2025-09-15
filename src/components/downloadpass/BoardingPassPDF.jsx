@@ -1,4 +1,3 @@
-import React from "react";
 import { Document, Page, Text, View, StyleSheet } from "@react-pdf/renderer";
 
 const styles = StyleSheet.create({
@@ -8,17 +7,19 @@ const styles = StyleSheet.create({
     position: "relative",
   },
   leftSection: {
-    flexGrow: 0, 
+    flexGrow: 0,
     flexShrink: 1,
     flexBasis: "auto",
     padding: 20,
-    borderRight: "2px dashed gray",
+    border: "2px dashed gray",
   },
   rightSection: {
     padding: 20,
     backgroundColor: "#b382e7",
-     flexGrow: 0,
-    flexShrink: 1, 
+    flexGrow: 0,
+    flexShrink: 1,
+    border: "2px dashed white",
+    borderTop:0,
   },
   heading: {
     fontSize: 12,
@@ -55,6 +56,16 @@ const styles = StyleSheet.create({
     marginTop: 10,
     textAlign: "center",
   },
+  instructionNote: {
+    fontSize: 8,
+    color: "purple",
+  },
+  title: {
+    fontSize: 10,
+    marginBottom: 4,
+    color: "purple",
+    marginTop: 10,
+  },
 });
 
 const BoardingPassPDF = ({ flightDetails, boardingDetails, seat }) => (
@@ -74,6 +85,43 @@ const BoardingPassPDF = ({ flightDetails, boardingDetails, seat }) => (
         </Text>
         <Text style={styles.smallNote}>
           Gate closes 15 minutes before departure
+        </Text>
+        <Text style={styles.title}>Boarding Instructions:</Text>
+        <Text style={styles.instructionNote}>
+          • Complete your check-in online or at the airport counter/kiosk.
+        </Text>
+        <Text style={styles.instructionNote}>
+          • Provide your booking reference or e-ticket number along with a valid
+          ID.
+        </Text>
+        <Text style={styles.instructionNote}>
+          • Choose whether to receive a digital boarding pass or a printed copy at the airport.
+        </Text>
+        <Text style={styles.instructionNote}>
+          • Confirm your flight number, departure gate, boarding time, and seat
+          assignment on the boarding pass.
+        </Text>
+        <Text style={styles.instructionNote}>
+          • Keep your boarding pass and valid ID ready for security screening.
+        </Text>
+        <Text style={styles.instructionNote}>
+          • Follow airport staff instructions and regulations.
+        </Text>
+        <Text style={styles.instructionNote}>
+          • Check the airport display screens for any updates or gate changes.
+        </Text>
+        <Text style={styles.instructionNote}>
+          • Arrive at the gate at least 30–45 minutes before departure.
+        </Text>
+        <Text style={styles.instructionNote}>
+          • Scan your boarding pass at the gate before entering the aircraft.
+        </Text>
+        <Text style={styles.instructionNote}>
+          • Stow your carry-on luggage as directed by the cabin crew.
+        </Text>
+        <Text style={styles.instructionNote}>
+          • Retain it until the flight is complete; you may need it for transit
+          checks, baggage claims, or future reference.
         </Text>
       </View>
       {/* Right Section */}

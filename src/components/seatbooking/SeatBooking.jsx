@@ -75,7 +75,7 @@ const SeatBooking = ({ seatArrange, travelClass }) => {
             className="bg-white text-violet-900 p-2 w-40 rounded-2xl hover:bg-violet-900 hover:text-white"
             onClick={handleBooking}
           >
-            Book Now
+            Make Payment
           </button>
         </div>
       </div>

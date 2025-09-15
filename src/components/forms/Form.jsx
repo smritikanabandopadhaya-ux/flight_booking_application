@@ -7,14 +7,13 @@ import password_img from "../../assets/password.svg";
 import { useNavigate } from "react-router-dom";
 
 const Form = () => {
-  const [isHidden, setHiddenState] = useState(true); // toggle between SignIn / SignUp
+  const [isHidden, setHiddenState] = useState(true); 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [name, setName] = useState("");
-  const [passwordStrength, setPasswordStrength] = useState(""); // ✅ NEW
+  const [passwordStrength, setPasswordStrength] = useState("");
   const navigate = useNavigate();
 
-  // ✅ Password strength checker
   const checkPasswordStrength = (password) => {
     if (!password) return "";
     if (password.length < 6) {
@@ -54,7 +53,7 @@ const Form = () => {
   const handleLogin = (event) => {
     event.preventDefault();
     event.stopPropagation();
-    doLogin(true); //
+    doLogin(true);
   };
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -65,7 +64,6 @@ const Form = () => {
     }
     const data = new FormData(event.target);
     const value = Object.fromEntries(data.entries());
-    // console.log({ value });
     localStorage.setItem("loginData", JSON.stringify(value));
     alert("Account Created Successfully");
     doLogin(false); 

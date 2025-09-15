@@ -1,4 +1,3 @@
-import React from "react";
 import "./pages/login/Login.css";
 import Login from "./pages/login/Login";
 import BoardingDetails from "./pages/boardingpassgenerator/boardingdetails/BoardingDetails";
@@ -7,7 +6,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import BarcodeGenerator from "./pages/boardingpassgenerator/BoardingPass";
 import PrivateRoute from "./components/privateRoute/privateRoute";
 import Profile from "./pages/profile/Profile";
-import PaymentPage from "./pages/boardingpassgenerator/PaymentPage";
+import PaymentPage from "./pages/boardingpassgenerator/paymentdetails/PaymentPage";
+import PaymentSuccessful from "./pages/boardingpassgenerator/paymentdetails/PaymentSuccessful";
 
 function App() {
   return (
@@ -53,6 +53,14 @@ function App() {
           element={
             <PrivateRoute>
               <PaymentPage/>
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/payment-successful"
+          element={
+            <PrivateRoute>
+              <PaymentSuccessful/>
             </PrivateRoute>
           }
         />

@@ -2,12 +2,13 @@ import background from "../../assets/background_cover_image.jpeg";
 import { pdf } from "@react-pdf/renderer";
 import { saveAs } from "file-saver";
 import BoardingPassPDF from "../../components/downloadpass/BoardingPassPDF";
+import { useNavigate } from "react-router-dom";
 
 const BoardingPass = () => {
   const myflightDetails = JSON.parse(localStorage.getItem("flightData"));
   const myboardingDetails = JSON.parse(localStorage.getItem("boardingDetails"));
   const mySeat = JSON.parse(localStorage.getItem("selectedSeat"));
-
+  const navigate = useNavigate();
   const handleDownload = async () => {
     const blob = await pdf(
       <BoardingPassPDF
@@ -17,6 +18,9 @@ const BoardingPass = () => {
       />
     ).toBlob();
     saveAs(blob, "boarding-pass.pdf");
+  };
+  const returntoHome = () => {
+    navigate("/flight-details");
   };
 
   return (
@@ -146,14 +150,20 @@ const BoardingPass = () => {
           </div>
         </div>
       </div>
-
-      {/* Download Button */}
-      <button
-        onClick={handleDownload}
-        className="mt-6 px-6 py-2 bg-purple-900 text-white rounded-lg shadow hover:bg-white hover:text-purple-800 "
-      >
-        Download Pass
-      </button>
+      <div className="flex justify-around gap-10">
+        <button
+          onClick={handleDownload}
+          className="mt-6 px-6 py-2 bg-purple-900 text-white rounded-lg shadow hover:bg-white hover:text-purple-800 "
+        >
+          Download Pass
+        </button>
+        <button
+          onClick={returntoHome}
+          className="mt-6 px-6 py-2 bg-purple-900 text-white rounded-lg shadow hover:bg-white hover:text-purple-800 "
+        >
+          Go to Home
+        </button>
+      </div>
     </div>
   );
 };
