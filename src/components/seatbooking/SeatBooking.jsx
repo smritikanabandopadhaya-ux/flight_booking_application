@@ -21,7 +21,7 @@ const SeatBooking = ({ seatArrange, travelClass }) => {
       setBookedSeats([...bookedSeats, selectedSeat]);
       console.log(selectedSeat);
       localStorage.setItem("selectedSeat", JSON.stringify(selectedSeat));
-      navigate("/boarding-pass");
+      navigate("/make-payment");
     }
     setSelectedSeat(null);
   };

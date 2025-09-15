@@ -1,20 +1,61 @@
-import "./Pages/login/Login.css";
-import Login from "./Pages/login/Login";
-import BoardingDetails from "./Pages/boardingpassgenerator/boardingdetails/BoardingDetails";
-import FlightDetails from "./Pages/boardingpassgenerator/FlightDetails";
+import React from "react";
+import "./pages/login/Login.css";
+import Login from "./pages/login/Login";
+import BoardingDetails from "./pages/boardingpassgenerator/boardingdetails/BoardingDetails";
+import FlightDetails from "./pages/boardingpassgenerator/FlightDetails";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import BoardingPass from "./Pages/boardingpassgenerator/BoardingPass";
-import Profile from "./Pages/profile/Profile";
+import BarcodeGenerator from "./pages/boardingpassgenerator/BoardingPass";
+import PrivateRoute from "./components/privateRoute/privateRoute";
+import Profile from "./pages/profile/Profile";
+import PaymentPage from "./pages/boardingpassgenerator/PaymentPage";
 
 function App() {
   return (
     <Router>
       <Routes>
+        {/* Public Route */}
         <Route path="/" element={<Login />} />
-        <Route path="/flight-details" element={<FlightDetails />} />
-        <Route path="/boarding-details" element={<BoardingDetails />} />
-        <Route path="/boarding-pass" element={<BoardingPass />} />
-        <Route path="/profile" element={<Profile />} />
+        {/* Protected Routes */}
+        <Route
+          path="/flight-details"
+          element={
+            <PrivateRoute>
+              <FlightDetails />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/boarding-details"
+          element={
+            <PrivateRoute>
+              <BoardingDetails />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/boarding-pass"
+          element={
+            <PrivateRoute>
+              <BarcodeGenerator />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/profile"
+          element={
+            <PrivateRoute>
+              <Profile />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/make-payment"
+          element={
+            <PrivateRoute>
+              <PaymentPage/>
+            </PrivateRoute>
+          }
+        />
       </Routes>
     </Router>
   );

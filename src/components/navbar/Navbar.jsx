@@ -5,6 +5,7 @@ const Navbar = () => {
   const user=JSON.parse(localStorage.getItem("loginData"));
   const handleLogout = () => {
     localStorage.removeItem("user");
+    alert("Logged Out Successfully");
     navigate("/"); 
   };
 

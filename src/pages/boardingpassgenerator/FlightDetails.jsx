@@ -5,7 +5,7 @@ import Button from "../../components/buttons/Button";
 import class_img from "../../assets/seat-pictogram-2-svgrepo-com.svg";
 import { useState } from "react";
 import allFlightDetails from "../../assets/flights.json";
-import FlightCard from "../boardingpassgenerator/flightcard/FlightCard";
+import FlightCard from "./flightcard/FlightCard";
 import Navbar from "../../components/navbar/Navbar";
 import Footer from "../../components/footer/Footer";
 
