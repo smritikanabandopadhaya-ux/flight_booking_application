@@ -6,7 +6,7 @@ import airplane from "../../assets/flight-ticket-svgrepo-com.svg";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#4f3d94] text-gray-300">
+    <footer className="bg-[#4f3d93] text-gray-300">
       <div className="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-4 gap-8">
         
         {/* Branding */}
@@ -55,7 +55,7 @@ export default function Footer() {
       </div>
 
       {/* Bottom bar */}
-      <div className="border-t border-gray-700 text-center py-4 text-sm">
+      <div className="border-t border-gray-200 text-center py-4 text-sm">
         © {new Date().getFullYear()} Wander Wings. All rights reserved.
       </div>
     </footer>

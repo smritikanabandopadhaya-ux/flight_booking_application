@@ -25,7 +25,7 @@ const BoardingPass = () => {
       style={{ backgroundImage: `url(${background})` }}
     >
       {/* Boarding Pass UI */}
-      <div className="w-[700px] h-3/5 bg-white rounded-xl shadow-xl overflow-hidden flex border-2 border-gray-300">
+      <div className="w-[800px] h-3/5 bg-white rounded-xl shadow-xl overflow-hidden flex border-2 border-gray-300">
         {/* Left Section */}
         <div className="flex-1 p-6 border-r-2 border-dashed border-gray-400">
           <h2 className="text-xl font-bold text-center bg-[#65339b] text-white py-2 rounded-md">
@@ -90,7 +90,7 @@ const BoardingPass = () => {
         </div>
 
         {/* Right Section */}
-        <div className="w-[220px] p-7 bg-[#b382e7]">
+        <div className="w-[300px] p-7 bg-[#b382e7]">
           <h2 className="text-lg font-bold text-center bg-white text-[#65339b] py-2 rounded-md">
             BOARDING PASS
           </h2>
@@ -150,7 +150,7 @@ const BoardingPass = () => {
       {/* Download Button */}
       <button
         onClick={handleDownload}
-        className="mt-6 px-6 py-2 bg-purple-700 text-white rounded-lg shadow hover:bg-purple-800"
+        className="mt-6 px-6 py-2 bg-purple-900 text-white rounded-lg shadow hover:bg-white hover:text-purple-800 "
       >
         Download Pass
       </button>

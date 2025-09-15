@@ -31,35 +31,10 @@ const Form = () => {
     }
     return "✅ Strong password";
   };
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-
-    // ✅ Block weak password during SignUp
-    if (!isHidden && !passwordStrength.startsWith("✅")) {
-      alert("Please choose a stronger password before signing up.");
-      return;
-    }
-
-    const data = new FormData(event.target); // for having form data
-    const value = Object.fromEntries(data.entries());
-    console.log({ value });
-    const jsonString = JSON.stringify(value);
-    localStorage.setItem("loginData", jsonString);
-    alert("Account Created Successfully");
-    setEmail("");
-    setPassword("");
-    setName("");
-    setPasswordStrength("");
-    setHiddenState(true);
-  };
-
-  const handleLogin = (event) => {
-    event.preventDefault();
-    event.stopPropagation();
+  const doLogin = (showAlert = true) => {
     const retrievedJsonString = localStorage.getItem("loginData");
     if (!retrievedJsonString) {
-      alert("No user data found");
+      if (showAlert) alert("No user data found");
       return;
     }
     const retrievedObject = JSON.parse(retrievedJsonString);
@@ -67,136 +42,163 @@ const Form = () => {
       retrievedObject.email === email &&
       retrievedObject.password === password
     ) {
-      localStorage.setItem('isLoggedIn' , true)
+      localStorage.setItem("isLoggedIn", true);
+      if (showAlert) alert("Login Successful!");
       navigate("/flight-details");
-      alert(" Login Successful!");
     } else {
-      alert(" Invalid credentials");
+      if (showAlert) alert("Invalid credentials");
     }
     setEmail("");
     setPassword("");
   };
+  const handleLogin = (event) => {
+    event.preventDefault();
+    event.stopPropagation();
+    doLogin(true); //
+  };
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    if (!isHidden && !passwordStrength.startsWith("✅")) {
+      alert("Please choose a stronger password before signing up.");
+      return;
+    }
+    const data = new FormData(event.target);
+    const value = Object.fromEntries(data.entries());
+    // console.log({ value });
+    localStorage.setItem("loginData", JSON.stringify(value));
+    alert("Account Created Successfully");
+    doLogin(false); 
+    setEmail("");
+    setPassword("");
+    setName("");
+    setPasswordStrength("");
+  };
 
   return (
-   <div> 
-    <form className="login-form" onSubmit={handleSubmit}>
-      <div className="login-form-fields login-form-header">
-        Welcome Onboard !
-      </div>
+    <div>
+      <form className="login-form" onSubmit={handleSubmit}>
+        <div className="login-form-fields login-form-header">
+          Welcome Onboard !
+        </div>
 
-      {!isHidden && (
-        <div className="login-form-fields" id="form-input-name">
-          <img src={username} alt="username icon" className="login-form-icon" />
+        {!isHidden && (
+          <div className="login-form-fields" id="form-input-name">
+            <img
+              src={username}
+              alt="username icon"
+              className="login-form-icon"
+            />
+            <input
+              type="text"
+              name="name"
+              className="input-field"
+              placeholder="   Name"
+              required={!isHidden}
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+            />
+          </div>
+        )}
+
+        <div className="login-form-fields">
+          <img src={email_img} alt="email icon" className="login-form-icon" />
           <input
-            type="text"
-            name="name"
+            type="email"
+            name="email"
             className="input-field"
-            placeholder="   Name"
-            required={!isHidden}
-            value={name}
-            onChange={(e) => setName(e.target.value)}
+            placeholder="   Username/Email"
+            required
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
           />
         </div>
-      )}
 
-      <div className="login-form-fields">
-        <img src={email_img} alt="email icon" className="login-form-icon" />
-        <input
-          type="email"
-          name="email"
-          className="input-field"
-          placeholder="   Username/Email"
-          required
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
-      </div>
-
-      <div className="login-form-fields">
-        <img
-          src={password_img}
-          alt="password icon"
-          className="login-form-icon"
-        />
-        <input
-          type="password"
-          name="password"
-          className="input-field"
-          placeholder="   Password "
-          required
-          value={password}
-          onChange={(e) => {
-            setPassword(e.target.value);
-            setPasswordStrength(checkPasswordStrength(e.target.value)); 
-          }}
-        />
-      </div>
-
-      {/* ✅ Pretty password strength message (only in SignUp mode) */}
-      {!isHidden && password && (
-        <div
-          className={`password-strength-msg ${
-            passwordStrength.startsWith("✅")
-              ? "strong"
-              : passwordStrength.startsWith("⚠️")
-              ? "medium"
-              : "weak"
-          }`}
-        >
-          {passwordStrength}
-        </div>
-      )}
-
-      <div className="login-form-fields text-xs flex gap-8 ml-10">
-        <label>
-          <input type="checkbox" />
-          &nbsp;Remember Me&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        </label>
-        <button id="sign-in-now">Forget Password ?</button>
-      </div>
-
-      {isHidden ? (
-        <div className="login-form-fields sign-in">
-          <Button handleClick={handleLogin} name="Sign In" />
-        </div>
-      ) : (
-        <div className="login-form-fields sign-in">
-          <Button name="Sign Up" type="submit" />
-        </div>
-      )}
-
-      {isHidden ? (
         <div className="login-form-fields">
-          Does not have an Account ?
-          <button
-            id="sign-in-now"
-            onClick={(e) => {
-              e.preventDefault();
-              setHiddenState(false); // switch to SignUp
-              setEmail("");
-              setPassword("");
+          <img
+            src={password_img}
+            alt="password icon"
+            className="login-form-icon"
+          />
+          <input
+            type="password"
+            name="password"
+            className="input-field"
+            placeholder="   Password "
+            required
+            value={password}
+            onChange={(e) => {
+              setPassword(e.target.value);
+              setPasswordStrength(checkPasswordStrength(e.target.value));
             }}
-          >
-            &nbsp; Sign Up
-          </button>
+          />
         </div>
-      ) : (
-        <div className="login-form-fields">
-          Already have an Account ?
-          <button
-            id="sign-in-now"
-            onClick={(e) => {
-              e.preventDefault();
-              setHiddenState(true); // switch back to SignIn
-              setEmail("");
-              setPassword("");
-            }}
+
+        {/* ✅ Pretty password strength message (only in SignUp mode) */}
+        {!isHidden && password && (
+          <div
+            className={`password-strength-msg ${
+              passwordStrength.startsWith("✅")
+                ? "strong"
+                : passwordStrength.startsWith("⚠️")
+                ? "medium"
+                : "weak"
+            }`}
           >
-            &nbsp; Sign In
-          </button>
+            {passwordStrength}
+          </div>
+        )}
+
+        <div className="login-form-fields text-xs flex gap-8 ml-10">
+          <label>
+            <input type="checkbox" />
+            &nbsp;Remember Me&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </label>
+          <button id="sign-in-now">Forget Password ?</button>
         </div>
-      )}
-    </form>
+
+        {isHidden ? (
+          <div className="login-form-fields sign-in">
+            <Button handleClick={handleLogin} name="Sign In" />
+          </div>
+        ) : (
+          <div className="login-form-fields sign-in">
+            <Button name="Sign Up" type="submit" />
+          </div>
+        )}
+
+        {isHidden ? (
+          <div className="login-form-fields">
+            Does not have an Account ?
+            <button
+              id="sign-in-now"
+              onClick={(e) => {
+                e.preventDefault();
+                setHiddenState(false); // switch to SignUp
+                setEmail("");
+                setPassword("");
+              }}
+            >
+              &nbsp; Sign Up
+            </button>
+          </div>
+        ) : (
+          <div className="login-form-fields">
+            Already have an Account ?
+            <button
+              id="sign-in-now"
+              onClick={(e) => {
+                e.preventDefault();
+                setHiddenState(true); // switch back to SignIn
+                setEmail("");
+                setPassword("");
+              }}
+            >
+              &nbsp; Sign In
+            </button>
+          </div>
+        )}
+      </form>
     </div>
   );
 };

@@ -11,7 +11,7 @@ const SeatBooking = ({ seatArrange, travelClass }) => {
   const navigate = useNavigate();
 
   const handleSeatClick = (seat) => {
-    if (bookedSeats.includes(seat)) return; // can't select booked seat
+    if (bookedSeats.includes(seat)) return;
     setSelectedSeat(seat);
   };
 
@@ -71,7 +71,6 @@ const SeatBooking = ({ seatArrange, travelClass }) => {
       <div className="flex justify-between font-bold text-lg mb-4">
         <div>{travelClass} Class</div>
         <div>
-          {" "}
           <button
             className="bg-white text-violet-900 p-2 w-40 rounded-2xl hover:bg-violet-900 hover:text-white"
             onClick={handleBooking}
@@ -80,15 +79,14 @@ const SeatBooking = ({ seatArrange, travelClass }) => {
           </button>
         </div>
       </div>
+      {/* Seat Layout */}
       {travelClass === "Economy" ? (
         <div className="flex flex-col gap-4">
           {[...Array(rows)].map((_, row) => (
             <div key={row} className="flex justify-center gap-8">
-              {/* Left block (A, B, C) */}
               <div className="flex gap-2">
                 {[0, 1, 2].map((col) => renderSeat(row, col))}
               </div>
-              {/* Right block (D, E, F) */}
               <div className="flex gap-2">
                 {[3, 4, 5].map((col) => renderSeat(row, col))}
               </div>
@@ -99,18 +97,37 @@ const SeatBooking = ({ seatArrange, travelClass }) => {
         <div className="flex flex-col gap-6">
           {[...Array(businessRows)].map((_, row) => (
             <div key={row} className="flex justify-center gap-16">
-              {/* Left block (A, B) */}
               <div className="flex gap-2">
-                {[0, 1].map((col) => renderSeat(row, col, "B"))}
+                {[0, 1].map((col) => renderSeat(row, col))}
               </div>
-              {/* Right block (C, D) */}
               <div className="flex gap-2">
-                {[2, 3].map((col) => renderSeat(row, col, "B"))}
+                {[2, 3].map((col) => renderSeat(row, col))}
               </div>
             </div>
           ))}
         </div>
       )}
+      {/* Legend Section */}
+      <div className="flex gap-6 mt-6 text-black justify-center">
+        <div className="flex items-center gap-2">
+          <div className="w-6 h-6 bg-white border-white rounded-md"></div>
+          <span className="text-sm">Available</span>
+        </div>
+        <div className="flex items-center gap-2">
+          <div className="w-6 h-6 bg-gray-500 rounded-md"></div>
+          <span className="text-sm">Booked</span>
+        </div>
+        <div className="flex items-center gap-2">
+          <div className="w-6 h-6 bg-blue-500 rounded-md"></div>
+          <span className="text-sm">Selected</span>
+        </div>
+        <div className="flex items-center gap-2">
+          <div className="w-6 h-6 border-2 border-blue-400 bg-white rounded-md flex items-center justify-center">
+            <span className="text-xs font-bold text-blue-400">W</span>
+          </div>
+          <span className="text-sm">Window</span>
+        </div>
+      </div>
     </div>
   );
 };

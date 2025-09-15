@@ -6,6 +6,7 @@ import luggage from "../../../assets/luggage-svgrepo-com.svg";
 import SeatBooking from "../../../components/seatbooking/SeatBooking";
 import food_img from "../../../assets/food_img.svg";
 import Navbar from "../../../components/navbar/Navbar";
+import Footer from "../../../components/footer/Footer";
 
 const Form = () => {
   const [showSeatBooking, setShowSeatBooking] = useState(false);
@@ -39,6 +40,7 @@ const Form = () => {
     setShowSeatBooking(true); // show SeatBooking after submit
   };
   return (
+    <>
       <div className="background flex-col justify-center align-baseliner">
         <div>
           <Navbar></Navbar>
@@ -111,6 +113,10 @@ const Form = () => {
         )}
         </section>
       </div>
+      <div>
+         <Footer/>
+      </div>
+      </>
   );
 };
 export default Form;
