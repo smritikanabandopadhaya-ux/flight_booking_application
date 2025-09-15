@@ -1,12 +1,5 @@
 import React from "react";
-import {
-  Document,
-  Page,
-  Text,
-  View,
-  StyleSheet,
-} from "@react-pdf/renderer";
-
+import { Document, Page, Text, View, StyleSheet } from "@react-pdf/renderer";
 
 const styles = StyleSheet.create({
   page: {
@@ -18,7 +11,7 @@ const styles = StyleSheet.create({
     flex: 2,
     padding: 20,
     borderRight: "2px dashed gray",
-    marginBottom: 0
+    marginBottom: 0,
   },
   rightSection: {
     flex: 1,
@@ -73,6 +66,7 @@ const BoardingPassPDF = ({ flightDetails, boardingDetails, seat }) => (
         <Text style={styles.text}>Flying From: {flightDetails.origin}</Text>
         <Text style={styles.text}>Flying To: {flightDetails.destination}</Text>
         <Text style={styles.text}>Departure Date: {flightDetails.date}</Text>
+        <Text style={styles.text}>Amount: {flightDetails.price}</Text>
         <Text style={styles.text}>
           Departure Time: {flightDetails.departuretime}
         </Text>
@@ -90,6 +84,7 @@ const BoardingPassPDF = ({ flightDetails, boardingDetails, seat }) => (
         <Text style={styles.text}>Terminal: {flightDetails.terminal}</Text>
         <Text style={styles.text}>Gate: {flightDetails.gate}</Text>
         <Text style={styles.text}>Date: {flightDetails.date}</Text>
+        <Text style={styles.text}>Amount: {flightDetails.price}</Text>
         <Text style={styles.text}>
           Boarding Time: {flightDetails.boardingtime}
         </Text>

@@ -78,6 +78,11 @@ const BoardingPass = () => {
                 Departure Time: {myflightDetails.departuretime}
               </span>
             </p>
+            <p>
+              <span className="font-semibold">
+                Amount: {myflightDetails.price} INR
+              </span>
+            </p>
             <p className="mt-3 text-xs text-red-600 font-medium">
               Gate closes 15 minutes before departure
             </p>
@@ -129,6 +134,11 @@ const BoardingPass = () => {
             <p>
               <span className="font-semibold">Meal: </span>
               {myboardingDetails.food}
+            </p>
+            <p>
+              <span className="font-semibold">
+                Amount: {myflightDetails.price} INR
+              </span>
             </p>
           </div>
           <div className="mt-6 text-center">
