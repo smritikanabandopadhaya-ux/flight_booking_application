@@ -149,7 +149,6 @@ const PaymentPage = () => {
           Cardholder name
           <input
             type="text"
-            value={name}
             onChange={(e) => setName(e.target.value)}
             defaultValue={mypersonalDetails.name}
             className={`mt-2 w-full rounded-lg border p-3 text-sm outline-none focus:ring-2 focus:ring-indigo-300 transition ${errors.name ? 'border-rose-300 bg-rose-50' : 'border-slate-200'}`}
