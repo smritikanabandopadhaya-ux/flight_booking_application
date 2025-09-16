@@ -41,7 +41,8 @@ const PaymentPage = () => {
     (entry) =>
       entry.flightNumber === newEntry.flightNumber && 
       entry.seat === newEntry.seat &&
-      entry.date === newEntry.date
+      entry.date === newEntry.date &&
+      entry.travelClass === newEntry.travelClass
   );
 
   if (!exists) {

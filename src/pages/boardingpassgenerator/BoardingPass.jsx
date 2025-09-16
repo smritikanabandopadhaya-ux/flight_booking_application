@@ -2,8 +2,8 @@ import background from "../../assets/background_cover_image.jpeg";
 import { pdf } from "@react-pdf/renderer";
 import { saveAs } from "file-saver";
 import BoardingPassPDF from "../../components/downloadpass/BoardingPassPDF";
-import { useNavigate } from "react-router-dom";
-import { useRef, useEffect } from "react";
+import { useNavigate} from "react-router-dom";
+import { useRef, useEffect} from "react";
 
 const BoardingPass = () => {
   const myflightDetails = JSON.parse(localStorage.getItem("flightData"));

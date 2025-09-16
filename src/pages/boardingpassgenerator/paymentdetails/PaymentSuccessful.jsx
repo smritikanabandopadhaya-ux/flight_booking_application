@@ -12,12 +12,16 @@ const PaymentSuccess = () => {
   };
 
   const newId = generateTransactionId();
+
   const handleBoardingPass = () => {
-  navigate("/boarding-pass");
+    navigate("/boarding-pass");
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center p-6" style={{ backgroundImage: `url(${background})`}}  >
+    <div
+      className="min-h-screen flex items-center justify-center p-6"
+      style={{ backgroundImage: `url(${background})` }}
+    >
       <div className="w-full max-w-md bg-white rounded-2xl shadow-lg border border-slate-100 p-6">
         <div className="text-2xl font-semibold text-purple-900 mb-2">
           Payment Successful
