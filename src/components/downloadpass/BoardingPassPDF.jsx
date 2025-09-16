@@ -71,7 +71,7 @@ const styles = StyleSheet.create({
 const BoardingPassPDF = ({ flightDetails, boardingDetails, seat }) => (
   <Document>
     <Page size="A5" style={styles.page}>
-      {/* Left Section */}
+      
       <View style={styles.leftSection}>
         <Text style={styles.heading}>{flightDetails.airline} Airline</Text>
         <Text style={styles.text}>Passenger: {boardingDetails.name}</Text>
@@ -124,7 +124,7 @@ const BoardingPassPDF = ({ flightDetails, boardingDetails, seat }) => (
           checks, baggage claims, or future reference.
         </Text>
       </View>
-      {/* Right Section */}
+      
       <View style={styles.rightSection}>
         <Text style={styles.rightHeading}>BOARDING PASS</Text>
         <Text style={styles.text}>Passenger: {boardingDetails.name}</Text>

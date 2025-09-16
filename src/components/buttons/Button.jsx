@@ -1,4 +1,3 @@
-import React, { useState } from "react"
 import "./Button.css"
 
 function Button({handleClick,name}){

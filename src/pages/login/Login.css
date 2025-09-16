@@ -12,12 +12,12 @@
   justify-content: center;
   align-items: baseline;
   flex-wrap: no-wrap;
-  padding: 2em;
+  padding: 2em 2em 0em 2em;
   margin-right: 18em;
 
 }
 .backgound-container-heading {
-  font-size: 8em;
+  font-size: 6em;
   font-family: "Comic Sans MS", cursive;
   font-weight: bold;
   width: 40%;

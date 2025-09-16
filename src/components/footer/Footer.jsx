@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import facebook from "../../assets/facebook-svgrepo-com.svg";
 import twitter from "../../assets/twitter-color-svgrepo-com.svg";
 import instagram from "../../assets/instagram-1-svgrepo-com.svg";
@@ -16,7 +16,7 @@ export default function Footer() {
   return (
     <footer className="bg-[#4f3d93] text-gray-300">
       <div className="max-w-6xl mx-auto px-6 py-10 grid grid-cols-1 md:grid-cols-3 gap-8">
-        {/* Branding */}
+        
         <div>
           <div className="flex items-center gap-2">
             <img src={airplane} alt="Logo" className="w-8 h-8" />
@@ -28,11 +28,11 @@ export default function Footer() {
           </p>
         </div>
 
-        {/* Accordion Section */}
+        
         <div>
           <h3 className="text-lg font-semibold text-white mb-4">Need Help?</h3>
 
-          {/* Support Accordion */}
+          
           <div className="mb-3 border-b border-purple-700">
             <button
               onClick={() => toggle("support")}
@@ -43,7 +43,7 @@ export default function Footer() {
             </button>
             {open === "support" && (
               <ul className="pl-3 pb-3 space-y-2 text-sm text-purple-200">
-                {/* Help Center */}
+                
                 <li className="border-b border-purple-800 pb-2">
                   <button
                     onClick={() => setOpenSupport(openSupport === 1 ? null : 1)}
@@ -60,7 +60,7 @@ export default function Footer() {
                   )}
                 </li>
 
-                {/* Contact Us */}
+                
                 <li className="border-b border-purple-800 pb-2">
                   <button
                     onClick={() => setOpenSupport(openSupport === 2 ? null : 2)}
@@ -77,7 +77,7 @@ export default function Footer() {
                   )}
                 </li>
 
-                {/* Terms & Conditions */}
+                
                 <li>
                   <button
                     onClick={() => setOpenSupport(openSupport === 3 ? null : 3)}
@@ -97,7 +97,7 @@ export default function Footer() {
             )}
           </div>
 
-          {/* FAQs Accordion */}
+          
           <div className="mb-3 border-b border-purple-700">
             <button
               onClick={() => toggle("faq")}
@@ -109,7 +109,7 @@ export default function Footer() {
 
             {open === "faq" && (
               <ul className="pl-3 pb-3 space-y-2 text-sm text-purple-200">
-                {/* Question 1 */}
+                
                 <li className="border-b border-purple-800 pb-2">
                   <button
                     onClick={() => setOpenFaq(openFaq === 1 ? null : 1)}
@@ -126,7 +126,7 @@ export default function Footer() {
                   )}
                 </li>
 
-                {/* Question 2 */}
+                
                 <li className="border-b border-purple-800 pb-2">
                   <button
                     onClick={() => setOpenFaq(openFaq === 2 ? null : 2)}
@@ -143,7 +143,7 @@ export default function Footer() {
                   )}
                 </li>
 
-                {/* Question 3 */}
+                
                 <li>
                   <button
                     onClick={() => setOpenFaq(openFaq === 3 ? null : 3)}
@@ -164,7 +164,7 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Social Media */}
+        
         <div className="ml-24">
           <h3 className="text-lg font-semibold text-white mb-4">Follow Us</h3>
           <div className="flex space-x-4">
@@ -200,7 +200,7 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Bottom bar */}
+      
       <div className="border-t border-white text-center py-4 text-sm text-purple-200">
         © {new Date().getFullYear()} Wander Wings. All rights reserved.
       </div>

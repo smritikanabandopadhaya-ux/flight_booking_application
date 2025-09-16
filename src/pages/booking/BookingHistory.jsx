@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import background from "../../assets/background_image1.jpeg";
 import Footer from "../../components/footer/Footer";
 
@@ -7,7 +7,6 @@ const Profile = () => {
   const user = JSON.parse(localStorage.getItem("loginData"));
   const [history, setHistory] = useState([]);
   const navigate = useNavigate();
-  const location = useLocation();
   useEffect(() => {
     const boardingHistory =
       JSON.parse(localStorage.getItem("boardingHistory")) || [];
@@ -49,7 +48,7 @@ const Profile = () => {
             Your Boarding History
           </div>
         </div>
-        {/* Boarding History */}
+
         <div className="max-w-6xl mx-auto grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {history.length > 0 ? (
             history.map((item, index) => (

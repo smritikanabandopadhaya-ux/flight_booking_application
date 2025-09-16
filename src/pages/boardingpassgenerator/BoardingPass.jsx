@@ -36,7 +36,7 @@ const BoardingPass = () => {
       className="w-full h-screen flex flex-col justify-center items-center"
       style={{ backgroundImage: `url(${background})` }}
     >
-      <div className="w-[800px] h-3/5 bg-white rounded-xl shadow-xl overflow-hidden flex border-2 border-gray-300">
+      <div className="w-[800px] h-80% bg-white rounded-xl shadow-xl overflow-hidden flex border-2 border-gray-300">
         <div className="flex-1 p-6 border-r-2 border-dashed border-gray-400">
           <h2 className="text-xl font-bold text-center bg-[#65339b] text-white py-2 rounded-md">
             {myflightDetails.airline} Airline
@@ -90,6 +90,7 @@ const BoardingPass = () => {
                 Amount: {myflightDetails.price} INR
               </span>
             </p>
+            <p className="font-bold text-[#65339b] text-lg">SEAT: {mySeat}</p>
             <p className="mt-3 text-xs text-red-600 font-medium">
               Gate closes 15 minutes before departure
             </p>

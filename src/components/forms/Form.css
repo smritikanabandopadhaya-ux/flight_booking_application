@@ -2,8 +2,8 @@
 
 .login-form {
   background-color: #9588bd;
-  padding: 2.8em;
-  margin: 2em 1em 4em 30em;
+  padding: 2em;
+  margin: 2em 1em 1em 30em;
   border-radius: 20px;
   justify-content: center;
   margin-top: 6em;
@@ -26,7 +26,7 @@
 }
 .input-field:hover{
    transition: all 0.3s ease;
-   box-shadow:  0 0 10px rgb(101, 51, 155);
+   box-shadow:  0 0 10px #65339b;
 }
 .login-form-icon{
   width: 2vw;

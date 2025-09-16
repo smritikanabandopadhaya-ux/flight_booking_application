@@ -35,10 +35,19 @@ const PaymentPage = () => {
       ...boardingDetails,
       seat: selectedSeat,
     };
-    const boardingHistory =
-      JSON.parse(localStorage.getItem("boardingHistory")) || [];
+     let boardingHistory = JSON.parse(localStorage.getItem("boardingHistory")) || [];
+
+  const exists = boardingHistory.some(
+    (entry) =>
+      entry.id === newEntry.id && // or use flight number if available
+      entry.seat === newEntry.seat
+  );
+
+  if (!exists) {
     boardingHistory.push(newEntry);
     localStorage.setItem("boardingHistory", JSON.stringify(boardingHistory));
+  }
+
     localStorage.setItem("cardholderName", cardholderName);
 
     const savedCard = JSON.parse(localStorage.getItem("cardDetails")) || {};
@@ -52,7 +61,7 @@ const PaymentPage = () => {
       if(savedCard.number === cardNumber && savedCard.expiry === expiry && savedCard.cvv === cvv)
         navigate("/payment-successful");
       else
-        alert("Card details are wrong.Please check");
+        alert("Card details are wrong. Please Check !");
     }
   };
   const handleConfirmSave = () => {
@@ -68,7 +77,7 @@ const PaymentPage = () => {
     navigate("/payment-successful");
   };
   const cancelPayment=(e)=>{
-    e.preventDefault();
+  e.preventDefault();
   e.stopPropagation();
 
   const flightData = JSON.parse(localStorage.getItem("flightData"));
@@ -84,9 +93,9 @@ const PaymentPage = () => {
   localStorage.removeItem("flightData");
   localStorage.removeItem("selectedSeat");
   localStorage.removeItem("boardingDetails");
-
   navigate("/flight-details");
   }
+  
   return (
     <div
       className="min-h-screen flex items-center justify-center p-6"

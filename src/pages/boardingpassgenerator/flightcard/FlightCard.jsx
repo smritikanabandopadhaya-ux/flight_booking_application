@@ -18,7 +18,6 @@ const FlightCard = ({ flight }) => {
   const handleSubmit = (event) => {
     event.preventDefault();
     event.stopPropagation();
-    console.log("Selected Flight:", flight);
     const jsonString = JSON.stringify(flight);
     localStorage.setItem("flightData", jsonString);
     navigate("/boarding-details");

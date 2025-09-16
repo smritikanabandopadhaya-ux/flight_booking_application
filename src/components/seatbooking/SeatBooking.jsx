@@ -42,11 +42,11 @@ const SeatBooking = ({ seatArrange, travelClass, flightNumber, flightDate }) => 
   };
 
   const renderSeat = (row, col) => {
-    const seat = `${String.fromCharCode(65 + row)}${col + 1}`; // A, B, C, D
+    const seat = `${String.fromCharCode(65 + row)}${col + 1}`; 
     const isBooked = bookedSeats.includes(seat);
     const isSelected = selectedSeat === seat;
 
-    // Window seat check
+    
     let isWindow = false;
     if (mytravelClass === "Economy") {
       isWindow = col === 0 || col === columns - 1;
@@ -79,7 +79,7 @@ const SeatBooking = ({ seatArrange, travelClass, flightNumber, flightDate }) => 
 
   return (
     <div className="w-fit flex-col items-center justify-center p-6 mt-6 ml-20">
-      {/* Header */}
+      
       <div className="flex justify-between font-bold text-lg mb-4">
         <div>{travelClass} Class</div>
         <div>
@@ -92,7 +92,7 @@ const SeatBooking = ({ seatArrange, travelClass, flightNumber, flightDate }) => 
         </div>
       </div>
 
-      {/* Seat Layout */}
+      
       {travelClass === "Economy" ? (
         <div className="flex flex-col gap-4">
           {[...Array(rows)].map((_, row) => (
@@ -121,7 +121,7 @@ const SeatBooking = ({ seatArrange, travelClass, flightNumber, flightDate }) => 
         </div>
       )}
 
-      {/* Legend */}
+      
       <div className="flex gap-6 mt-6 text-black justify-center">
         <div className="flex items-center gap-2">
           <div className="w-6 h-6 bg-white border-white rounded-md"></div>

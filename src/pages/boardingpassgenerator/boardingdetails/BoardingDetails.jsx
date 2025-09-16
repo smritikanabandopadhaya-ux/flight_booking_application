@@ -22,23 +22,24 @@ const Form = () => {
     if (savedData) {
       const parsedData = JSON.parse(savedData);
       setFlightData(parsedData);
-      // console.log("All:", parsedData);
-      const weightNum = parseInt(parsedData.luggageWeight, 10); // extracts the integer part
+      
+      const weightNum = parseInt(parsedData.luggageWeight, 10); 
       setMaxLuggage(weightNum);
-      // console.log("seat", parsedData.seatDetails);
+      
       setSeatArrangement(parsedData.seatDetails);
       setTravelClass(parsedData.travelClass);
     }
   }, []);
 
   const bookMySeat = (e) => {
-    e.preventDefault(); // prevent form from reloading
-    const data = new FormData(e.target); // for having form data
+    e.preventDefault();
+    e.stopPropagation(); 
+    const data = new FormData(e.target); 
     const value = Object.fromEntries(data.entries());
-    console.log({ value });
+    
     const jsonString = JSON.stringify(value);
     localStorage.setItem("boardingDetails", jsonString);
-    setShowSeatBooking(true); // show SeatBooking after submit
+    setShowSeatBooking(true); 
   };
   return (
     <>

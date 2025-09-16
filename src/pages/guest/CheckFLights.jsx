@@ -4,14 +4,13 @@ import calender from "../../assets/calender-svgrepo-com.svg";
 import Button from "../../components/buttons/Button";
 import class_img from "../../assets/seat-pictogram-2-svgrepo-com.svg";
 import { useState } from "react";
-import { useNavigate, useLocation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import allFlightDetails from "../../assets/flights.json";
 import GuestFlightCard from "./GuestFLightCard";
 import Footer from "../../components/footer/Footer";
 
 const checkFlights = () => {
   const navigate = useNavigate();
-  const location = useLocation();
   const [flightsAvailable, setflightsAvailable] = useState([]);
   const [myFlight, setMyFlight] = useState([]);
   const [source, setSource] = useState("");
@@ -91,7 +90,7 @@ const checkFlights = () => {
               strokeWidth={2}
               d="M15 19l-7-7 7-7"
             />
-          </svg> Back to LogIn
+          </svg> Back to Log In
         </button>
          <h1 className="text-5xl font-bold text-[#533d88]">
               The World is Waiting. We'll Take You There. 
@@ -139,7 +138,7 @@ const checkFlights = () => {
               <select className="input-field" name="destination" required>
                 <option value="">Destination</option>
                 {locations
-                  .filter((loc) => loc !== source) // hide selected source
+                  .filter((loc) => loc !== source) 
                   .map((loc, i) => (
                     <option key={i} value={loc}>
                       {loc}

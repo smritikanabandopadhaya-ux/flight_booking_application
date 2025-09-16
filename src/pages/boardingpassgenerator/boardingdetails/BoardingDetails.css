@@ -17,7 +17,7 @@
   justify-content: center;
   max-width: fit-content;
   align-self: flex-start;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 20px #00000033;
 }
 .boarding-form-header {
   font-size: 1.5em;
@@ -35,7 +35,7 @@
 }
 .input-field:hover {
   transition: all 0.3s ease;
-  box-shadow: 0 0 10px rgb(101, 51, 155);
+  box-shadow: 0 0 10px #65339b;
 }
 .boarding-form-icon {
   width: 1.5vw;

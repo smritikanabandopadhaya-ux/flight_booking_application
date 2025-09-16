@@ -23,7 +23,7 @@ const SaveCardPopup = ({ isOpen, onClose, onConfirm }) => {
             onClick={onConfirm}
             className="px-4 py-2 rounded-lg bg-purple-600 text-white font-medium hover:bg-white hover:text-purple-900"
           >
-            Yes, save
+            Yes, Save
           </button>
         </div>
       </div>
