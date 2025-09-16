@@ -15,6 +15,7 @@ const Form = () => {
   const [seatArrangement, setSeatArrangement] = useState(null);
   const [travelClass, setTravelClass] = useState("");
   const userdata=JSON.parse(localStorage.getItem("loginData"));
+   const myflightDetails=JSON.parse(localStorage.getItem("flightData"));
 
   useEffect(() => {
     const savedData = localStorage.getItem("flightData");
@@ -109,6 +110,8 @@ const Form = () => {
           <SeatBooking
             seatArrange={seatArrangement}
             travelClass={travelClass}
+            flightNumber={myflightDetails.flightNumber}
+            flightDate={myflightDetails.date}
           />
         )}
         </section>

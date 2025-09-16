@@ -8,6 +8,7 @@ import PrivateRoute from "./components/privateRoute/privateRoute";
 import Profile from "./pages/profile/Profile";
 import PaymentPage from "./pages/boardingpassgenerator/paymentdetails/PaymentPage";
 import PaymentSuccessful from "./pages/boardingpassgenerator/paymentdetails/PaymentSuccessful";
+import CheckFlights from "./pages/guest/CheckFLights";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Routes>
         {/* Public Route */}
         <Route path="/" element={<Login />} />
+        <Route path="/guest-flight-checking" element={<CheckFlights />} />
         {/* Protected Routes */}
         <Route
           path="/flight-details"
@@ -52,7 +54,7 @@ function App() {
           path="/make-payment"
           element={
             <PrivateRoute>
-              <PaymentPage/>
+              <PaymentPage />
             </PrivateRoute>
           }
         />
@@ -60,7 +62,7 @@ function App() {
           path="/payment-successful"
           element={
             <PrivateRoute>
-              <PaymentSuccessful/>
+              <PaymentSuccessful />
             </PrivateRoute>
           }
         />

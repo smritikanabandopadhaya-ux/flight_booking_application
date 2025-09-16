@@ -1,13 +1,16 @@
 import { useState } from "react";
-import SaveCardPopup from "./saveCardPopup";
+import SaveCardPopup from "./SaveCardPopup";
 import { useNavigate } from "react-router-dom";
 import background from "../../../assets/background_cover_image.jpeg";
+import masterCard from "../../../assets/mastercard-svgrepo-com.svg";
+import visaCard from "../../../assets/visa-svgrepo-com.svg";
 const PaymentPage = () => {
   const myDetails = JSON.parse(localStorage.getItem("flightData"));
   const mypersonalDetails = JSON.parse(localStorage.getItem("loginData"));
-  const [cardNumber, setCardNumber] = useState("");
+  const savedCard = JSON.parse(localStorage.getItem("cardDetails")) || {};
+  const [cardNumber, setCardNumber] = useState(savedCard.number || "");
   const [cardholderName, setcardholderName] = useState(
-    mypersonalDetails.name || ""
+    savedCard.name || mypersonalDetails.name || ""
   );
   const [expiry, setExpiry] = useState("");
   const [cvv, setCvv] = useState("");
@@ -19,10 +22,13 @@ const PaymentPage = () => {
   ).padStart(2, "0")}`;
 
   const handleSubmit = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
     const flightData = JSON.parse(localStorage.getItem("flightData")) || {};
     const boardingDetails =
       JSON.parse(localStorage.getItem("boardingDetails")) || {};
     const selectedSeat = JSON.parse(localStorage.getItem("selectedSeat")) || "";
+
     const { seatDetails, ...filteredFlightData } = flightData;
     const newEntry = {
       ...filteredFlightData,
@@ -33,11 +39,18 @@ const PaymentPage = () => {
       JSON.parse(localStorage.getItem("boardingHistory")) || [];
     boardingHistory.push(newEntry);
     localStorage.setItem("boardingHistory", JSON.stringify(boardingHistory));
-    console.log("Boarding history updated:", boardingHistory);
-    e.preventDefault();
-    e.stopPropagation();
     localStorage.setItem("cardholderName", cardholderName);
-    setShowPopup(true);
+
+    const savedCard = JSON.parse(localStorage.getItem("savedCard")) || {};
+    const isNewCard =
+      !savedCard.number || 
+      savedCard.number !== cardNumber;
+     
+    if (isNewCard) {
+      setShowPopup(true); // show popup for new card
+    } else {
+      navigate("/payment-successful"); // old card, proceed
+    }
   };
   const handleConfirmSave = () => {
     setShowPopup(false);
@@ -66,10 +79,25 @@ const PaymentPage = () => {
           <h2 className="text-xl font-semibold text-slate-900">
             Payment Details
           </h2>
-          <span className="text-sm text-slate-500"></span>
+          <div className="flex gap-4">
+            <span>
+              <img
+                src={masterCard}
+                alt="username icon"
+                className="login-form-icon"
+              />
+            </span>
+            <span className="text-sm text-slate-500">
+              <img
+                src={visaCard}
+                alt="username icon"
+                className="login-form-icon"
+              />
+            </span>
+          </div>
         </div>
 
-        <label className="block text-sm text-slate-700 mb-2">
+        <label className="block text-xl font-bold text-purple-900 mb-2">
           Amount : ₹ {myDetails.price}.00
         </label>
 
@@ -85,7 +113,7 @@ const PaymentPage = () => {
           />
         </label>
 
-        <label className="block text-sm text-slate-700 mb-2">
+        <label className="block text-sm text-black mb-2">
           Card number
           <input
             inputMode="numeric"

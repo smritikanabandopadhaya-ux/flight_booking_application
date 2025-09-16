@@ -4,12 +4,14 @@ import calender from "../../assets/calender-svgrepo-com.svg";
 import Button from "../../components/buttons/Button";
 import class_img from "../../assets/seat-pictogram-2-svgrepo-com.svg";
 import { useState } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 import allFlightDetails from "../../assets/flights.json";
-import FlightCard from "./flightcard/FlightCard";
-import Navbar from "../../components/navbar/Navbar";
+import GuestFlightCard from "./GuestFLightCard";
 import Footer from "../../components/footer/Footer";
 
-const FlightDetails = () => {
+const checkFlights = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
   const [flightsAvailable, setflightsAvailable] = useState([]);
   const [myFlight, setMyFlight] = useState([]);
   const [source, setSource] = useState("");
@@ -33,9 +35,9 @@ const FlightDetails = () => {
     e.stopPropagation();
     const myData = new FormData(e.target);
     const myFlightDetails = Object.fromEntries(myData.entries());
-    setMyFlight(myFlightDetails);
     const mySource = myFlightDetails["source"];
     const myDestination = myFlightDetails["destination"];
+    setMyFlight(myFlightDetails);
     const flightArray = allFlightDetails.filter(
       (flight) =>
         mySource === flight["origin"]["city"] &&
@@ -44,7 +46,7 @@ const FlightDetails = () => {
     setflightsAvailable(flightArray);
   };
   const flightCards = flightsAvailable.map((flight, index) => (
-    <FlightCard
+    <GuestFlightCard
       key={index}
       flight={{
         airline: flight.airline,
@@ -71,7 +73,30 @@ const FlightDetails = () => {
     <div>
       <div className="background flex-col justify-center align-baseliner">
         <div>
-          <Navbar></Navbar>
+        <div className="flex justify-self-start gap-7">
+        <button
+          onClick={() => navigate(-1)}
+          className="flex items-center gap-2 text-white hover:text-gray-300 transition"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            className="w-6 h-6"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M15 19l-7-7 7-7"
+            />
+          </svg> Back to LogIn
+        </button>
+         <h1 className="text-5xl font-bold text-[#533d88]">
+              The World is Waiting. We'll Take You There. 
+            </h1>
+      </div>
         </div>
         <section className="flex justify-between">
           <div className="flex gap-8 p-10 pl-50">
@@ -82,7 +107,7 @@ const FlightDetails = () => {
             onSubmit={checkFlights}
           >
             <div className="boarding-form-fields boarding-form-header">
-              Let's book your next flight,
+              Let's fly Beyond the Ordinary,
             </div>
             <div className="boarding-form-fields" id="form-input-name">
               <img
@@ -114,7 +139,7 @@ const FlightDetails = () => {
               <select className="input-field" name="destination" required>
                 <option value="">Destination</option>
                 {locations
-                  .filter((loc) => loc !== source)
+                  .filter((loc) => loc !== source) // hide selected source
                   .map((loc, i) => (
                     <option key={i} value={loc}>
                       {loc}
@@ -133,7 +158,9 @@ const FlightDetails = () => {
                 type="date"
                 name="date"
                 className="input-field"
-                min={new Date(Date.now() + 86400000).toISOString().split("T")[0]}
+                min={
+                  new Date(Date.now() + 86400000).toISOString().split("T")[0]
+                }
                 required
               />
             </div>
@@ -167,4 +194,4 @@ const FlightDetails = () => {
     </div>
   );
 };
-export default FlightDetails;
+export default checkFlights;

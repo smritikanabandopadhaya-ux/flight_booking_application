@@ -7,13 +7,12 @@ const Navbar = () => {
 
   const handleLogout = () => {
     localStorage.removeItem("isLoggedIn");
-    alert("Logged Out Successfully");
+    alert("Successfully Logged Out !");
     navigate("/");
   };
 
   return (
-    <nav className="flex justify-between items-center px-6 py-4 bg-[#533d88] text-[#3c2075] shadow-md rounded-lg">
-      {/* Back Arrow (hide if on /flight-details) */}
+    <nav className="flex justify-between items-center px-6 mr-30 ml-20 py-4 bg-[#533d88] text-[#3c2075] shadow-md rounded-lg">
       {location.pathname !== "/flight-details" && (
         <button
           onClick={() => navigate(-1)}
@@ -36,12 +35,10 @@ const Navbar = () => {
         </button>
       )}
 
-      {/* Title */}
       <h2 className="m-0 font-sans font-bold text-3xl italic text-white">
         Welcome {user?.name},
       </h2>
 
-      {/* Right Buttons */}
       <div className="flex gap-4 items-center">
         <button
           onClick={() => navigate("/profile")}

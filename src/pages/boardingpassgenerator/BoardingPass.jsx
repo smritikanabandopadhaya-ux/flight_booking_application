@@ -3,11 +3,13 @@ import { pdf } from "@react-pdf/renderer";
 import { saveAs } from "file-saver";
 import BoardingPassPDF from "../../components/downloadpass/BoardingPassPDF";
 import { useNavigate } from "react-router-dom";
+import { useRef, useEffect } from "react";
 
 const BoardingPass = () => {
   const myflightDetails = JSON.parse(localStorage.getItem("flightData"));
   const myboardingDetails = JSON.parse(localStorage.getItem("boardingDetails"));
   const mySeat = JSON.parse(localStorage.getItem("selectedSeat"));
+  const downloadedRef = useRef(false);
   const navigate = useNavigate();
   const handleDownload = async () => {
     const blob = await pdf(
@@ -19,6 +21,12 @@ const BoardingPass = () => {
     ).toBlob();
     saveAs(blob, "boarding-pass.pdf");
   };
+  useEffect(() => {
+    if (!downloadedRef.current) {
+      handleDownload();
+      downloadedRef.current = true;
+    }
+  }, []);
   const returntoHome = () => {
     navigate("/flight-details");
   };
@@ -28,15 +36,11 @@ const BoardingPass = () => {
       className="w-full h-screen flex flex-col justify-center items-center"
       style={{ backgroundImage: `url(${background})` }}
     >
-      {/* Boarding Pass UI */}
       <div className="w-[800px] h-3/5 bg-white rounded-xl shadow-xl overflow-hidden flex border-2 border-gray-300">
-        {/* Left Section */}
         <div className="flex-1 p-6 border-r-2 border-dashed border-gray-400">
           <h2 className="text-xl font-bold text-center bg-[#65339b] text-white py-2 rounded-md">
             {myflightDetails.airline} Airline
           </h2>
-
-          {/* Barcode */}
           <div className="my-4 flex justify-center">
             <div className="flex gap-[2px]">
               {Array.from({ length: 30 }).map((_, i) => (
@@ -50,7 +54,6 @@ const BoardingPass = () => {
             </div>
           </div>
 
-          {/* Details */}
           <div className="text-sm space-y-2 text-black">
             <p>
               <span className="font-semibold">
@@ -93,7 +96,6 @@ const BoardingPass = () => {
           </div>
         </div>
 
-        {/* Right Section */}
         <div className="w-[300px] p-7 bg-[#b382e7]">
           <h2 className="text-lg font-bold text-center bg-white text-[#65339b] py-2 rounded-md">
             BOARDING PASS

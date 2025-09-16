@@ -20,12 +20,11 @@ const Profile = () => {
         className="min-h-screen py-10 px-4"
         style={{ backgroundImage: `url(${background})` }}
       >
-        <div className="w-full bg-gray-300 shadow-md rounded-xl p-4 flex justify-between mb-14">
+        <div className=" bg-gray-300 shadow-md mr-30 ml-20 rounded-xl p-4 flex justify-between mb-14">
           <div className="flex justify-self-start gap-8">
-            {location.pathname !== "/flight-details" && (
               <button
                 onClick={() => navigate(-1)}
-                className="flex items-center gap-2 text-black hover:text-gray-300 transition"
+                className="flex items-center gap-2 text-black hover:text-white transition"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -42,7 +41,6 @@ const Profile = () => {
                   />
                 </svg>
               </button>
-            )}
             <h2 className="text-2xl font-bold text-[#533d88]">
               Welcome, {user?.name}
             </h2>
@@ -57,58 +55,53 @@ const Profile = () => {
             history.map((item, index) => (
               <div
                 key={index}
-                className="bg-white rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition p-6 flex flex-col justify-between"
+                className="bg-gradient-to-r from-[#7f5d9a] to-purple-200 rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition p-6 flex flex-col justify-between"
               >
-                <h3 className="text-lg font-bold text-[#533d88] mb-2">
+                <h3 className="text-lg font-bold text-white mb-2">
                   {item.flightNumber} – {item.airline}
                 </h3>
-                <p className="text-gray-700 text-sm">
-                  <span className="font-semibold">Name:</span> {item.name}
+                <p className="text-black text-sm">
+                  <span className="font-semibold">Name: {item.name} </span>
                 </p>
-                <p className="text-gray-700 text-sm">
-                  <span className="font-semibold">From:</span> {item.origin}
+                <p className="text-black text-sm">
+                  <span className="font-semibold">From: {item.origin} </span>
                 </p>
-                <p className="text-gray-700 text-sm">
-                  <span className="font-semibold">To:</span> {item.destination}
+                <p className="text-black text-sm">
+                  <span className="font-semibold">To: {item.destination} </span>
                 </p>
-                <p className="text-gray-700 text-sm">
-                  <span className="font-semibold">Date:</span> {item.date}
+                <p className="text-black text-sm">
+                  <span className="font-semibold">Date: {item.date} </span>
                 </p>
-                <p className="text-gray-700 text-sm">
-                  <span className="font-semibold">Departure:</span>{" "}
-                  {item.departuretime}
+                <p className="text-black text-sm">
+                  <span className="font-semibold">Departure: {item.departuretime}</span>
                 </p>
-                <p className="text-gray-700 text-sm">
-                  <span className="font-semibold">Boarding:</span>{" "}
-                  {item.boardingtime}
+                <p className="text-black text-sm">
+                  <span className="font-semibold">Boarding: {item.boardingtime} </span>
                 </p>
-                <p className="text-gray-700 text-sm">
-                  <span className="font-semibold">Duration:</span>{" "}
-                  {item.duration}
+                <p className="text-black text-sm">
+                  <span className="font-semibold">Duration: {item.duration} </span>
                 </p>
-                <p className="text-gray-700 text-sm">
-                  <span className="font-semibold">Seat:</span> {item.seat}
+                <p className="text-black text-sm">
+                  <span className="font-semibold">Class: {item.travelClass}</span>
                 </p>
-                <p className="text-gray-700 text-sm">
-                  <span className="font-semibold">Class:</span>{" "}
-                  {item.travelClass}
+                <p className="text-black text-sm">
+                  <span className="font-semibold">Gate: {item.gate} </span> 
                 </p>
-                <p className="text-gray-700 text-sm">
-                  <span className="font-semibold">Gate:</span> {item.gate}
+                <p className="text-black text-sm">
+                  <span className="font-semibold">Terminal: {item.terminal} </span> 
                 </p>
-                <p className="text-gray-700 text-sm">
-                  <span className="font-semibold">Terminal:</span>{" "}
-                  {item.terminal}
-                </p>
-                <p className="text-gray-700 text-sm">
-                  <span className="font-semibold">Luggage:</span> {item.luggage}{" "}
+                <p className="text-black text-sm">
+                  <span className="font-semibold">Luggage: {item.luggage}{" "} </span> 
                   kg (Allowed {item.luggageWeight})
                 </p>
-                <p className="text-gray-700 text-sm">
-                  <span className="font-semibold">Food:</span> {item.food}
+                <p className="text-black text-sm">
+                  <span className="font-semibold">Food: {item.food} </span> 
                 </p>
-                <p className="text-gray-700 text-sm mt-2">
-                  <span className="font-semibold">Price:</span> ₹{item.price}
+                <p className="text-black text-sm mt-2">
+                  <span className="font-semibold">Price: ₹{item.price}</span>
+                </p>
+                <p className="text-white text-m">
+                  <span className="font-semibold">Seat:</span><span className="font-semibold text-white"> {item.seat}</span>
                 </p>
               </div>
             ))

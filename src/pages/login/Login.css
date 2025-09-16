@@ -23,11 +23,6 @@
   width: 40%;
   margin-left: 2em;
   text-align: center;
-}
-
-.backgound-container-subheading {
-  padding: 0em 1em 1em 1em;
-  font-size: 2.8em;
-  font-family: "Comic Sans MS", cursive;
-  font-style: italic;
+  display: flex;
+  justify-content: center;
 }

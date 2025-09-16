@@ -1,14 +1,23 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
-const SeatBooking = ({ seatArrange, travelClass }) => {
+const SeatBooking = ({ seatArrange, travelClass, flightNumber, flightDate }) => {
   const rows = seatArrange.rows;
   const columns = seatArrange.columns;
   const businessRows = 4;
   const mytravelClass = travelClass;
-  const [bookedSeats, setBookedSeats] = useState(seatArrange.bookedSeats);
+
+  const [bookedSeats, setBookedSeats] = useState([]);
   const [selectedSeat, setSelectedSeat] = useState(null);
+
   const navigate = useNavigate();
+
+  // Load booked seats for this flight + date
+  useEffect(() => {
+    const key = `${flightNumber}_${flightDate}`;
+    const bookings = JSON.parse(localStorage.getItem("bookings")) || {};
+    setBookedSeats(bookings[key] || []);
+  }, [flightNumber, flightDate]);
 
   const handleSeatClick = (seat) => {
     if (bookedSeats.includes(seat)) return;
@@ -17,13 +26,19 @@ const SeatBooking = ({ seatArrange, travelClass }) => {
 
   const handleBooking = () => {
     if (!selectedSeat) return alert("No seat is selected.");
-    else {
-      setBookedSeats([...bookedSeats, selectedSeat]);
-      console.log(selectedSeat);
-      localStorage.setItem("selectedSeat", JSON.stringify(selectedSeat));
-      navigate("/make-payment");
-    }
+
+    const key = `${flightNumber}_${flightDate}`;
+    let bookings = JSON.parse(localStorage.getItem("bookings")) || {};
+
+    if (!bookings[key]) bookings[key] = [];
+    bookings[key].push(selectedSeat);
+
+    localStorage.setItem("bookings", JSON.stringify(bookings));
+
+    setBookedSeats([...bookedSeats, selectedSeat]);
     setSelectedSeat(null);
+
+    navigate("/make-payment");
   };
 
   const renderSeat = (row, col) => {
@@ -31,32 +46,28 @@ const SeatBooking = ({ seatArrange, travelClass }) => {
     const isBooked = bookedSeats.includes(seat);
     const isSelected = selectedSeat === seat;
 
-    //  window seat check
+    // Window seat check
     let isWindow = false;
     if (mytravelClass === "Economy") {
-      // Economy
       isWindow = col === 0 || col === columns - 1;
-      // Window seat check
     } else if (travelClass === "Business") {
-      // Business
       isWindow = col === 0 || col === 3;
     }
+
     return (
       <div
         key={seat}
         onClick={() => handleSeatClick(seat)}
         className={`w-16 h-12 flex items-center justify-center rounded-xl cursor-pointer m-1 
-        ${isBooked ? "bg-gray-500 cursor-not-allowed" : ""}
-        ${isSelected ? "bg-blue-500 text-white" : ""}
-        ${
-          !isBooked && !isSelected
-            ? "bg-white text-violet-950 hover:bg-violet-900 hover:text-white"
-            : ""
-        }
-        ${
-          isWindow ? "border-2 border-blue-400 " : ""
-        }  // 👈 highlight window seats
-      `}
+          ${isBooked ? "bg-gray-500 cursor-not-allowed" : ""}
+          ${isSelected ? "bg-blue-500 text-white" : ""}
+          ${
+            !isBooked && !isSelected
+              ? "bg-white text-violet-950 hover:bg-violet-900 hover:text-white"
+              : ""
+          }
+          ${isWindow ? "border-2 border-blue-400" : ""}
+        `}
       >
         {seat}
         {isWindow && (
@@ -68,6 +79,7 @@ const SeatBooking = ({ seatArrange, travelClass }) => {
 
   return (
     <div className="w-fit flex-col items-center justify-center p-6 mt-6 ml-20">
+      {/* Header */}
       <div className="flex justify-between font-bold text-lg mb-4">
         <div>{travelClass} Class</div>
         <div>
@@ -79,6 +91,7 @@ const SeatBooking = ({ seatArrange, travelClass }) => {
           </button>
         </div>
       </div>
+
       {/* Seat Layout */}
       {travelClass === "Economy" ? (
         <div className="flex flex-col gap-4">
@@ -107,7 +120,8 @@ const SeatBooking = ({ seatArrange, travelClass }) => {
           ))}
         </div>
       )}
-      {/* Legend Section */}
+
+      {/* Legend */}
       <div className="flex gap-6 mt-6 text-black justify-center">
         <div className="flex items-center gap-2">
           <div className="w-6 h-6 bg-white border-white rounded-md"></div>
@@ -131,4 +145,5 @@ const SeatBooking = ({ seatArrange, travelClass }) => {
     </div>
   );
 };
+
 export default SeatBooking;
