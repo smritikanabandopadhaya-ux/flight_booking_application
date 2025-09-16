@@ -73,7 +73,6 @@ const PaymentPage = () => {
       expiry,
       cvv,
     };
-    console.log("Saving card:", cardData);
     localStorage.setItem("cardDetails", JSON.stringify(cardData));
     navigate("/payment-successful");
   };
