@@ -12,7 +12,6 @@ const SeatBooking = ({ seatArrange, travelClass, flightNumber, flightDate }) => 
 
   const navigate = useNavigate();
 
-  // Load booked seats for this flight + date
   useEffect(() => {
     const key = `${flightNumber}_${flightDate}`;
     const bookings = JSON.parse(localStorage.getItem("bookings")) || {};
@@ -36,6 +35,7 @@ const SeatBooking = ({ seatArrange, travelClass, flightNumber, flightDate }) => 
     localStorage.setItem("bookings", JSON.stringify(bookings));
 
     setBookedSeats([...bookedSeats, selectedSeat]);
+    localStorage.setItem("selectedSeat", JSON.stringify(selectedSeat));
     setSelectedSeat(null);
 
     navigate("/make-payment");

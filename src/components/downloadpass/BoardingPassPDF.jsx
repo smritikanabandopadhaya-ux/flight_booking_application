@@ -79,7 +79,7 @@ const BoardingPassPDF = ({ flightDetails, boardingDetails, seat }) => (
         <Text style={styles.text}>Flying From: {flightDetails.origin}</Text>
         <Text style={styles.text}>Flying To: {flightDetails.destination}</Text>
         <Text style={styles.text}>Departure Date: {flightDetails.date}</Text>
-        <Text style={styles.text}>Amount: {flightDetails.price}</Text>
+        <Text style={styles.text}>Amount Paid: ₹ {flightDetails.price}</Text>
         <Text style={styles.text}>
           Departure Time: {flightDetails.departuretime}
         </Text>
@@ -134,7 +134,7 @@ const BoardingPassPDF = ({ flightDetails, boardingDetails, seat }) => (
         <Text style={styles.text}>Terminal: {flightDetails.terminal}</Text>
         <Text style={styles.text}>Gate: {flightDetails.gate}</Text>
         <Text style={styles.text}>Date: {flightDetails.date}</Text>
-        <Text style={styles.text}>Amount: {flightDetails.price}</Text>
+        <Text style={styles.text}>Amount Paid: ₹{flightDetails.price}</Text>
         <Text style={styles.text}>
           Boarding Time: {flightDetails.boardingtime}
         </Text>

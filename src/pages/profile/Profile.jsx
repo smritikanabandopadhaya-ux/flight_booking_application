@@ -106,7 +106,7 @@ const Profile = () => {
               </div>
             ))
           ) : (
-            <p className="text-center col-span-full text-white mr-5">
+            <p className="text-center col-span-full font-bold text-white mr-5">
               No boarding history found.
             </p>
           )}

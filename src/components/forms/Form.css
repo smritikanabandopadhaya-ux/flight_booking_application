@@ -58,13 +58,13 @@
 }
 
 .password-strength-msg.weak {
-  color: #fa2335; /* red */
+  color: #fa2335;
 }
 
 .password-strength-msg.medium {
-  color: #fff025; /* orange */
+  color: #fff025;
 }
 
 .password-strength-msg.strong {
-  color: #68d671; /* green */
+  color: #68d671; 
 }

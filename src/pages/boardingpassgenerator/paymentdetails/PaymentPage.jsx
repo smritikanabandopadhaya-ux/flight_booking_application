@@ -41,15 +41,15 @@ const PaymentPage = () => {
     localStorage.setItem("boardingHistory", JSON.stringify(boardingHistory));
     localStorage.setItem("cardholderName", cardholderName);
 
-    const savedCard = JSON.parse(localStorage.getItem("savedCard")) || {};
+    const savedCard = JSON.parse(localStorage.getItem("cardDetails")) || {};
     const isNewCard =
       !savedCard.number || 
       savedCard.number !== cardNumber;
      
     if (isNewCard) {
-      setShowPopup(true); // show popup for new card
+      setShowPopup(true); 
     } else {
-      navigate("/payment-successful"); // old card, proceed
+      navigate("/payment-successful");
     }
   };
   const handleConfirmSave = () => {

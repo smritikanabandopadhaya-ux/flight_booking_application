@@ -20,11 +20,18 @@ const Form = () => {
     const newEmail = e.target.value;
     setEmail(newEmail);
     const saved = JSON.parse(localStorage.getItem("loginData"));
-    if (saved && saved.email === newEmail && saved.rememberMe) {
-      setPassword(saved.password); // :white_check_mark: autofill password
+    if (saved && saved.email === newEmail) {
+    if (saved.rememberMe) {
+      setPassword(saved.password);
+      setRememberMe(true);
     } else {
-      setPassword(""); // clear if not remembered
+      setPassword("");
+      setRememberMe(false);
     }
+  } else {
+    setPassword("");
+    setRememberMe(false);
+  }
   };
   const checkPasswordStrength = (password) => {
     if (!password) return "";
@@ -72,7 +79,7 @@ const Form = () => {
         "loginData",
         JSON.stringify({
           ...retrievedObject,
-          rememberMe, // comes from checkbox state
+          rememberMe, 
           password,
         })
       );
@@ -86,6 +93,7 @@ const Form = () => {
       alert("Please choose a stronger password before signing up.");
       return;
     }
+    localStorage.clear();
     const data = new FormData(event.target);
     const value = Object.fromEntries(data.entries());
     localStorage.setItem(
@@ -169,7 +177,6 @@ const Form = () => {
           </button>
         </div>
 
-        {/* ✅ Pretty password strength message (only in SignUp mode) */}
         {!isHidden && password && (
           <div
             className={`password-strength-msg ${
@@ -193,7 +200,6 @@ const Form = () => {
             />
             &nbsp;Remember Me&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           </label>
-          <button class="sign-in-now">Forget Password ?</button>
         </div>
 
         {isHidden ? (
@@ -213,7 +219,7 @@ const Form = () => {
               class="sign-in-now"
               onClick={(e) => {
                 e.preventDefault();
-                setHiddenState(false); // switch to SignUp
+                setHiddenState(false);
                 setEmail("");
                 setPassword("");
               }}
@@ -228,7 +234,7 @@ const Form = () => {
               id="sign-in-now"
               onClick={(e) => {
                 e.preventDefault();
-                setHiddenState(true); // switch back to SignIn
+                setHiddenState(true);
                 setEmail("");
                 setPassword("");
               }}
