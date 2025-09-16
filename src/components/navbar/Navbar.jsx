@@ -7,6 +7,10 @@ const Navbar = () => {
 
   const handleLogout = () => {
     localStorage.removeItem("isLoggedIn");
+    localStorage.removeItem("flightData");
+    localStorage.removeItem("selectedSeat");
+    localStorage.removeItem("boardingDetails");
+    localStorage.removeItem("bookings");
     alert("Successfully Logged Out !");
     navigate("/");
   };

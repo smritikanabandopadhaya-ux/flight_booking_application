@@ -64,7 +64,15 @@ const PaymentPage = () => {
     localStorage.setItem("cardDetails", JSON.stringify(cardData));
     navigate("/payment-successful");
   };
-
+  const cancelPayment=(e)=>{
+    e.preventDefault();
+    e.stopPropagation();
+    localStorage.removeItem("flightData");
+    localStorage.removeItem("selectedSeat");
+    localStorage.removeItem("boardingDetails");
+    localStorage.removeItem("bookings");
+    navigate("/flight-details");
+  }
   return (
     <div
       className="min-h-screen flex items-center justify-center p-6"
@@ -165,6 +173,14 @@ const PaymentPage = () => {
             className="w-full bg-purple-950 py-3 rounded-lg text-white font-medium hover:bg-purple-500 hover:text-white hover:border-2 hover:border-purple-700"
           >
             Pay ₹{myDetails.price}.00
+          </button>
+        </div>
+        <div className="mt-4">
+          <button
+            onClick={cancelPayment}
+            className="w-full bg-red-500 py-3 rounded-lg text-white font-medium hover:bg-red-300 hover:text-red-900 hover:border-2 hover:border-red-700"
+          >
+            Cancel Payment
           </button>
         </div>
       </form>
