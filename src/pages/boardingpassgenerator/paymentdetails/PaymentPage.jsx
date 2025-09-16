@@ -39,8 +39,9 @@ const PaymentPage = () => {
 
   const exists = boardingHistory.some(
     (entry) =>
-      entry.id === newEntry.id && // or use flight number if available
-      entry.seat === newEntry.seat
+      entry.flightNumber === newEntry.flightNumber && 
+      entry.seat === newEntry.seat &&
+      entry.date === newEntry.date
   );
 
   if (!exists) {

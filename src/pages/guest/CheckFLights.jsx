@@ -14,6 +14,9 @@ const checkFlights = () => {
   const [flightsAvailable, setflightsAvailable] = useState([]);
   const [myFlight, setMyFlight] = useState([]);
   const [source, setSource] = useState("");
+  const tomorrow = new Date();
+  tomorrow.setDate(tomorrow.getDate() + 1);
+  const minDate = tomorrow.toLocaleDateString("en-CA");
   const locations = [
     "Amritsar",
     "Bengaluru",
@@ -157,9 +160,7 @@ const checkFlights = () => {
                 type="date"
                 name="date"
                 className="input-field"
-                min={
-                  new Date(Date.now() + 86400000).toISOString().split("T")[0]
-                }
+                min={minDate}
                 required
               />
             </div>
