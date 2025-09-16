@@ -49,7 +49,10 @@ const PaymentPage = () => {
     if (isNewCard) {
       setShowPopup(true); 
     } else {
-      navigate("/payment-successful");
+      if(savedCard.number === cardNumber && savedCard.expiry === expiry && savedCard.cvv === cvv)
+        navigate("/payment-successful");
+      else
+        alert("Card details are wrong.Please check");
     }
   };
   const handleConfirmSave = () => {
@@ -66,12 +69,23 @@ const PaymentPage = () => {
   };
   const cancelPayment=(e)=>{
     e.preventDefault();
-    e.stopPropagation();
-    localStorage.removeItem("flightData");
-    localStorage.removeItem("selectedSeat");
-    localStorage.removeItem("boardingDetails");
-    localStorage.removeItem("bookings");
-    navigate("/flight-details");
+  e.stopPropagation();
+
+  const flightData = JSON.parse(localStorage.getItem("flightData"));
+  if (flightData) {
+    const key = `${flightData.flightNumber}_${flightData.date}`;
+    let bookings = JSON.parse(localStorage.getItem("bookings")) || {};
+
+    if (bookings[key] && bookings[key].length > 0) {
+      bookings[key].pop();
+      localStorage.setItem("bookings", JSON.stringify(bookings));
+    }
+  }
+  localStorage.removeItem("flightData");
+  localStorage.removeItem("selectedSeat");
+  localStorage.removeItem("boardingDetails");
+
+  navigate("/flight-details");
   }
   return (
     <div

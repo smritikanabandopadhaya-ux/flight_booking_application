@@ -10,7 +10,6 @@ const Navbar = () => {
     localStorage.removeItem("flightData");
     localStorage.removeItem("selectedSeat");
     localStorage.removeItem("boardingDetails");
-    localStorage.removeItem("bookings");
     alert("Successfully Logged Out !");
     navigate("/");
   };
@@ -45,7 +44,7 @@ const Navbar = () => {
 
       <div className="flex gap-4 items-center">
         <button
-          onClick={() => navigate("/profile")}
+          onClick={() => navigate("/booking-history")}
           className="px-4 py-2 rounded-2xl bg-[#f5f5f5] text-[#533d88] font-medium hover:bg-[#a18dce] hover:text-white transition"
         >
           Bookings

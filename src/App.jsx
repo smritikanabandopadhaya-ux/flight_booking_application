@@ -5,7 +5,7 @@ import FlightDetails from "./pages/boardingpassgenerator/FlightDetails";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import BarcodeGenerator from "./pages/boardingpassgenerator/BoardingPass";
 import PrivateRoute from "./components/privateRoute/privateRoute";
-import Profile from "./pages/profile/Profile";
+import BookingHistory from "./pages/booking/BookingHistory";
 import PaymentPage from "./pages/boardingpassgenerator/paymentdetails/PaymentPage";
 import PaymentSuccessful from "./pages/boardingpassgenerator/paymentdetails/PaymentSuccessful";
 import CheckFlights from "./pages/guest/CheckFLights";
@@ -43,10 +43,10 @@ function App() {
           }
         />
         <Route
-          path="/profile"
+          path="/booking-history"
           element={
             <PrivateRoute>
-              <Profile />
+              <BookingHistory />
             </PrivateRoute>
           }
         />
