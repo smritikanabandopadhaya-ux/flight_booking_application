@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import background from "../../../assets/background_cover_image.jpeg";
 import masterCard from "../../../assets/mastercard-svgrepo-com.svg";
 import visaCard from "../../../assets/visa-svgrepo-com.svg";
+import { useEffect } from "react";
 const PaymentPage = () => {
   const myDetails = JSON.parse(localStorage.getItem("flightData"));
   const mypersonalDetails = JSON.parse(localStorage.getItem("loginData"));
@@ -20,6 +21,7 @@ const PaymentPage = () => {
   const minValue = `${today.getFullYear()}-${String(
     today.getMonth() + 1
   ).padStart(2, "0")}`;
+  const [isValidCard, setIsValidCard] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -35,35 +37,33 @@ const PaymentPage = () => {
       ...boardingDetails,
       seat: selectedSeat,
     };
-     let boardingHistory = JSON.parse(localStorage.getItem("boardingHistory")) || [];
+    let boardingHistory =
+      JSON.parse(localStorage.getItem("boardingHistory")) || [];
 
-  const exists = boardingHistory.some(
-    (entry) =>
-      entry.flightNumber === newEntry.flightNumber && 
-      entry.seat === newEntry.seat &&
-      entry.date === newEntry.date &&
-      entry.travelClass === newEntry.travelClass
-  );
+    const exists = boardingHistory.some(
+      (entry) =>
+        entry.flightNumber === newEntry.flightNumber &&
+        entry.seat === newEntry.seat &&
+        entry.date === newEntry.date &&
+        entry.travelClass === newEntry.travelClass
+    );
 
-  if (!exists) {
-    boardingHistory.push(newEntry);
-    localStorage.setItem("boardingHistory", JSON.stringify(boardingHistory));
-  }
+    if (!exists) {
+      boardingHistory.push(newEntry);
+      localStorage.setItem("boardingHistory", JSON.stringify(boardingHistory));
+    }
 
     localStorage.setItem("cardholderName", cardholderName);
 
     const savedCard = JSON.parse(localStorage.getItem("cardDetails")) || {};
-    const isNewCard =
-      !savedCard.number || 
-      savedCard.number !== cardNumber;
-     
+    const isNewCard = !savedCard.number || savedCard.number !== cardNumber;
+
     if (isNewCard) {
-      setShowPopup(true); 
+      setShowPopup(true);
+    } else if (isValidCard) {
+      navigate("/payment-successful");
     } else {
-      if(savedCard.number === cardNumber && savedCard.expiry === expiry && savedCard.cvv === cvv)
-        navigate("/payment-successful");
-      else
-        alert("Card details are wrong. Please Check !");
+      alert("Card details are wrong. Please check!");
     }
   };
   const handleConfirmSave = () => {
@@ -77,26 +77,38 @@ const PaymentPage = () => {
     localStorage.setItem("cardDetails", JSON.stringify(cardData));
     navigate("/payment-successful");
   };
-  const cancelPayment=(e)=>{
-  e.preventDefault();
-  e.stopPropagation();
+  const cancelPayment = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
 
-  const flightData = JSON.parse(localStorage.getItem("flightData"));
-  if (flightData) {
-    const key = `${flightData.flightNumber}_${flightData.date}`;
-    let bookings = JSON.parse(localStorage.getItem("bookings")) || {};
+    const flightData = JSON.parse(localStorage.getItem("flightData"));
+    if (flightData) {
+      const key = `${flightData.flightNumber}_${flightData.date}`;
+      let bookings = JSON.parse(localStorage.getItem("bookings")) || {};
 
-    if (bookings[key] && bookings[key].length > 0) {
-      bookings[key].pop();
-      localStorage.setItem("bookings", JSON.stringify(bookings));
+      if (bookings[key] && bookings[key].length > 0) {
+        bookings[key].pop();
+        localStorage.setItem("bookings", JSON.stringify(bookings));
+      }
     }
-  }
-  localStorage.removeItem("flightData");
-  localStorage.removeItem("selectedSeat");
-  localStorage.removeItem("boardingDetails");
-  navigate("/flight-details");
-  }
-  
+    localStorage.removeItem("flightData");
+    localStorage.removeItem("selectedSeat");
+    localStorage.removeItem("boardingDetails");
+    navigate("/flight-details");
+  };
+  useEffect(() => {
+    const savedCard = JSON.parse(localStorage.getItem("cardDetails")) || {};
+
+    if (
+      savedCard.number === cardNumber &&
+      savedCard.expiry === expiry &&
+      savedCard.cvv === cvv
+    ) {
+      setIsValidCard(true);
+    } else {
+      setIsValidCard(false);
+    }
+  }, [cardNumber, expiry, cvv]);
   return (
     <div
       className="min-h-screen flex items-center justify-center p-6"
@@ -108,10 +120,15 @@ const PaymentPage = () => {
         autoComplete="off"
       >
         <div className="flex items-center justify-between mb-4">
-          <h2 className="text-xl font-semibold text-slate-900">
-            Payment Details
-          </h2>
-          <div className="flex gap-4">
+          <div className="flex flex-col gap-2">
+            <h2 className="text-xl font-semibold text-slate-900">
+              Payment Details
+            </h2>
+            <h6 className="text-xs font-semibold text-slate-900">
+              CREDIT / DEBIT CARD
+            </h6>
+          </div>
+          <div className="flex gap-2">
             <span>
               <img
                 src={masterCard}
@@ -174,6 +191,11 @@ const PaymentPage = () => {
               className="mt-2 w-full rounded-lg border p-3 text-sm outline-none focus:ring-2 focus:ring-indigo-300 transition"
               required
             />
+            {isValidCard && (
+              <span className="absolute right-235 top-133 text-green-600 text-lg">
+                ✔
+              </span>
+            )}
           </label>
 
           <label className="block text-sm text-slate-700 mb-2">
@@ -188,6 +210,11 @@ const PaymentPage = () => {
               className="mt-2 w-full rounded-lg border p-3 text-sm outline-none focus:ring-2 focus:ring-indigo-300 transition"
               required
             />
+            {isValidCard && (
+              <span className="absolute right-185 top-133 text-green-600 text-lg">
+                ✔
+              </span>
+            )}
           </label>
         </div>
 
