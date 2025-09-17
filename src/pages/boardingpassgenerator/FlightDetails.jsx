@@ -77,7 +77,7 @@ const FlightDetails = () => {
           <Navbar></Navbar>
         </div>
         <section className="flex justify-between">
-          <div className="flex gap-8 p-10 pl-50">
+          <div className="flex flex-wrap gap-8 p-10 pl-50">
             {flightCards.length > 0 ? flightCards : <div />}
           </div>
           <form
