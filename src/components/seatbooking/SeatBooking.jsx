@@ -78,7 +78,7 @@ const SeatBooking = ({ seatArrange, travelClass, flightNumber, flightDate }) => 
   };
 
   return (
-    <div className="w-fit flex-col items-center justify-center p-6 mt-6 ml-20">
+    <div className="w-fit flex-col items-center justify-center p-6 mt-6">
       
       <div className="flex justify-between font-bold text-lg mb-4">
         <div>{travelClass} Class</div>

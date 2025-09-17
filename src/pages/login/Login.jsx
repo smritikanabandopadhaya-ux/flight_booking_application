@@ -11,7 +11,7 @@ function Login() {
           <div className="backgound-container-heading">Wander Wings</div>
           <Form></Form>
         </div>
-        <div className="font-['Comic_Sans_MS'] text-center ml-50 mt-20 flex-col justify-self-start items-center">
+        <div className="font-['Comic_Sans_MS'] text-center ml-30 mt-20 flex-col justify-self-start items-center">
           <div className="text-[2em] font-bold  pb-4">
             The journey of a thousand miles begins with a single step...
           </div>

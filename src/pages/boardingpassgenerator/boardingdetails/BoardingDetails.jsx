@@ -47,7 +47,7 @@ const Form = () => {
         <div>
           <Navbar></Navbar>
         </div>
-        <section className="flex justify-evenly">
+        <section className="flex flex-wrap items-baseline justify-center gap-8">
           <form className="boarding-form mt-16 ml-12" onSubmit={bookMySeat}>
             <div className="boarding-form-fields boarding-form-header">
               Boarding Pass

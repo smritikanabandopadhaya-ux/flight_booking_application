@@ -177,7 +177,7 @@ const PaymentPage = () => {
           />
         </label>
 
-        <div className="grid grid-cols-2 gap-3">
+        <div className="grid grid-cols-2 gap-3 relative">
           <label htmlFor="expiry" className="block text-sm text-slate-700 mb-2">
             Expiry (MM/YY)
             <input
@@ -192,7 +192,7 @@ const PaymentPage = () => {
               required
             />
             {isValidCard && (
-              <span className="absolute right-235 top-133 text-green-600 text-lg">
+              <span className="absolute right-54 top-9 text-green-600 text-lg">
                 ✔
               </span>
             )}
@@ -211,7 +211,7 @@ const PaymentPage = () => {
               required
             />
             {isValidCard && (
-              <span className="absolute right-185 top-133 text-green-600 text-lg">
+              <span className="absolute right-3 top-9 text-green-600 text-lg">
                 ✔
               </span>
             )}

@@ -3,12 +3,12 @@
 .login-form {
   background-color: #9588bd;
   padding: 2em;
-  margin: 2em 1em 1em 30em;
+  margin: 2em 1em 1em 15em;
   border-radius: 20px;
   justify-content: center;
   margin-top: 6em;
   box-shadow: 0 8px 20px #00000066;
-  min-width: 50%;
+  min-width: 60%;
 }
 .login-form-header{
   font-size: 1.5em;
